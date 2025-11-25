@@ -1,0 +1,138 @@
+@import 'tailwindcss';
+
+@layer utilities {
+  .underline-hover {
+    position: relative;
+    display: inline-block;
+  }
+
+  .underline-hover::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: 0;
+    background: #6b4423;
+    transition: all 0.3s ease;
+  }
+
+  .underline-hover:hover::after {
+    width: 100%;
+  }
+}
+
+@theme {
+  /* solid color */
+  --color-primary: #6b4423;
+  --color-on-primary: #faf7f2;
+  --color-secondary: #f5e6d3;
+  --color-on-secondary: #8b6f47;
+
+  --color-primary-navbar: #f9f6ee;
+
+  --color-primary-container: #8b6f47;
+  --color-primary-text: #6b4423;
+  --color-primary-border: #6b4423;
+
+  --color-tertiary-border: #e8d4b8;
+
+  --color-error: #d8524e;
+  --color-error-text: #fbeaea;
+  --color-error-container: #fbeaea;
+  --color-error-border: #f1b3af;
+
+  /* linear gradient */
+  --color-grad-top: #faf7f2;
+  --color-grad-bottom: #f5e6d3;
+
+  --font-poppins: 'Poppins';
+  --font-quiksand: 'Quicksand';
+}
+
+@layer base {
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins-Thin.woff2') format('woff2');
+    font-weight: 100;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins-ExtraLight.woff2') format('woff2');
+    font-weight: 200;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins-ExtraBold.woff2') format('woff2');
+    font-weight: 800;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Poppins';
+    src: url('/assets/fonts/Poppins-Black.woff2') format('woff2');
+    font-weight: 900;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Quicksand';
+    src: url('/assets/fonts/Quicksand-Light.woff2') format('woff2');
+    font-weight: 300;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Quicksand';
+    src: url('/assets/fonts/Quicksand-Regular.woff2') format('woff2');
+    font-weight: 400;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Quicksand';
+    src: url('/assets/fonts/Quicksand-Medium.woff2') format('woff2');
+    font-weight: 500;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Quicksand';
+    src: url('/assets/fonts/Quicksand-SemiBold.woff2') format('woff2');
+    font-weight: 600;
+    font-display: swap;
+  }
+  @font-face {
+    font-family: 'Quicksand';
+    src: url('/assets/fonts/Quicksand-Bold.woff2') format('woff2');
+    font-weight: 700;
+    font-display: swap;
+  }
+}
