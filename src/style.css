@@ -1,0 +1,1705 @@
+.l-page-asli {
+    background-color: #ffffff;
+    width: 100%;
+    position: relative;
+}
+
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+
+.navbar-light {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 1rem clamp(1rem, 4vw, 2rem);
+    background-color: #f9f6ee;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.container-36 {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.header-left {
+    justify-content: flex-start;
+}
+
+.header-right {
+    justify-content: flex-end;
+}
+
+
+/* Logo Polije Styling (Left) */
+
+.polije-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 0 0 auto;
+}
+
+.polije-logo-svg {
+    max-height: 64px;
+    height: auto;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.polije-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.125rem;
+    min-width: fit-content;
+}
+
+.polije-main-text {
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #6b5344;
+    font-size: clamp(14px, 3vw, 18px);
+    line-height: 1;
+    letter-spacing: 0.5px;
+}
+
+.polije-sub-text {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(10px, 1.5vw, 12px);
+    line-height: 1;
+    letter-spacing: 0.4px;
+}
+
+
+/* Logo TEFA Styling (Right) */
+
+.tefa-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 0 0 auto;
+}
+
+.tefa-logo-svg {
+    max-height: 48px;
+    height: auto;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.tefa-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.125rem;
+    min-width: fit-content;
+}
+
+.tefa-main-text {
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #6b5344;
+    font-size: clamp(14px, 3vw, 18px);
+    line-height: 1;
+    letter-spacing: 0.5px;
+}
+
+.tefa-sub-text {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(10px, 1.5vw, 12px);
+    line-height: 1;
+    letter-spacing: 0.4px;
+}
+
+
+/* Navigation Menu (Center) */
+
+.container-37 {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+.frame-wrapper,
+.frame-3,
+.frame-4,
+.frame-5,
+.frame-6 {
+    position: relative;
+    height: auto;
+}
+
+.frame-2 {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.5rem 0;
+    padding-bottom: 0.25rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    position: relative;
+}
+
+.frame-2::after {
+    content: '';
+    position: absolute;
+    bottom: 0.125rem;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #8b6f47;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.frame-2:hover {
+    border-bottom-color: transparent;
+}
+
+.frame-2:hover::after {
+    width: 100%;
+}
+
+.text-wrapper-30,
+.text-wrapper-31,
+.text-wrapper-32,
+.text-wrapper-33,
+.text-wrapper-34 {
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #6b5344;
+    font-size: clamp(13px, 2.5vw, 16px);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s ease;
+    line-height: 1.5;
+    display: inline-block;
+}
+
+.frame-2:hover .text-wrapper-30,
+.frame-2:hover .text-wrapper-31,
+.frame-2:hover .text-wrapper-32,
+.frame-2:hover .text-wrapper-33,
+.frame-2:hover .text-wrapper-34 {
+    color: #8b6f47;
+    transform: translateY(-1px);
+}
+
+
+/* Responsive Header - Tablet */
+
+@media (max-width: 1024px) {
+    .navbar-light {
+        padding: 0.875rem clamp(1rem, 3vw, 1.5rem);
+    }
+    .container-36 {
+        gap: 1.5rem;
+    }
+    .container-37 {
+        gap: 1.25rem;
+    }
+    .polije-logo-svg {
+        max-height: 56px;
+    }
+    .tefa-logo-svg {
+        max-height: 44px;
+    }
+    .text-wrapper-30,
+    .text-wrapper-31,
+    .text-wrapper-32,
+    .text-wrapper-33,
+    .text-wrapper-34 {
+        font-size: clamp(12px, 2vw, 14px);
+    }
+}
+
+
+/* Responsive Header - Mobile */
+
+@media (max-width: 768px) {
+    .navbar-light {
+        padding: 0.75rem clamp(1rem, 3vw, 1.5rem);
+    }
+    .container-36 {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .header-left,
+    .header-right {
+        flex: 0 0 auto;
+    }
+    .container-37 {
+        gap: 1rem;
+        order: 3;
+        flex: 0 0 100%;
+        justify-content: center;
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(107, 84, 62, 0.1);
+    }
+    .polije-logo-svg {
+        max-height: 48px;
+    }
+    .tefa-logo-svg {
+        max-height: 40px;
+    }
+    .text-wrapper-30,
+    .text-wrapper-31,
+    .text-wrapper-32,
+    .text-wrapper-33,
+    .text-wrapper-34 {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-light {
+        padding: 0.625rem 1rem;
+    }
+    .container-36 {
+        gap: 0.75rem;
+    }
+    .polije-logo-svg {
+        max-height: 40px;
+    }
+    .tefa-logo-svg {
+        max-height: 36px;
+    }
+    .container-37 {
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+    }
+    .text-wrapper-30,
+    .text-wrapper-31,
+    .text-wrapper-32,
+    .text-wrapper-33,
+    .text-wrapper-34 {
+        font-size: 12px;
+    }
+}
+
+
+/* ============================================
+   HERO SECTION
+   ============================================ */
+
+.container-6 {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 3rem clamp(1.5rem, 4vw, 2rem);
+    gap: 2rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .container-6 {
+        grid-template-columns: 1fr 1fr;
+        padding: 5rem clamp(2rem, 5vw, 3rem);
+    }
+}
+
+.container-7 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.tefa-bakery-cofee {
+    font-family: "Quicksand-Medium", Helvetica;
+    font-weight: 500;
+    font-size: clamp(32px, 8vw, 72px);
+    line-height: 1.1;
+    color: #6b4423;
+}
+
+.enjoy-artisan-breads {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(14px, 3vw, 20px);
+    line-height: 1.5;
+}
+
+.container-8 {
+    display: flex;
+    gap: 0.75rem;
+}
+
+
+/* ============================================
+   BOOTSTRAP BUTTON CUSTOMIZATION
+   ============================================ */
+
+
+/* Override Bootstrap primary button with brand colors */
+
+.btn-primary,
+.btn.btn-primary,
+a.btn-primary {
+    background-color: #8b6f47 !important;
+    border-color: #8b6f47 !important;
+    color: #ffffff !important;
+    font-family: "Poppins-Regular", Helvetica !important;
+    font-size: 15px !important;
+    padding: 0.625rem 1.5rem !important;
+    border-radius: 50px !important;
+    font-weight: 500 !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1) !important;
+    border: none !important;
+}
+
+.btn-primary:hover,
+.btn-primary:focus,
+.btn.btn-primary:hover,
+.btn.btn-primary:focus,
+a.btn-primary:hover,
+a.btn-primary:focus {
+    background-color: #6b5a3a !important;
+    border-color: #6b5a3a !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.btn-outline-primary,
+.btn.btn-outline-primary,
+a.btn-outline-primary {
+    color: #8b6f47 !important;
+    border-color: #8b6f47 !important;
+    background-color: transparent !important;
+    font-family: "Poppins-Regular", Helvetica !important;
+    font-size: 15px !important;
+    padding: 0.625rem 1.5rem !important;
+    border-radius: 50px !important;
+    font-weight: 500 !important;
+    border-width: 2px !important;
+    transition: all 0.3s ease !important;
+}
+
+.btn-outline-primary:hover,
+.btn-outline-primary:focus,
+.btn.btn-outline-primary:hover,
+.btn.btn-outline-primary:focus,
+a.btn-outline-primary:hover,
+a.btn-outline-primary:focus {
+    background-color: #faf7f2 !important;
+    border-color: #8b6f47 !important;
+    color: #8b6f47 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15) !important;
+}
+
+.container-10 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 100%;
+}
+
+@media (min-width: 768px) {
+    .container-10 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.container-11 {
+    border-radius: 32px;
+    overflow: hidden;
+    box-shadow: 0px 25px 50px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Image Container Styles */
+
+.container-11,
+.image-with-fallback-wrapper {
+    border-radius: 24px;
+    overflow: hidden;
+    display: block;
+}
+
+.hero-img,
+.about-img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover;
+}
+
+
+/* Image Height Settings */
+
+.container-11 {
+    height: 420px;
+}
+
+.image-with-fallback-wrapper {
+    height: 360px;
+}
+
+@media (max-width: 767px) {
+    .container-11 {
+        height: 260px;
+    }
+    .image-with-fallback-wrapper {
+        height: 240px;
+    }
+}
+
+.image-with-fallback-2 {
+    width: 100%;
+    height: 300px;
+    background-size: cover;
+    background-position: 50% 50%;
+}
+
+@media (min-width: 768px) {
+    .image-with-fallback-2 {
+        height: 500px;
+    }
+}
+
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+
+.about {
+    display: grid;
+    grid-template-columns: 1fr;
+    max-width: 1440px;
+    margin: 0 auto;
+    gap: 2rem;
+    padding: 3rem clamp(1.5rem, 4vw, 2rem);
+    background-color: #faf7f2;
+}
+
+@media (min-width: 768px) {
+    .about {
+        grid-template-columns: 1fr 1fr;
+        padding: 5rem clamp(2rem, 5vw, 3rem);
+        gap: 3rem;
+    }
+}
+
+.frame {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+@media (min-width: 768px) {
+    .frame {
+        grid-template-columns: 1fr 1fr;
+        gap: 3rem;
+        align-items: center;
+    }
+    .frame .container {
+        justify-self: center;
+        width: 100%;
+        max-width: 520px;
+    }
+    .frame .image-with-fallback-wrapper {
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+        width: 100%;
+    }
+    .frame .image-with-fallback {
+        width: 100%;
+        height: 420px;
+        background-size: cover;
+        background-position: center;
+        display: block;
+        border-radius: 24px;
+    }
+    .frame .container-2 {
+        justify-self: start;
+        max-width: 560px;
+    }
+    .frame .text-wrapper,
+    .frame .since-we-ve {
+        text-align: left;
+    }
+}
+
+
+/* Mobile: Stack and Center Content */
+
+@media (max-width: 767px) {
+    .frame {
+        grid-template-columns: 1fr;
+    }
+    .frame .container,
+    .frame .container-2 {
+        justify-self: center;
+        text-align: center;
+    }
+    .frame .image-with-fallback {
+        height: 260px;
+        border-radius: 16px;
+    }
+}
+
+.container-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.text-wrapper {
+    font-family: "Quicksand-Medium", Helvetica;
+    font-weight: 500;
+    color: #6b4423;
+    font-size: clamp(32px, 6vw, 64px);
+    line-height: 1.2;
+}
+
+.since-we-ve {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(14px, 2.5vw, 20px);
+    line-height: 1.5;
+}
+
+.container-3 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+    gap: 1.5rem;
+}
+
+.container-4 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.text-wrapper-2 {
+    font-family: "Quicksand-Regular", Helvetica;
+    font-weight: 400;
+    color: #6b4423;
+    font-size: clamp(24px, 5vw, 30px);
+    text-align: center;
+}
+
+.text-wrapper-3,
+.text-wrapper-4,
+.text-wrapper-6 {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: 12px;
+    text-align: center;
+}
+
+
+/* ============================================
+   FEATURED PRODUCTS
+   ============================================ */
+
+.featured-products {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 3rem clamp(1.5rem, 4vw, 2rem);
+    background: linear-gradient( 180deg, rgba(250, 247, 242, 1) 0%, rgba(245, 230, 211, 1) 100%);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .featured-products {
+        padding: 5rem clamp(2rem, 5vw, 3rem);
+    }
+}
+
+
+/* Featured Products - Header Section */
+
+.featured-products .container-14 {
+    max-width: 1200px;
+    margin: 0 auto;
+    text-align: center;
+    padding: 2rem 0 2rem;
+}
+
+.featured-products .heading {
+    font-family: "Quicksand-Bold", Helvetica;
+    font-weight: 700;
+    font-size: clamp(28px, 6vw, 48px);
+    color: #6b4423;
+    margin-bottom: 1rem;
+}
+
+.featured-products .discover-our {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(14px, 2.5vw, 18px);
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+
+/* Carousel Wrapper */
+
+.carousel-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    padding: 2rem 0;
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .carousel-wrapper {
+        padding: 2rem 0;
+        gap: 2rem;
+    }
+}
+
+
+/* Carousel Arrow Buttons - Bootstrap Style */
+
+.carousel-wrapper .btn,
+.carousel-wrapper .btn-outline-secondary {
+    width: 44px !important;
+    height: 44px !important;
+    padding: 0 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    font-size: 18px !important;
+    border: 1px solid rgba(107, 84, 62, 0.12) !important;
+    background: #fff !important;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) !important;
+    transition: all 0.3s ease !important;
+    border-radius: 50% !important;
+    flex-shrink: 0;
+}
+
+.carousel-wrapper .btn:hover,
+.carousel-wrapper .btn-outline-secondary:hover {
+    background-color: #faf7f2 !important;
+    border-color: #8b6f47 !important;
+    color: #8b6f47 !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12) !important;
+}
+
+
+/* Carousel Viewport */
+
+.carousel-content {
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow: visible;
+    display: block;
+    width: 100%;
+}
+
+
+/* Carousel Track - Grid Layout untuk 3 cards */
+
+.carousel-track {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    align-items: stretch;
+    padding: 0.5rem 0;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+    .carousel-track {
+        gap: 2rem;
+    }
+}
+
+@media (max-width: 992px) {
+    .carousel-track {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-track {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+}
+
+@media (min-width: 768px) {
+    .carousel-track {
+        gap: 2rem;
+    }
+}
+
+
+/* Carousel Item Sizing */
+
+.carousel-item,
+.card-wrapper,
+.carousel-item-2 {
+    width: 100%;
+    max-width: 100%;
+    display: block;
+}
+
+.card {
+    background-color: #ffffff;
+    border-radius: 20px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    transition: all 0.3s ease;
+    height: 100%;
+}
+
+.card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Product Card Image Block */
+
+.featured-products-2 {
+    height: 240px;
+    overflow: hidden;
+    background: #f4efe8;
+    position: relative;
+}
+
+@media (min-width: 768px) {
+    .featured-products-2 {
+        height: 280px;
+    }
+}
+
+.image-with-fallback-3,
+.image-with-fallback-4,
+.image-with-fallback-5 {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.card:hover .image-with-fallback-3,
+.card:hover .image-with-fallback-4,
+.card:hover .image-with-fallback-5 {
+    transform: scale(1.05);
+}
+
+
+/* Product Card Content */
+
+.featured-products-3,
+.featured-products-4 {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    flex: 1;
+}
+
+.heading-2 {
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    font-size: clamp(16px, 2.5vw, 20px);
+    color: #6b4423;
+    margin: 0;
+    line-height: 1.3;
+}
+
+.paragraph {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    font-size: clamp(13px, 2vw, 14px);
+    color: #8b6f47;
+    margin: 0;
+    flex: 1;
+    line-height: 1.5;
+}
+
+
+/* Price and Add to Cart Row */
+
+.container-15,
+.container-16 {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+    margin-top: auto;
+    padding-top: 0.5rem;
+}
+
+.text-wrapper-12,
+.text-wrapper-14 {
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #6b4423;
+    font-size: clamp(18px, 3vw, 22px);
+}
+
+
+/* Add to Cart Button - Bootstrap Small */
+
+.btn-sm {
+    padding: 0.375rem 0.875rem;
+    font-size: 13px;
+    border-radius: 50px;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.375rem;
+}
+
+
+/* Featured Products - Responsive */
+
+@media (max-width: 992px) {
+    .carousel-wrapper .btn {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .carousel-wrapper {
+        gap: 1rem;
+        padding: 1.5rem clamp(1.5rem, 4vw, 2rem);
+    }
+    .carousel-track {
+        gap: 1.5rem;
+        padding: 0.5rem 0;
+    }
+    .carousel-wrapper .btn {
+        display: none;
+    }
+    .featured-products-2 {
+        height: 220px;
+    }
+}
+
+@media (max-width: 480px) {
+    .featured-products-2 {
+        height: 200px;
+    }
+    .featured-products-3 {
+        padding: 1.25rem;
+    }
+}
+
+
+/* Add to Cart button - Small size */
+
+.btn-primary.btn-sm,
+.btn.btn-primary.btn-sm {
+    padding: 0.375rem 0.875rem !important;
+    font-size: 13px !important;
+    border-radius: 50px !important;
+    font-weight: 500 !important;
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 0.375rem !important;
+}
+
+
+/* ============================================
+   PARTNERSHIP SECTION
+   ============================================ */
+
+.partnership {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 3rem clamp(1.5rem, 4vw, 2rem);
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+@media (min-width: 768px) {
+    .partnership {
+        padding: 5rem clamp(2rem, 5vw, 3rem);
+    }
+}
+
+.heading-3 {
+    text-align: center;
+    font-family: "Quicksand-Regular", Helvetica;
+    font-weight: 400;
+    font-size: clamp(28px, 6vw, 48px);
+    color: #6b4423;
+    margin-bottom: 1rem;
+}
+
+.join-us-in-bringing {
+    text-align: center;
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(14px, 2.5vw, 16px);
+}
+
+.container-19 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .container-19 {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-19 {
+        grid-template-columns: repeat(4, 1fr);
+    }
+}
+
+.partnership-wrapper,
+.card-3,
+.card-4,
+.card-5 {
+    background-color: #faf7f2;
+    border-radius: 24px;
+    padding: 1.5rem;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.partnership-2,
+.partnership-3 {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.icon-wrapper {
+    width: 64px;
+    height: 64px;
+    background-color: #ffffff;
+    border-radius: 9999px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.heading-4,
+.heading-5,
+.heading-6,
+.heading-7 {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    font-size: clamp(16px, 3vw, 18px);
+    color: #6b4423;
+}
+
+.supply-your-caf-or,
+.expand-your-menu,
+.co-create-unique,
+.consistent-quality {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+.container-22 {
+    background: linear-gradient( 180deg, rgba(232, 212, 184, 1) 0%, rgba(245, 230, 211, 1) 100%);
+    border-radius: 24px;
+    padding: 2rem clamp(1.5rem, 4vw, 2rem);
+    text-align: center;
+    box-shadow: 0px 8px 10px rgba(0, 0, 0, 0.1);
+    margin: 0 clamp(1.5rem, 4vw, 2rem);
+}
+
+@media (min-width: 768px) {
+    .container-22 {
+        padding: 3rem clamp(2rem, 5vw, 3rem);
+        margin: 0;
+    }
+}
+
+.heading-8 {
+    font-family: "Quicksand-Regular", Helvetica;
+    font-weight: 400;
+    font-size: clamp(24px, 5vw, 36px);
+    color: #6b4423;
+    margin-bottom: 1rem;
+}
+
+.we-re-always-looking {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(14px, 2.5vw, 16px);
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+}
+
+.container-23 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+@media (min-width: 640px) {
+    .container-23 {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+
+/* Partnership Section Buttons */
+
+.container-23 .btn {
+    width: 100%;
+    min-width: 200px;
+}
+
+@media (min-width: 640px) {
+    .container-23 .btn {
+        width: auto;
+        min-width: 180px;
+    }
+}
+
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    background-color: #f5e6d3;
+    padding: 2rem clamp(1.5rem, 4vw, 2rem);
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding: 3rem clamp(2rem, 5vw, 3rem);
+    }
+}
+
+.container-24 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .container-24 {
+        padding: 0;
+    }
+}
+
+.container-25 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .container-25 {
+        grid-template-columns: 1.2fr 1.8fr;
+        gap: 2rem;
+        align-items: start;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-25 {
+        grid-template-columns: 1.5fr 2.5fr;
+        gap: 2.5rem;
+    }
+}
+
+.container-26 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.container-27 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.tefa-logo {
+    width: 56px;
+    height: 56px;
+    background-image: url('../assets/images/tefa_logo.webp');
+    border-radius: 50%;
+    background-size: cover;
+    background-position: 50% 50%;
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .tefa-logo {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.tefa-bakery-coffee {
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    font-size: clamp(18px, 3vw, 28px);
+    color: #6b4423;
+    line-height: 1.2;
+}
+
+.crafting-artisan {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(13px, 2vw, 16px);
+    line-height: 1.6;
+    margin-top: 0.25rem;
+}
+
+.container-28 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .container-28 {
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-28 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+.container-29,
+.container-30,
+.container-32 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.text-wrapper-24,
+.text-wrapper-26 {
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #6b4423;
+    font-size: clamp(15px, 2.5vw, 18px);
+    margin-bottom: 0.25rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.text-wrapper-25 {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(12px, 2vw, 16px);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.text-wrapper-25:hover {
+    color: #6b4423;
+}
+
+.container-31 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.div-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.text-wrapper-27,
+.text-wrapper-28,
+.sabtu-minggu,
+.p {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(12px, 2vw, 16px);
+}
+
+.container-33 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+
+/* Social Media Icons */
+
+.social-media-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #6b5344;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon[aria-label="Instagram"]:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icon[aria-label="Instagram"]:hover i {
+    color: #ffffff;
+}
+
+.social-icon[aria-label="WhatsApp"]:hover {
+    background-color: #25d366;
+}
+
+.social-icon[aria-label="WhatsApp"]:hover i {
+    color: #ffffff;
+}
+
+.social-icon[aria-label="Facebook"]:hover {
+    background-color: #1877f2;
+}
+
+.social-icon[aria-label="Facebook"]:hover i {
+    color: #ffffff;
+}
+
+@media (max-width: 480px) {
+    .social-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+}
+
+.container-35 {
+    border-top: 1px solid rgba(220, 197, 168, 0.5);
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.text-wrapper-29 {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(12px, 1.5vw, 14px);
+    margin: 0;
+}
+
+
+/* Remove Unnecessary Elements on Small Screens */
+
+@media (max-width: 768px) {
+    .container-12,
+    .container-13 {
+        display: none;
+    }
+}
+
+
+/* Background Image Blocks */
+
+.image-with-fallback,
+.image-with-fallback-2,
+.image-with-fallback-3,
+.image-with-fallback-4,
+.image-with-fallback-5,
+.image-with-fallback-6 {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    min-height: 320px;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+
+/* Hero Image Larger */
+
+.image-with-fallback-2 {
+    min-height: 420px;
+}
+
+
+/* Image Blocks - Responsive */
+
+@media (max-width: 767px) {
+    .image-with-fallback,
+    .image-with-fallback-2 {
+        min-height: 220px;
+        border-radius: 12px;
+    }
+}
+
+
+/* ============================================
+   HERO SECTION (BERANDA) - Centered Layout
+   ============================================ */
+
+#beranda {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: clamp(2rem, 6vw, 6rem) clamp(1.5rem, 4vw, 2rem);
+    box-sizing: border-box;
+    background: #ffffff;
+}
+
+#beranda .container-6 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 520px;
+    gap: 2.5rem;
+    align-items: center;
+    justify-items: center;
+}
+
+#beranda .container-7 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 560px;
+    gap: 1rem;
+}
+
+
+/* Hero Title and Description */
+
+.tefa-bakery-cofee {
+    font-size: clamp(32px, 6vw, 48px);
+    line-height: 1.05;
+    color: #6b5344;
+    font-weight: 700;
+    margin: 0 0 0.5rem 0;
+}
+
+.enjoy-artisan-breads {
+    color: #8b6f47;
+    margin: 0 0 1.25rem 0;
+    line-height: 1.45;
+    max-width: 520px;
+}
+
+
+/* Hero Buttons */
+
+.container-8 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    align-items: center;
+    margin-top: 1.5rem;
+}
+
+
+/* Hero buttons styling - Section Beranda */
+
+#beranda .container-8 .btn {
+    white-space: nowrap;
+    min-width: 140px;
+    text-align: center;
+    justify-content: center;
+}
+
+@media (max-width: 767px) {
+    #beranda .container-8 {
+        justify-content: center;
+        width: 100%;
+    }
+    #beranda .container-8 .btn {
+        flex: 1 1 auto;
+        min-width: 120px;
+    }
+}
+
+
+/* Hero Image Card */
+
+.container-11 {
+    width: 100%;
+    max-width: 520px;
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 30px 60px rgba(0, 0, 0, 0.08);
+    background: #fff;
+}
+
+.image-with-fallback-2 {
+    width: 100%;
+    height: 420px;
+    background-size: cover;
+    background-position: center;
+    display: block;
+}
+
+
+/* Hero Section - Responsive */
+
+@media (max-width: 767px) {
+    #beranda .container-6 {
+        grid-template-columns: 1fr;
+        padding-top: 2.5rem;
+    }
+    #beranda .container-7 {
+        align-items: center;
+        text-align: center;
+    }
+    .container-11 {
+        max-width: 100%;
+    }
+    .image-with-fallback-2 {
+        height: 260px;
+        border-radius: 16px;
+    }
+}
+
+
+/* ============================================
+   ABOUT SECTION (TENTANG) - Centered Layout
+   ============================================ */
+
+.about {
+    width: 100%;
+    padding: 3rem clamp(1.5rem, 4vw, 2rem);
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+@media (min-width: 768px) {
+    .about {
+        padding: 3rem clamp(2rem, 5vw, 3rem);
+    }
+}
+
+.about .frame {
+    width: 100%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    align-items: center;
+    justify-items: center;
+}
+
+@media (min-width: 768px) {
+    .about .frame {
+        grid-template-columns: 520px 1fr;
+        gap: 3rem;
+        align-items: center;
+        justify-items: start;
+    }
+    .about .image-with-fallback-wrapper {
+        width: 100%;
+        max-width: 520px;
+        border-radius: 24px;
+        overflow: hidden;
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.08);
+    }
+    .about .image-with-fallback {
+        width: 100%;
+        height: 360px;
+        background-size: cover;
+        background-position: center;
+        display: block;
+        border-radius: 24px;
+    }
+    .about .container-2 {
+        max-width: 560px;
+        padding-left: 0.5rem;
+    }
+    .about .text-wrapper,
+    .about .since-we-ve {
+        text-align: left;
+    }
+}
+
+
+/* About Section - Mobile */
+
+@media (max-width: 767px) {
+    .about .frame {
+        grid-template-columns: 1fr;
+    }
+    .about .container,
+    .about .container-2 {
+        justify-self: center;
+        text-align: center;
+    }
+    .about .image-with-fallback {
+        height: 240px;
+        border-radius: 16px;
+    }
+}
+
+
+/* Center Hero and About Content Wrappers */
+
+#beranda .container-6,
+.about .frame {
+    justify-items: center;
+    align-items: center;
+}
+
+
+/* Desktop Layout Adjustments */
+
+@media (min-width: 768px) {
+    #beranda .container-7 {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        text-align: left;
+        margin: 0;
+    }
+    #beranda .container-10,
+    #beranda .container-11 {
+        justify-self: center;
+    }
+    .about .frame {
+        grid-template-columns: 520px 1fr;
+        justify-items: center;
+    }
+    .about .image-with-fallback-wrapper {
+        justify-self: center;
+    }
+    .about .container-2 {
+        justify-self: start;
+        text-align: left;
+    }
+}
+
+
+/* Mobile: Stacked and Centered */
+
+@media (max-width: 767px) {
+    #beranda .container-6,
+    .about .frame {
+        grid-template-columns: 1fr;
+        justify-items: center;
+        text-align: center;
+    }
+    #beranda .container-7,
+    .about .container-2 {
+        align-items: center;
+        text-align: center;
+        justify-self: center;
+    }
+    .about .container-2 {
+        justify-self: center;
+    }
+    .container-11,
+    .image-with-fallback-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
