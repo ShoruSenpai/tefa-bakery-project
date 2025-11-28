@@ -207,6 +207,24 @@ a:focus-visible {
     width: 100%;
 }
 
+/* Styling untuk menu navigasi header - tidak boleh diubah */
+.navbar-light .text-wrapper-30,
+.navbar-light .text-wrapper-31,
+.navbar-light .text-wrapper-32,
+.navbar-light .text-wrapper-33,
+.navbar-light .text-wrapper-34 {
+    font-family: "Poppins-Medium", Helvetica !important;
+    font-weight: 500 !important;
+    color: #6b5344 !important;
+    font-size: clamp(13px, 2.5vw, 16px) !important;
+    white-space: nowrap !important;
+    cursor: pointer !important;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s ease !important;
+    line-height: 1.5 !important;
+    display: inline-block !important;
+}
+
+/* Fallback untuk text-wrapper di luar navbar (jika ada) */
 .text-wrapper-30,
 .text-wrapper-31,
 .text-wrapper-32,
