@@ -52,7 +52,7 @@
 
 .our-product .text-wrapper-8 {
     font-family: "Poppins-Bold", Helvetica;
-    font-weight: 700;
+    font-weight: 500;
     color: #6b4423;
     font-size: clamp(32px, 6vw, 60px);
     line-height: 1.2;
@@ -286,7 +286,7 @@
 .our-product .coffee-drinks-2,
 .our-product .text-wrapper-27 {
     font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
+    font-weight: 500;
     color: #8b6f47;
     font-size: 12px;
     line-height: 16px;
