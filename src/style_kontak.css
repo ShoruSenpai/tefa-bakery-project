@@ -14,27 +14,43 @@ main {
     width: 100%;
 }
 
-.contact-header {
+.div {
+    padding: clamp(1.5rem, 4vw, 3.5rem) clamp(1.25rem, 3.5vw, 1.75rem);
+    max-width: 1440px;
     text-align: center;
-    max-width: 720px;
     margin: 0 auto;
-    padding: 4rem clamp(1.5rem, 4vw, 3rem) 2.5rem;
 }
 
-.contact-header h1 {
+.div-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.text-wrapper-2 {
     font-family: "Poppins-Bold", Helvetica;
     font-weight: 500;
-    font-size: clamp(42px, 6vw, 56px);
     color: #6b4423;
-    margin: 0 0 1rem;
+    font-size: clamp(32px, 6vw, 60px);
+    line-height: 1.2;
+    margin: 0;
 }
 
-.contact-header p {
+.from-humble-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.from-humble {
     font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
     color: #8b6f47;
-    font-size: clamp(16px, 2.8vw, 18px);
-    margin: 0;
+    font-size: clamp(14px, 2.5vw, 18px);
     line-height: 1.6;
+    max-width: 800px;
+    margin: 0;
 }
 
 .eyebrow {
@@ -50,7 +66,7 @@ main {
 .contact-section {
     max-width: 1200px;
     margin: 0 auto 5rem;
-    padding: 0 clamp(1.5rem, 4vw, 3rem);
+    padding: 5rem clamp(1.5rem, 4vw, 3rem);
     display: grid;
     grid-template-columns: minmax(0, 1.1fr) minmax(0, 0.9fr);
     gap: 2.5rem;
