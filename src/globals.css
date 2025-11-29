@@ -1,0 +1,595 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+    -webkit-font-smoothing: antialiased;
+    box-sizing: border-box;
+}
+
+html,
+body {
+    margin: 0px;
+    height: 100%;
+}
+
+button:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+a {
+    text-decoration: none;
+}
+
+a:focus-visible {
+    outline: 2px solid #4a90e2 !important;
+    outline: -webkit-focus-ring-color auto 5px !important;
+}
+
+
+/* ============================================
+   NAVBAR
+   ============================================ */
+
+.navbar-light {
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: auto;
+    padding: 1rem clamp(1rem, 4vw, 2rem);
+    background-color: #f9f6ee;
+    box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+}
+
+.container-36 {
+    display: flex;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+.header-left,
+.header-right {
+    display: flex;
+    align-items: center;
+    flex: 0 0 auto;
+}
+
+.header-left {
+    justify-content: flex-start;
+}
+
+.header-right {
+    justify-content: flex-end;
+}
+
+
+/* Logo Polije Styling (Left) */
+
+.polije-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 0 0 auto;
+}
+
+.polije-logo-svg {
+    max-height: 64px;
+    height: auto;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.polije-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.125rem;
+    min-width: fit-content;
+}
+
+.polije-main-text {
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #6b5344;
+    font-size: clamp(14px, 3vw, 18px);
+    line-height: 1;
+    letter-spacing: 0.5px;
+}
+
+.polije-sub-text {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(10px, 1.5vw, 12px);
+    line-height: 1;
+    letter-spacing: 0.4px;
+}
+
+
+/* Logo TEFA Styling (Right) */
+
+.tefa-logo-container {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex: 0 0 auto;
+}
+
+.tefa-logo-svg {
+    max-height: 48px;
+    height: auto;
+    width: auto;
+    display: block;
+    object-fit: contain;
+}
+
+.tefa-text {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.125rem;
+    min-width: fit-content;
+}
+
+.tefa-main-text {
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    color: #6b5344;
+    font-size: clamp(14px, 3vw, 18px);
+    line-height: 1;
+    letter-spacing: 0.5px;
+}
+
+.tefa-sub-text {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(10px, 1.5vw, 12px);
+    line-height: 1;
+    letter-spacing: 0.4px;
+}
+
+
+/* Navigation Menu (Center) */
+
+.container-37 {
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    list-style: none;
+    flex: 1;
+    justify-content: center;
+    flex-wrap: nowrap;
+    margin: 0;
+    padding: 0;
+}
+
+.frame-wrapper,
+.frame-3,
+.frame-4,
+.frame-5,
+.frame-6 {
+    position: relative;
+    height: auto;
+}
+
+.frame-2 {
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    padding: 0.5rem 0;
+    padding-bottom: 0.25rem;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    display: inline-block;
+    position: relative;
+}
+
+.frame-2::after {
+    content: '';
+    position: absolute;
+    bottom: 0.125rem;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #8b6f47;
+    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.frame-2:hover {
+    border-bottom-color: transparent;
+}
+
+.frame-2:hover::after {
+    width: 100%;
+}
+
+.text-wrapper-30,
+.text-wrapper-31,
+.text-wrapper-32,
+.text-wrapper-33,
+.text-wrapper-34 {
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #6b5344;
+    font-size: clamp(13px, 2.5vw, 16px);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s ease;
+    line-height: 1.5;
+    display: inline-block;
+}
+
+.frame-2:hover .text-wrapper-30,
+.frame-2:hover .text-wrapper-31,
+.frame-2:hover .text-wrapper-32,
+.frame-2:hover .text-wrapper-33,
+.frame-2:hover .text-wrapper-34 {
+    color: #8b6f47;
+    transform: translateY(-1px);
+}
+
+
+/* Responsive Header - Tablet */
+
+@media (max-width: 1024px) {
+    .navbar-light {
+        padding: 0.875rem clamp(1rem, 3vw, 1.5rem);
+    }
+    .container-36 {
+        gap: 1.5rem;
+    }
+    .container-37 {
+        gap: 1.25rem;
+    }
+    .polije-logo-svg {
+        max-height: 56px;
+    }
+    .tefa-logo-svg {
+        max-height: 44px;
+    }
+    .text-wrapper-30,
+    .text-wrapper-31,
+    .text-wrapper-32,
+    .text-wrapper-33,
+    .text-wrapper-34 {
+        font-size: clamp(12px, 2vw, 14px);
+    }
+}
+
+
+/* Responsive Header - Mobile */
+
+@media (max-width: 768px) {
+    .navbar-light {
+        padding: 0.75rem clamp(1rem, 3vw, 1.5rem);
+    }
+    .container-36 {
+        gap: 1rem;
+        flex-wrap: wrap;
+    }
+    .header-left,
+    .header-right {
+        flex: 0 0 auto;
+    }
+    .container-37 {
+        gap: 1rem;
+        order: 3;
+        flex: 0 0 100%;
+        justify-content: center;
+        margin-top: 0.75rem;
+        padding-top: 0.75rem;
+        border-top: 1px solid rgba(107, 84, 62, 0.1);
+    }
+    .polije-logo-svg {
+        max-height: 48px;
+    }
+    .tefa-logo-svg {
+        max-height: 40px;
+    }
+    .text-wrapper-30,
+    .text-wrapper-31,
+    .text-wrapper-32,
+    .text-wrapper-33,
+    .text-wrapper-34 {
+        font-size: 13px;
+    }
+}
+
+@media (max-width: 480px) {
+    .navbar-light {
+        padding: 0.625rem 1rem;
+    }
+    .container-36 {
+        gap: 0.75rem;
+    }
+    .polije-logo-svg {
+        max-height: 40px;
+    }
+    .tefa-logo-svg {
+        max-height: 36px;
+    }
+    .container-37 {
+        gap: 0.75rem;
+        margin-top: 0.5rem;
+        padding-top: 0.5rem;
+    }
+    .text-wrapper-30,
+    .text-wrapper-31,
+    .text-wrapper-32,
+    .text-wrapper-33,
+    .text-wrapper-34 {
+        font-size: 12px;
+    }
+}
+
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.footer {
+    background-color: #f5e6d3;
+    padding: 2rem clamp(1.5rem, 4vw, 2rem);
+    width: 100vw;
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+}
+
+@media (min-width: 768px) {
+    .footer {
+        padding: 3rem clamp(2rem, 5vw, 3rem);
+    }
+}
+
+.container-24 {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0;
+}
+
+@media (min-width: 768px) {
+    .container-24 {
+        padding: 0;
+    }
+}
+
+.container-25 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .container-25 {
+        grid-template-columns: 1.2fr 1.8fr;
+        gap: 2rem;
+        align-items: start;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-25 {
+        grid-template-columns: 1.5fr 2.5fr;
+        gap: 2.5rem;
+    }
+}
+
+.container-26 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.container-27 {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 0.25rem;
+}
+
+.tefa-logo {
+    width: 56px;
+    height: 56px;
+    background-image: url('../assets/images/tefa_logo.webp');
+    border-radius: 50%;
+    background-size: cover;
+    background-position: 50% 50%;
+    flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+    .tefa-logo {
+        width: 64px;
+        height: 64px;
+    }
+}
+
+.tefa-bakery-coffee {
+    font-family: "Poppins-Bold", Helvetica;
+    font-weight: 700;
+    font-size: clamp(18px, 3vw, 28px);
+    color: #6b4423;
+    line-height: 1.2;
+}
+
+.crafting-artisan {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(13px, 2vw, 16px);
+    line-height: 1.6;
+    margin-top: 0.25rem;
+}
+
+.container-28 {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
+}
+
+@media (min-width: 768px) {
+    .container-28 {
+        gap: 2rem;
+    }
+}
+
+@media (min-width: 1024px) {
+    .container-28 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+    }
+}
+
+.container-29,
+.container-30,
+.container-32 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.text-wrapper-24,
+.text-wrapper-26 {
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-weight: 600;
+    color: #6b4423;
+    font-size: clamp(15px, 2.5vw, 18px);
+    margin-bottom: 0.25rem;
+}
+
+.list {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.text-wrapper-25 {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(12px, 2vw, 16px);
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.text-wrapper-25:hover {
+    color: #6b4423;
+}
+
+.container-31 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.div-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+}
+
+.text-wrapper-27,
+.text-wrapper-28,
+.sabtu-minggu,
+.p {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(12px, 2vw, 16px);
+}
+
+.container-33 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+
+/* Social Media Icons */
+
+.social-media-icons {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    flex-wrap: wrap;
+}
+
+.social-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background-color: #ffffff;
+    color: #6b5344;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
+}
+
+.social-icon[aria-label="Instagram"]:hover {
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+}
+
+.social-icon[aria-label="Instagram"]:hover i {
+    color: #ffffff;
+}
+
+.social-icon[aria-label="WhatsApp"]:hover {
+    background-color: #25d366;
+}
+
+.social-icon[aria-label="WhatsApp"]:hover i {
+    color: #ffffff;
+}
+
+.social-icon[aria-label="Facebook"]:hover {
+    background-color: #1877f2;
+}
+
+.social-icon[aria-label="Facebook"]:hover i {
+    color: #ffffff;
+}
+
+@media (max-width: 480px) {
+    .social-icon {
+        width: 36px;
+        height: 36px;
+        font-size: 18px;
+    }
+}
+
+.container-35 {
+    border-top: 1px solid rgba(220, 197, 168, 0.5);
+    padding-top: 1rem;
+    margin-top: 0.5rem;
+    text-align: center;
+}
+
+.text-wrapper-29 {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(12px, 1.5vw, 14px);
+    margin: 0;
+}
