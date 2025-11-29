@@ -1,5 +1,5 @@
 /* ============================================
-   PRODUCT PAGE (PRODUK.HTML) STYLING
+   HALAMAN PRODUK (PRODUK.HTML) STYLING
    ============================================ */
 
 .our-product {
@@ -12,12 +12,12 @@
 
 
 /* ============================================
-   HEADER (uses globals.css)
+   HEADER (menggunakan globals.css)
    ============================================ */
 
 
 /* ============================================
-   MAIN CONTENT SECTION
+   BAGIAN KONTEN UTAMA
    ============================================ */
 
 .our-product .section {
@@ -76,7 +76,7 @@
 
 
 /* ============================================
-   FILTER BUTTONS
+   TOMBOL FILTER
    ============================================ */
 
 .our-product .container-4 {
@@ -110,12 +110,8 @@
     white-space: nowrap;
 }
 
-.our-product .button {
-    background-color: #8b6f47;
-    color: #ffffff;
-    box-shadow: 0px 4px 6px -4px #0000001a, 0px 10px 15px -3px #0000001a;
-}
-
+/* Semua tombol filter memiliki styling default yang sama (tidak aktif) */
+.our-product .button,
 .our-product .button-2,
 .our-product .button-3,
 .our-product .cakes-desserts-wrapper,
@@ -125,11 +121,34 @@
     border: 1.78px solid #e8d4b8;
 }
 
-.our-product .button:hover,
-.our-product .button-2:hover,
-.our-product .button-3:hover,
-.our-product .cakes-desserts-wrapper:hover,
-.our-product .coffee-drinks-wrapper:hover {
+/* Efek hover dihapus dari sini karena sudah ditangani di bagian btn-filter */
+
+/* Status Aktif dan Hover untuk Tombol Filter */
+.our-product .btn-filter {
+    transition: all 0.3s ease;
+}
+
+/* Status aktif - tombol yang sedang dipilih */
+.our-product .btn-filter.active {
+    background-color: #8b6f47 !important;
+    color: #ffffff !important;
+    border: 1.78px solid #8b6f47 !important;
+    box-shadow: 0px 4px 6px -4px #0000001a, 0px 10px 15px -3px #0000001a;
+}
+
+/* Efek hover untuk tombol filter yang tidak aktif */
+.our-product .btn-filter:not(.active):hover {
+    background-color: #f5e6d3 !important;
+    border-color: #8b6f47 !important;
+    color: #8b6f47 !important;
+    transform: translateY(-2px);
+    box-shadow: 0px 6px 8px -4px #0000001a, 0px 12px 17px -3px #0000001a;
+}
+
+/* Efek hover untuk tombol filter yang aktif */
+.our-product .btn-filter.active:hover {
+    background-color: #6b5a3a !important;
+    border-color: #6b5a3a !important;
     transform: translateY(-2px);
     box-shadow: 0px 6px 8px -4px #0000001a, 0px 12px 17px -3px #0000001a;
 }
@@ -146,7 +165,7 @@
 
 
 /* ============================================
-   PRODUCT CARDS GRID
+   GRID KARTU PRODUK
    ============================================ */
 
 .our-product .container-5 {
@@ -178,7 +197,7 @@
 
 
 /* ============================================
-   PRODUCT CARD STYLING
+   STYLING KARTU PRODUK
    ============================================ */
 
 .our-product .card,
@@ -428,7 +447,7 @@
 
 
 /* ============================================
-   PAGINATION
+   PAGINASI
    ============================================ */
 
 .our-product .container-18 {
@@ -496,15 +515,23 @@
 }
 
 .our-product .button-5 {
-    background-color: #8b6f47;
-    color: #ffffff;
+    background-color: #8b6f47 !important;
+    color: #ffffff !important;
     box-shadow: 0px 4px 6px -4px #0000001a, 0px 10px 15px -3px #0000001a;
 }
 
+.our-product .button-5 * {
+    color: #ffffff !important;
+}
+
 .our-product .button-6 {
-    background-color: #ffffff;
-    color: #8b6f47;
+    background-color: #ffffff !important;
+    color: #8b6f47 !important;
     border: 1.78px solid #e8d4b8;
+}
+
+.our-product .button-6 * {
+    color: #8b6f47 !important;
 }
 
 .our-product .button-5:hover,
@@ -512,9 +539,29 @@
     transform: translateY(-2px);
 }
 
-.our-product .text-wrapper-29,
-.our-product .text-wrapper-30 {
+/* Styling teks tombol paginasi - hanya untuk pagination, tidak mempengaruhi header */
+.our-product .container-19 .text-wrapper-29,
+.our-product .container-19 .text-wrapper-30,
+.our-product .container-19 .text-wrapper-pagination {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
     margin: 0;
+    display: inline-block;
+    color: inherit;
+}
+
+/* Teks untuk tombol paginasi aktif (background coklat) */
+.our-product .container-19 .button-5 .text-wrapper-29,
+.our-product .container-19 .button-5.active .text-wrapper-29 {
+    color: #ffffff !important;
+}
+
+/* Teks untuk tombol paginasi tidak aktif (background putih) */
+.our-product .container-19 .button-6 .text-wrapper-30,
+.our-product .container-19 .button-6 .text-wrapper-pagination {
+    color: #8b6f47 !important;
 }
 
 .our-product .paragraph-4 {
@@ -536,7 +583,7 @@
 
 
 /* ============================================
-   CTA SECTION
+   BAGIAN CTA (CALL TO ACTION)
    ============================================ */
 
 .our-product .container-wrapper {
@@ -627,5 +674,5 @@
 
 
 /* ============================================
-   FOOTER (uses globals.css)
+   FOOTER (menggunakan globals.css)
    ============================================ */
