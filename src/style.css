@@ -83,8 +83,8 @@ a.btn-primary {
 .btn.btn-primary:focus,
 a.btn-primary:hover,
 a.btn-primary:focus {
-    background-color: #6b5a3a !important;
-    border-color: #6b5a3a !important;
+    background-color: #6b4423 !important;
+    border-color: #6b4423 !important;
     color: #ffffff !important;
     transform: translateY(-2px) !important;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15) !important;
@@ -95,7 +95,6 @@ a.btn-primary:focus {
 a.btn-outline-primary {
     color: #8b6f47 !important;
     border-color: #8b6f47 !important;
-    background-color: transparent !important;
     font-family: "Poppins-Regular", Helvetica !important;
     font-size: 15px !important;
     padding: 0.625rem 1.5rem !important;
@@ -105,11 +104,17 @@ a.btn-outline-primary {
     transition: all 0.3s ease !important;
 }
 
-.btn-outline-primary:hover,
+.btn-outline-primary:hover{
+    color: #ffffff;
+}
 .btn-outline-primary:focus,
-.btn.btn-outline-primary:hover,
+.btn.btn-outline-primary:hover{
+    background-color:#6b4423!important;
+}
 .btn.btn-outline-primary:focus,
-a.btn-outline-primary:hover,
+a.btn-outline-primary:hover {
+   color: #FFFFFF !important;
+}
 a.btn-outline-primary:focus {
     background-color: #faf7f2 !important;
     border-color: #8b6f47 !important;
@@ -117,6 +122,7 @@ a.btn-outline-primary:focus {
     transform: translateY(-2px) !important;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15) !important;
 }
+
 
 .container-10 {
     display: grid;
@@ -1235,5 +1241,381 @@ a.btn-outline-primary:focus {
 @media (max-width: 768px) {
     .testimonial-card {
         min-height: auto;
+    }
+}
+
+/* ============================================
+   ENHANCED ANIMATIONS FOR STYLE.CSS
+   ============================================ */
+
+/* Smooth scroll behavior */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Hero Section Enhanced Animations */
+#beranda .tefa-bakery-cofee {
+    animation: slideInLeft 0.8s ease-out;
+    transform-origin: left center;
+}
+
+#beranda .enjoy-artisan-breads {
+    animation: slideInLeft 0.8s ease-out 0.2s both;
+}
+
+#beranda .container-8 {
+    animation: fadeInUp 0.8s ease-out 0.4s both;
+}
+
+#beranda .hero-img {
+    animation: slideInRight 0.8s ease-out 0.2s both;
+    transition: transform 0.3s ease-out;
+}
+
+/* About Section Stats Animation */
+.text-wrapper-2 {
+    display: inline-block;
+    animation: fadeInUp 0.6s ease-out;
+    transition: color 0.3s ease;
+}
+
+.container-4:hover .text-wrapper-2 {
+    color: #c68a44;
+
+}
+
+.about .text-wrapper {
+    animation: slideInLeft 0.8s ease-out;
+}
+
+.about .since-we-ve {
+    animation: slideInLeft 0.8s ease-out 0.1s both;
+}
+
+.about .image-with-fallback-wrapper {
+    animation: slideInRight 0.8s ease-out;
+}
+
+.about .container-3 {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.container-4 {
+    animation: scaleIn 0.6s ease-out;
+}
+
+.container-4:nth-child(1) { animation-delay: 0.3s; }
+.container-4:nth-child(2) { animation-delay: 0.4s; }
+.container-4:nth-child(3) { animation-delay: 0.5s; }
+
+/* Featured Products Section Animations */
+.featured-products .heading,
+.featured-products .discover-our {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.carousel-item {
+    animation: scaleIn 0.6s ease-out;
+}
+
+.carousel-item:nth-child(1) { animation-delay: 0.1s; }
+.carousel-item:nth-child(2) { animation-delay: 0.2s; }
+.carousel-item:nth-child(3) { animation-delay: 0.3s; }
+
+/* Product Card Enhanced Hover Effect */
+.card {
+    overflow: hidden;
+    position: relative;
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.3) 0%, transparent 70%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.card:hover::before {
+    opacity: 1;
+}
+
+.card:hover {
+    transform: translateY(-12px);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
+}
+
+/* Testimonial Section Animations */
+.testimonials-header h2 {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.testimonials-header p {
+    animation: fadeInUp 0.8s ease-out 0.1s both;
+}
+
+.testimonial-card {
+    animation: slideInUp 0.8s ease-out;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.testimonial-card:nth-child(1) { animation-delay: 0.1s; }
+.testimonial-card:nth-child(2) { animation-delay: 0.2s; }
+.testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+
+.testimonial-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(107, 68, 35, 0.2);
+}
+
+.testimonial-card .stars {
+    animation: pulse 2s ease-in-out infinite;
+}
+
+/* Link hover animations */
+a {
+    transition: color 0.3s ease;
+}
+
+/* Heading animations with underline */
+.featured-products .heading {
+    position: relative;
+}
+
+.testimonials-header h2 {
+    position: relative;
+    padding-bottom: 15px;
+}
+
+.featured-products .heading::after,
+.testimonials-header h2::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #8b6f47 0%, #c68a44 50%, #8b6f47 100%);
+    border-radius: 2px;
+    animation: slideInDown 0.8s ease-out;
+}
+
+/* Button animations */
+.btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.btn:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Navigation link animation improvement */
+.frame-2 {
+    position: relative;
+}
+
+/* Carousel button animations */
+.carousel-wrapper .btn,
+.carousel-wrapper .btn-outline-secondary {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Image parallax effect on scroll */
+.hero-img,
+.about-img {
+    transition: transform 0.3s ease-out;
+}
+
+/* Footer animations */
+.footer {
+    animation: fadeInUp 0.8s ease-out;
+}
+
+/* Carousel buttons with enhanced animation */
+.carousel-wrapper .btn,
+.carousel-wrapper .btn-outline-secondary {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.carousel-wrapper .btn::after,
+.carousel-wrapper .btn-outline-secondary::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.4s, height 0.4s;
+}
+
+.carousel-wrapper .btn:active::after,
+.carousel-wrapper .btn-outline-secondary:active::after {
+    width: 100px;
+    height: 100px;
+}
+
+/* Enhanced card shine effect */
+.card::after {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent 30%, rgba(255, 255, 255, 0.2) 50%, transparent 70%);
+    transform: rotate(45deg);
+    animation: none;
+    pointer-events: none;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.card:hover::after {
+    animation: shine 0.6s ease-in 1;
+    opacity: 1;
+}
+
+@keyframes shine {
+    0% {
+        left: -100%;
+    }
+    100% {
+        left: 100%;
+    }
+}
+
+/* Product category hover effect */
+.heading-2 {
+    position: relative;
+}
+
+.heading-2::after {
+    display: none; /* underline removed for product titles */
+}
+
+/* Add to Cart button animation */
+.btn-sm {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-sm:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(139, 111, 71, 0.25) !important;
+}
+
+/* Testimonial quote animation */
+.testimonial-card .quote {
+    font-style: italic;
+}
+
+/* Star rating - no hover animation */
+.stars i {
+    display: inline-block;
+}
+
+/* Heading accent animation */
+@keyframes textGlow {
+    0%, 100% {
+        text-shadow: 0 0 10px rgba(198, 138, 68, 0.3);
+    }
+    50% {
+        text-shadow: 0 0 20px rgba(198, 138, 68, 0.6);
+    }
+}
+
+/* Paragraph animation */
+.paragraph {
+    line-height: 1.6;
+}
+
+/* Responsive animation adjustments */
+@media (max-width: 992px) {
+    .card:hover {
+        transform: translateY(-8px);
+        box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+    }
+    
+    .testimonial-card:hover {
+        transform: translateY(-6px);
+    }
+}
+
+@media (max-width: 768px) {
+    .card:hover {
+        transform: translateY(-6px);
+        box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    }
+    
+    .testimonial-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 12px 24px rgba(107, 68, 35, 0.15);
+    }
+    
+    .container-4:hover {
+        transform: scale(1.02);
+    }
+    
+    /* Disable complex animations on mobile for better performance */
+    .card::before,
+    .card::after {
+        display: none;
+    }
+    
+    #beranda .container-11:hover {
+        animation: none;
+    }
+}
+
+@media (max-width: 480px) {
+    .card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+    }
+    
+    .testimonial-card:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 16px rgba(107, 68, 35, 0.12);
+    }
+    
+    .container-4:hover {
+        transform: scale(1.01);
+    }
+    
+    /* Disable animations that consume battery on small devices */
+    .container-4 {
+        animation: none;
     }
 }

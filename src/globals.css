@@ -183,7 +183,7 @@ a:focus-visible {
     border-bottom: 2px solid transparent;
     padding: 0.5rem 0;
     padding-bottom: 0.25rem;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     display: inline-block;
     position: relative;
 }
@@ -196,7 +196,7 @@ a:focus-visible {
     width: 0;
     height: 2px;
     background-color: #8b6f47;
-    transition: width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .frame-2:hover {
@@ -206,25 +206,17 @@ a:focus-visible {
 .frame-2:hover::after {
     width: 100%;
 }
-
-/* Styling untuk menu navigasi header - tidak boleh diubah */
-.navbar-light .text-wrapper-30,
-.navbar-light .text-wrapper-31,
-.navbar-light .text-wrapper-32,
-.navbar-light .text-wrapper-33,
-.navbar-light .text-wrapper-34 {
-    font-family: "Poppins-Medium", Helvetica !important;
-    font-weight: 500 !important;
-    color: #6b5344 !important;
-    font-size: clamp(13px, 2.5vw, 16px) !important;
-    white-space: nowrap !important;
-    cursor: pointer !important;
-    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s ease !important;
-    line-height: 1.5 !important;
-    display: inline-block !important;
+.text-wrapper-331{
+    font-family: "Poppins-Medium", Helvetica;
+    font-weight: 500;
+    color: #ffffff;
+    font-size: clamp(13px, 2.5vw, 16px);
+    white-space: nowrap;
+    cursor: pointer;
+    transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1), transform 0.2s ease;
+    line-height: 1.5;
+    display: inline-block;
 }
-
-/* Fallback untuk text-wrapper di luar navbar (jika ada) */
 .text-wrapper-30,
 .text-wrapper-31,
 .text-wrapper-32,
@@ -240,13 +232,12 @@ a:focus-visible {
     line-height: 1.5;
     display: inline-block;
 }
-
+.frame-2:hover .text-wrapper-33,
 .frame-2:hover .text-wrapper-30,
 .frame-2:hover .text-wrapper-31,
 .frame-2:hover .text-wrapper-32,
-.frame-2:hover .text-wrapper-33,
 .frame-2:hover .text-wrapper-34 {
-    color: #8b6f47;
+    color: #6b4423;
     transform: translateY(-1px);
 }
 
@@ -262,6 +253,19 @@ a:focus-visible {
     }
     .container-37 {
         gap: 1.25rem;
+    }
+    .frame-2 {
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .frame-2::after {
+        transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .text-wrapper-30,
+    .text-wrapper-31,
+    .text-wrapper-32,
+    .text-wrapper-33,
+    .text-wrapper-34 {
+        transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s ease;
     }
     .polije-logo-svg {
         max-height: 56px;
@@ -302,17 +306,18 @@ a:focus-visible {
         padding-top: 0.75rem;
         border-top: 1px solid rgba(107, 84, 62, 0.1);
     }
-    .polije-logo-svg {
-        max-height: 48px;
+    .frame-2 {
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    .tefa-logo-svg {
-        max-height: 40px;
+    .frame-2::after {
+        transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
     .text-wrapper-30,
     .text-wrapper-31,
     .text-wrapper-32,
     .text-wrapper-33,
     .text-wrapper-34 {
+        transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s ease;
         font-size: 13px;
     }
 }
@@ -323,6 +328,19 @@ a:focus-visible {
     }
     .container-36 {
         gap: 0.75rem;
+    }
+    .frame-2 {
+        transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .frame-2::after {
+        transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+    }
+    .text-wrapper-30,
+    .text-wrapper-31,
+    .text-wrapper-32,
+    .text-wrapper-33,
+    .text-wrapper-34 {
+        transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s ease;
     }
     .polije-logo-svg {
         max-height: 40px;
@@ -500,11 +518,31 @@ a:focus-visible {
     color: #8b6f47;
     font-size: clamp(12px, 2vw, 16px);
     text-decoration: none;
-    transition: color 0.3s ease;
 }
 
-.text-wrapper-25:hover {
+/* Footer quick links hover effect */
+.container-29 .list a.text-wrapper-25 {
+    position: relative;
+    display: inline-block;
+    transition: color 0.25s ease, transform 0.15s ease;
+}
+.container-29 .list a.text-wrapper-25::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #8b6f47 0%, #c68a44 50%, #8b6f47 100%);
+    transition: width 0.25s ease;
+    border-radius: 2px;
+}
+.container-29 .list a.text-wrapper-25:hover {
     color: #6b4423;
+    transform: translateY(-2px);
+}
+.container-29 .list a.text-wrapper-25:hover::after {
+    width: 100%;
 }
 
 .container-31 {
@@ -610,4 +648,190 @@ a:focus-visible {
     color: #8b6f47;
     font-size: clamp(12px, 1.5vw, 14px);
     margin: 0;
+}
+
+/* ============================================
+   ANIMATIONS & TRANSITIONS
+   ============================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-8px);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Apply animations to header */
+.navbar-light {
+    /* Animation removed - no fade in for navbar */
+}
+
+.container-37 li {
+    /* Animation removed - no fade in for nav items */
+}
+
+/* Social icon animation */
+.social-icon {
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.social-icon:hover {
+    transform: translateY(-4px) scale(1.1);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Ripple effect CSS */
+.btn .ripple {
+    position: absolute;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.6);
+    transform: scale(0);
+    animation: ripple-animation 0.6s ease-out;
+    pointer-events: none;
+}
+
+@keyframes ripple-animation {
+    to {
+        transform: scale(4);
+        opacity: 0;
+    }
+}
+
+/* Loading animation */
+@keyframes spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+/* Gradient shift animation */
+@keyframes gradient-shift {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+/* Glow animation */
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 0 5px rgba(139, 111, 71, 0.3);
+    }
+    50% {
+        box-shadow: 0 0 20px rgba(139, 111, 71, 0.6);
+    }
+}
+
+/* Hover scale animation */
+@keyframes scaleUp {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.05);
+    }
+}
+
+/* Text shimmer animation */
+@keyframes shimmer {
+    0% {
+        background-position: -1200px 0;
+    }
+    100% {
+        background-position: 1200px 0;
+    }
 }

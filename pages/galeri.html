@@ -76,16 +76,16 @@
 
             <section class="gallery-section">
                 <div class="gallery-grid">
-                    <article class="gallery-item">
+                    <article class="gallery-item" data-id="1">
                         <div class="gallery-image-wrapper">
-                            <img src="../assets/images/dummy-image-square.webp" alt="Bakery Interior" class="gallery-image" />
+                            <img src="../assets/images/dummy-image-square.webp" alt="Kunjungan" class="gallery-image" />
                             <div class="gallery-overlay">
-                                <h3 class="gallery-caption">Bakery Interior</h3>
+                                <h3 class="gallery-caption">Kunjungan</h3>
                             </div>
                         </div>
                     </article>
 
-                    <article class="gallery-item">
+                    <article class="gallery-item" data-id="2">
                         <div class="gallery-image-wrapper">
                             <img src="../assets/images/dummy-image-square.webp" alt="Artisan Bread Making" class="gallery-image" />
                             <div class="gallery-overlay">
@@ -94,7 +94,7 @@
                         </div>
                     </article>
 
-                    <article class="gallery-item gallery-item-tall">
+                    <article class="gallery-item gallery-item-tall" data-id="3">
                         <div class="gallery-image-wrapper">
                             <img src="../assets/images/dummy-image-square.webp" alt="Coffee Barista" class="gallery-image" />
                             <div class="gallery-overlay">
@@ -103,7 +103,7 @@
                         </div>
                     </article>
 
-                    <article class="gallery-item">
+                    <article class="gallery-item" data-id="4">
                         <div class="gallery-image-wrapper">
                             <img src="../assets/images/dummy-image-square.webp" alt="Cafe Exterior" class="gallery-image" />
                             <div class="gallery-overlay">
@@ -112,7 +112,7 @@
                         </div>
                     </article>
 
-                    <article class="gallery-item gallery-item-tall">
+                    <article class="gallery-item gallery-item-tall" data-id="5">
                         <div class="gallery-image-wrapper">
                             <img src="../assets/images/dummy-image-square.webp" alt="Pastry Display" class="gallery-image" />
                             <div class="gallery-overlay">
@@ -121,7 +121,7 @@
                         </div>
                     </article>
 
-                    <article class="gallery-item">
+                    <article class="gallery-item" data-id="6">
                         <div class="gallery-image-wrapper">
                             <img src="../assets/images/dummy-image-square.webp" alt="Dessert Plating" class="gallery-image" />
                             <div class="gallery-overlay">
@@ -132,6 +132,45 @@
                 </div>
             </section>
         </main>
+
+        <!-- Popup Detail Gambar -->
+        <div class="gallery-popup" id="galleryPopup">
+            <div class="popup-content">
+                <button class="btn-close" aria-label="close" id="popupClose">&times;</button>
+                <div class="popup-body">
+                    <div class="popup-image-container">
+                        <img src="" alt="" class="popup-image" id="popupImage" />
+                    </div>
+                    <div class="popup-details">
+                      <div class="contain-ket"><div class="keterangan-singkat">Detail Gambar</div></div>
+                        <h3 class="popup-title" id="popupTitle">Kunjungan</h3>
+                        <p class="popup-description" id="popupDescription">Gambar kegiatan kunjungan siswa smk negeri jember ke Tefa Coffe and Bakery</p>
+                        
+                        <div class="popup-meta">
+                            <div class="meta-item">
+                              <i><div class="meta-label">Date</div></i>
+                                <div class="meta-value" id="popupDate">March 2024</div>
+                            </div>
+                            <div class="meta-item">
+                                <div class="meta-label">Location</div>
+                                <div class="meta-value" id="popupLocation">Tefa coffe and bakery</div>
+                            </div>
+                        </div>
+                        
+                        <div class="popup-interactions">
+                            <div class="popup-interaction1" id="popupLike">
+                                <i class="bi bi-heart"></i>
+                                <span>Like</span>
+                            </div>
+                            <div class="popup-interaction2" id="popupShare">
+                                <i class="bi bi-share"></i>
+                                <span>Share</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
         <footer class="footer" id="kontak">
             <div class="container-24">
@@ -210,6 +249,9 @@
             </div>
         </footer>
     </div>
+    <script>
+    
+    </script>
 </body>
-
+<script src="../script/galeri.js"></script>
 </html>

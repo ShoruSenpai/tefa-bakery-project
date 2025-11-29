@@ -317,3 +317,178 @@
     margin: 0;
     font-style: normal;
 }
+
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInLeft {
+    from {
+        opacity: 0;
+        transform: translateX(-50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes slideInRight {
+    from {
+        opacity: 0;
+        transform: translateX(50px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+@keyframes scaleIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+@keyframes float {
+    0%, 100% {
+        transform: translateY(0px);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes glow {
+    0%, 100% {
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 10px 15px rgba(0, 0, 0, 0.1);
+    }
+    50% {
+        box-shadow: 0 8px 12px rgba(107, 68, 35, 0.15), 0 20px 30px rgba(107, 68, 35, 0.2);
+    }
+}
+
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.8;
+    }
+}
+
+/* Apply animations to elements */
+.about-us .div-wrapper {
+    animation: fadeInDown 0.8s ease-out;
+}
+
+.about-us .from-humble-wrapper {
+    animation: fadeInUp 0.8s ease-out 0.2s both;
+}
+
+.about-us .sejarah-wrapper {
+    animation: fadeInUp 0.8s ease-out 0.3s both;
+}
+
+.about-us .sejarah-content {
+    animation: slideInLeft 0.8s ease-out 0.4s both;
+}
+
+.about-us .image-with-fallback-wrapper {
+    animation: slideInRight 0.8s ease-out 0.5s both;
+}
+
+.about-us .visi-misi {
+    animation: fadeInUp 0.8s ease-out 0.6s both;
+}
+
+.about-us .visi-misi-2 {
+    animation: fadeInDown 0.8s ease-out 0.7s both;
+}
+
+.about-us .card,
+.about-us .card-2 {
+    animation: scaleIn 0.6s ease-out both;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.about-us .card {
+    animation-delay: 0.8s;
+}
+
+.about-us .card-2 {
+    animation-delay: 0.95s;
+}
+
+/* Hover effect untuk visi & misi cards */
+.about-us .card:hover,
+.about-us .card-2:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 20px rgba(107, 68, 35, 0.2), 0 24px 32px rgba(107, 68, 35, 0.15);
+}
+
+.about-us .icon-wrapper-visi:hover,
+.about-us .icon-wrapper-misi:hover {
+    background: linear-gradient(135deg, rgba(245, 230, 211, 1) 0%, rgba(232, 212, 184, 1) 100%);
+    animation: float 0.6s ease-in-out infinite;
+}
+
+/* Quote section animation */
+.about-us .section {
+    animation: fadeInUp 0.8s ease-out 1.1s both;
+}
+
+.about-us .container-3 {
+    animation: scaleIn 0.6s ease-out 1.2s both;
+}
+
+.about-us .we-believe-that {
+    animation: fadeInUp 0.8s ease-out 1.3s both;
+}
+
+.about-us .text-wrapper-5 {
+    animation: fadeInDown 0.8s ease-out 0.9s both;
+}
+
+/* Smooth transition untuk paragraph */
+.about-us .our-bakery-was {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.about-us .our-bakery-was:hover {
+    color: #6b4423;
+    transform: translateX(5px);
+}
+
+/* Paragraph 2 animation */
+.about-us .paragraph-2 {
+    animation: fadeInUp 0.8s ease-out 1.4s both;
+}
