@@ -95,6 +95,13 @@ main {
     font-family: "Poppins-SemiBold", Helvetica;
     color: #6b4423;
 }
+.judul {
+    margin: 0;
+    font-family: "Poppins-SemiBold", Helvetica;
+    color: #6b4423;
+    text-align: center;
+}
+
 
 .info-card p {
     margin: 0;
@@ -133,6 +140,23 @@ main {
     align-items: center;
     justify-content: center;
     font-size: 1.5rem;
+    flex-shrink: 0;
+}
+
+.map-header {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.map-header .icon-wrapper {
+    flex-shrink: 0;
+}
+
+.map-header .judul {
+    text-align: left;
+    margin: 0;
 }
 
 .map-card {
@@ -149,6 +173,83 @@ main {
     justify-content: center;
     color: #6b4423;
     font-family: "Poppins-SemiBold", Helvetica;
+}
+
+/* Responsive map embed wrapper - soft modern design */
+.map-embed-wrapper {
+    margin-top: 1rem;
+    border-radius: 16px;
+    max-width: 100%;
+    overflow: hidden;
+}
+.map-responsive {
+    position: relative;
+    width: 100%;
+    padding-bottom: 42%; /* very compact for soft modern look */
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(107, 68, 35, 0.08), 0 2px 4px rgba(0,0,0,0.03);
+    background: #f9f7f5;
+    border: 1px solid rgba(198, 138, 68, 0.08);
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+.map-responsive:hover {
+    box-shadow: 0 8px 16px rgba(107, 68, 35, 0.12), 0 4px 8px rgba(0,0,0,0.05);
+    transform: translateY(-1px);
+}
+.map-responsive iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+    border-radius: 12px;
+}
+.map-actions {
+    margin-top: 0.75rem;
+    display: flex;
+    gap: 0.6rem;
+    align-items: center;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+.map-actions .btn {
+    padding: 0.5rem 1rem;
+    font-size: 0.8rem;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+.map-actions .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(198, 138, 68, 0.15);
+}
+
+/* Reduce map/card vertical footprint on medium screens */
+@media (max-width: 1024px) {
+    .map-responsive { 
+        padding-bottom: 48%;
+        box-shadow: 0 3px 10px rgba(107, 68, 35, 0.06), 0 1px 3px rgba(0,0,0,0.02);
+    }
+    .map-actions { justify-content: flex-start; }
+    .contact-section { padding: 3rem clamp(1rem, 3vw, 2rem); gap: 1.5rem; }
+    .info-card { min-height: 140px; padding: 1.25rem; }
+}
+
+/* On small screens stack the map action buttons and make map slightly taller for touch */
+@media (max-width: 600px) {
+    .map-responsive { padding-bottom: 54%; }
+    .map-actions { 
+        width: 100%;
+        gap: 0.4rem;
+        justify-content: space-between;
+    }
+    .map-actions .btn { 
+        flex: 1;
+        padding: 0.45rem 0.5rem;
+        font-size: 0.75rem;
+    }
+    .contact-section { padding: 2rem 1rem; }
 }
 
 .contact-form-card {
@@ -374,19 +475,21 @@ main {
 .info-card:nth-child(4) { animation-delay: 0.55s; }
 .info-card:nth-child(5) { animation-delay: 0.6s; }
 
-/* Hover effects untuk info cards */
-.info-card:hover {
-    transform: translateY(-8px);
-    animation: glow 0.6s ease-in-out;
+/* Hover effects for devices that support hover (desktop) */
+@media (hover: hover) and (pointer: fine) {
+    .info-card:hover {
+        transform: translateY(-8px);
+        animation: glow 0.6s ease-in-out;
+    }
+
+    .icon-wrapper {
+        transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    }
 }
 
-.icon-wrapper {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.info-card:hover .icon-wrapper {
-    animation: float 0.6s ease-in-out infinite;
-    background: linear-gradient(135deg, #f5e6d3, #e8d4b8);
+/* Touch fallback: subtle active state without 3D/hover animations */
+.info-card:active {
+    transform: translateY(-4px);
 }
 
 /* Form card animation */
@@ -423,6 +526,18 @@ main {
 
 .contact-form-card .btn:active {
     transform: translateY(0px);
+}
+
+/* Disable ripple visuals inside contact page (ripple spans may be created globally) */
+.contact-section .btn .ripple {
+    display: none !important;
+}
+
+/* Simple pressed feedback class used in JS (no ripple) */
+.contact-form-card .btn.pressed {
+    transform: translateY(0px) scale(0.995);
+    opacity: 0.96;
+    transition: transform 0.12s ease, opacity 0.12s ease;
 }
 
 /* Eyebrow text animation */

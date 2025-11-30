@@ -313,7 +313,8 @@
             border-radius: 16px;
             max-width: 90%;
             max-height: 90%;
-            width: 900px;
+            width: 980px;
+            height: 494px;
             overflow: hidden;
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.3);
             position: relative;
@@ -358,6 +359,8 @@
         .popup-image-container {
             flex: 1;
             overflow: hidden;
+            width: 687px;
+            height: 494px;
             /* background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); */
             background-color: #faf7f2;
             display: flex;
@@ -408,7 +411,7 @@
             font-family: "Quicksand-Medium", Helvetica;
             font-weight: 700;
             color: #6b4423;
-            font-size: clamp(15px, 4vw, 30px);
+            font-size: clamp(15px, 5vw, 25px);
             line-height: 1.2;
         }
 
@@ -416,12 +419,9 @@
             font-family: "Poppins-Regular", Helvetica;
             font-weight: 400;
             color: #8b6f47;
-            font-size: clamp(14px, 2.5vw, 16px);
+            font-size: clamp(14px, 2.5vw, 12px);
             line-height: 1.5;
     }
-
-        
-
         .popup-meta {
             margin-bottom: 30px;
             background: white;
@@ -429,13 +429,28 @@
         }
 
         .meta-item {
-            margin-bottom: 15px;
-            padding: 12px 0;
+            margin-bottom: 12px;
+            padding: 8px 0;
             border-bottom: 1px solid #f0f0f0;
+            display: flex;
+            align-items: flex-start;
+            gap: 12px;
         }
 
         .meta-item:last-child {
             border-bottom: none;
+        }
+
+        .meta-icon {
+            font-size: 1.05rem;
+            color: #6b4423;
+            flex-shrink: 0;
+            margin-top: 3px;
+        }
+
+        .meta-content {
+            display: flex;
+            flex-direction: column;
         }
 
         .meta-label {
@@ -450,12 +465,15 @@
             color: #8b6f47;
             font-size: 1rem;
             font-weight: 500;
+            font-family: "Poppins-Regular", Helvetica;
+            font-weight: 400;
+            font-size: clamp(14px, 2.5vw, 12px);
+            line-height: 1.5;
         }
 
         .popup-interactions {
             display: flex;
             gap: 15px;
-            margin-top: auto;
             padding-top: 20px;
             border-top: 1px solid #e0e0e0;
         }
