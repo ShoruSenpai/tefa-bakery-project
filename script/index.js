@@ -1,5 +1,5 @@
-  // Smooth scroll and animation effects
-        document.addEventListener('DOMContentLoaded', function() {
+// Smooth scroll, animation effects, dan penyesuaian carousel produk di beranda
+document.addEventListener('DOMContentLoaded', function() {
             // Add animation to elements on scroll
             const observerOptions = {
                 threshold: 0.1,
@@ -85,17 +85,17 @@
                 card.addEventListener('mousemove', (e) => {
                     // Disable 3D effect on mobile/tablet for better performance
                     if (window.innerWidth < 768) return;
-                    
+
                     const rect = card.getBoundingClientRect();
                     const x = e.clientX - rect.left;
                     const y = e.clientY - rect.top;
-                    
+
                     const centerX = rect.width / 2;
                     const centerY = rect.height / 2;
-                    
+
                     const rotateX = (y - centerY) / 15;
                     const rotateY = (centerX - x) / 15;
-                    
+
                     card.style.transform = `perspective(1000px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateZ(5px)`;
                 });
 
@@ -104,4 +104,50 @@
                 });
             });
 
+            // ============================
+            // Featured Products Carousel: pengelompokan produk
+            // ============================
+            const featuredCarousel = document.querySelector('#featuredProductsCarousel');
+            if (featuredCarousel) {
+                const inner = featuredCarousel.querySelector('.carousel-inner');
+                if (inner) {
+                    const originalCols = Array.from(inner.querySelectorAll('.row > .col.d-flex'));
+                    if (originalCols.length > 0) {
+                        const templates = originalCols.map(col => col.cloneNode(true));
+                        let currentGroupSize = null;
+
+                        const buildSlides = (groupSize) => {
+                            inner.innerHTML = '';
+
+                            for (let i = 0; i < templates.length; i += groupSize) {
+                                const item = document.createElement('div');
+                                item.className = 'carousel-item';
+                                if (i === 0) item.classList.add('active');
+
+                                const row = document.createElement('div');
+                                // xs-sm: 2 produk per baris, lg: 3 per baris
+                                row.className = 'row row-cols-2 row-cols-lg-3 g-4 justify-content-center';
+
+                                templates.slice(i, i + groupSize).forEach(col => {
+                                    row.appendChild(col.cloneNode(true));
+                                });
+
+                                item.appendChild(row);
+                                inner.appendChild(item);
+                            }
+                        };
+
+                        const updateGrouping = () => {
+                            const width = window.innerWidth;
+                            const groupSize = width < 768 ? 2 : 3; // mobile: 2 produk/slide, desktop: 3 produk/slide
+                            if (groupSize === currentGroupSize) return;
+                            currentGroupSize = groupSize;
+                            buildSlides(groupSize);
+                        };
+
+                        // Bangun slide sekali berdasarkan lebar awal (hindari rebuild saat resize di mobile)
+                        updateGrouping();
+                    }
+                }
+            }
         });

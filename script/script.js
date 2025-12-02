@@ -16,8 +16,13 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentFilter = 'all';
 
     // Hitung jumlah produk per halaman
-    // Disesuaikan permintaan: SELALU 4 produk per halaman (semua ukuran layar)
+    // Desktop: 2 baris penuh (menyesuaikan jumlah kolom)
+    // Mobile: tetap 4 produk (2 kolom x 2 baris)
     function getProductsPerPage() {
+        const width = window.innerWidth;
+        if (width >= 1440) return 8; // 4 kolom x 2 baris
+        if (width >= 1024) return 6; // 3 kolom x 2 baris
+        // Tablet & mobile: 2 kolom x 2 baris = 4 produk
         return 4;
     }
 
@@ -200,9 +205,21 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', function() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function() {
-            currentPage = 1; // Reset ke halaman pertama saat resize
+            // Jangan reset ke halaman 1 agar tidak terasa "refresh" saat address bar mobile muncul/hilang
             showCurrentPage();
         }, 250);
+    });
+
+    // Klik kartu = klik tombol Preview (khusus mobile)
+    const isMobile = () => window.innerWidth <= 576;
+    productCards.forEach(card => {
+        card.addEventListener('click', function() {
+            if (!isMobile()) return;
+            const previewBtn = card.querySelector('.button-4');
+            if (previewBtn) {
+                previewBtn.click();
+            }
+        });
     });
 
     // Muat awal

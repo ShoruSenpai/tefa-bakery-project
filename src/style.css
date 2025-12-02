@@ -446,13 +446,15 @@ a.btn-outline-primary:focus {
 
 .featured-products .carousel-control-prev i,
 .featured-products .carousel-control-next i {
-    color: #ffffff;
+    color: #6b4423;
+    /* default: coklat, sama seperti border */
     font-size: 1.4rem;
 }
 
 .featured-products .carousel-control-prev:hover i,
 .featured-products .carousel-control-next:hover i {
     color: #ffffff;
+    /* saat hover: icon jadi putih */
 }
 
 @media (max-width: 992px) {

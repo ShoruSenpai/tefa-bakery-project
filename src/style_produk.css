@@ -187,6 +187,64 @@
     margin-bottom: 3rem;
 }
 
+
+/* Mobile: 4 produk per halaman ditata menjadi 2 kolom x 2 baris */
+
+@media (max-width: 768px) {
+    .our-product .container-5 {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 1rem;
+    }
+    /* Kartu lebih ringkas di mobile */
+    .our-product .card,
+    .our-product .card-2,
+    .our-product .card-3,
+    .our-product .card-4,
+    .our-product .card-5,
+    .our-product .card-6,
+    .our-product .card-7,
+    .our-product .card-8 {
+        border-radius: 18px;
+    }
+    .our-product .image-with-fallback-wrapper,
+    .our-product .product-page-3 {
+        height: 140px;
+    }
+    .our-product .product-page-2,
+    .our-product .product-page-4 {
+        padding: 0.9rem;
+        gap: 0.6rem;
+    }
+    .our-product .text-wrapper-14,
+    .our-product .text-wrapper-24 {
+        font-size: 14px;
+    }
+    .our-product .p,
+    .our-product .text-wrapper-19,
+    .our-product .text-wrapper-21,
+    .our-product .text-wrapper-23,
+    .our-product .text-wrapper-25,
+    .our-product .text-wrapper-28 {
+        font-size: 12px;
+    }
+    .our-product .text-wrapper-26,
+    .our-product .text-wrapper-15,
+    .our-product .text-wrapper-20 {
+        font-size: 16px;
+    }
+    .our-product .container-8,
+    .our-product .container-11,
+    .our-product .container-13,
+    .our-product .container-15,
+    .our-product .container-16 {
+        gap: 0.5rem;
+    }
+    /* Sembunyikan tombol Preview di mobile - interaksi via klik kartu */
+    .our-product .button-4 {
+        display: none !important;
+    }
+}
+
 @media (min-width: 768px) {
     .our-product .container-5 {
         grid-template-columns: repeat(2, 1fr);
@@ -223,6 +281,7 @@
     flex-direction: column;
     background-color: #ffffff;
     border-radius: 24px;
+    border: 1px solid #ead9c3; /* garis halus di sekeliling semua kartu */
     overflow: hidden;
     box-shadow: 0px 4px 6px -4px #0000001a, 0px 10px 15px -3px #0000001a;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -262,7 +321,7 @@
     background-position: center;
     background-repeat: no-repeat;
     transition: transform 0.3s ease;
-     transform: scale(1.05);
+    transform: scale(1.05);
 }
 
 .our-product .card:hover .image-with-fallback,
@@ -565,7 +624,9 @@
     color: inherit;
 }
 
+
 /* Ellipsis ("...") untuk pagination */
+
 .our-product .pagination-dots {
     display: flex;
     align-items: center;
@@ -611,12 +672,13 @@
     margin: 0;
 }
 
+
 /* Penyesuaian tampilan pagination di mobile */
+
 @media (max-width: 576px) {
     .our-product .container-18 {
         gap: 0.25rem;
     }
-
     .our-product .icon-wrapper,
     .our-product .button-7,
     .our-product .button-5,
@@ -624,7 +686,6 @@
         width: 40px;
         height: 40px;
     }
-
     .our-product .button-5,
     .our-product .button-6,
     .our-product .pagination-dots {
@@ -934,9 +995,6 @@
 .our-product .btn-filter:active {
     transform: translateY(1px) scale(0.995);
 }
-
-
-
 
 
 /* Respect user preference for reduced motion */
