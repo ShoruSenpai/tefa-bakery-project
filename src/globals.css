@@ -632,9 +632,27 @@ a:focus-visible {
     transition: color 0.25s ease, transform 0.15s ease;
 }
 
-.text-wrapper-25:hover {
+.container-29 .list li:hover::before {
     color: #6b4423;
-    font-weight: 500;
+    transform: translateX(3px) scale(1.1);
+}
+
+.container-29 .list a.text-wrapper-25 {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(12px, 2vw, 16px);
+    text-decoration: none;
+    display: block;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 2px 0;
+    position: relative;
+}
+
+.container-29 .list a.text-wrapper-25:hover {
+    color: #6b4423 !important;
+    font-weight:500 !important;
+    transform: translateX(5px);
 }
 
 .container-31 {
@@ -644,9 +662,11 @@ a:focus-visible {
 }
 
 .div-2 {
-  display: flex;
-  flex-direction: column;
-  gap: 0.25rem;
+    display: grid;
+    grid-template-columns: 1fr auto;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.5rem 0;
 }
 
 .text-wrapper-27,
