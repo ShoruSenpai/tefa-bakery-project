@@ -3,44 +3,44 @@
             1: {
                 title: "Kunjungan",
                 image: "../assets/asset tefa/IMG-20251201-WA0012.jpg",
-                description: "Gambar kegiatan kunjungan siswa smk negeri jember ke Tefa Coffe and Bakery",
-                date: "March 2024",
-                location: "Tefa coffe and bakery"
+                description: "Kunjungan dari Politeknik Darussalam Blokagung Banyuwangi ke Tefa Bakery & Coffee",
+                date: "16 Oktober 2025",
+                location: "Tefa Bakery & Coffee"
             },
             2: {
-                title: "Artisan Bread Making",
+                title: "Kunjungan Dinas Peternakan",
                 image: "../assets/asset tefa/IMG-20251201-WA0016.jpg",
-                description: "Proses pembuatan roti artisan oleh siswa TEFA Bakery",
-                date: "April 2024",
-                location: "Tefa coffe and bakery"
+                description: "Kunjungan dari Dinas Peternakan Provinsi Jawa Timur, Melihat Pabrik dan Kegiatan Produksi Tefa Bakery & Coffee",
+                date: "25 September 2025",
+                location: "Tefa Bakery & Coffee"
             },
             3: {
-                title: "Coffee Barista",
+                title: "Observasi Mahasiswa Jurusan TI",
                 image: "../assets/asset tefa/IMG_20250902_150333 - (1).jpg",
-                description: "Pelatihan barista untuk siswa dalam menyajikan kopi berkualitas",
-                date: "Mei 2024",
-                location: "Tefa coffe and bakery"
+                description: "Mahasiswa Jurusan TI Prodi Teknik Informatika melakukan Observasi mengenai Sistem dan Informasi Tefa Bakery & Coffee",
+                date: "03 September 2025",
+                location: "Tefa Bakery & Coffee"
             },
             4: {
-                title: "Cafe Exterior",
+                title: "Kunjungan TK Nailul Maram",
                 image: "../assets/asset tefa/IMG-20251201-WA0014.jpg",
-                description: "Tampilan luar cafe TEFA Bakery & Coffee yang menarik",
-                date: "Juni 2024",
-                location: "Tefa coffe and bakery"
+                description: "Tefa Bakery & Coffee menerima kunjungan dari TK Nailul Maram untuk edukasi tentang bakery dan kopi",
+                date: "21 Oktober 2025",
+                location: "Tefa Bakery & Coffee"
             },
             5: {
-                title: "Pastry Display",
+                title: "Pelatihan Barista Kopi",
                 image: "../assets/asset tefa/IMG-20251201-WA0013.jpg",
-                description: "Display pastry yang dibuat oleh siswa TEFA Bakery",
-                date: "Juli 2024",
-                location: "Tefa coffe and bakery"
+                description: "Pelatihan Barista kopi di Tefa Bakery & Coffee di buka langsung Oleh Kepala Dinas Tenaga Kerja Kabupaten Jember Ibu Yuliana Harimurti, SE.,MSI.,",
+                date: "03 November 2025",
+                location: "Tefa Bakery & Coffee"
             },
             6: {
-                title: "Dessert Plating",
+                title: "Kunjungan Perum Bulog",
                 image: "../assets/asset tefa/foto prbd.jpg",
-                description: "Teknik plating dessert yang diajarkan kepada siswa",
-                date: "Agustus 2024",
-                location: "Tefa coffe and bakery"
+                description: "Kunjungan dari Perum Bulog ke Tefa Bakery & Coffee didampingi Direktur Politeknik Negeri Jember Bapak Saiful Anwar, S.Tp,.M.P",
+                date: "19 September 2025",
+                location: "Tefa Bakery & Coffee"
             }
         };
 
@@ -70,8 +70,8 @@
                     document.body.style.overflow = 'hidden';
                     
                     // Reset like button state
-                    popupLike.classList.remove('liked');
-                    popupLike.innerHTML = '<i class="bi bi-heart"></i><span>Like</span>';
+                    popupLike.classList.remove('Menyukai');
+                    popupLike.innerHTML = '<i class="bi bi-heart"></i><span>Suka</span>';
                 }
             }
 
@@ -120,9 +120,9 @@
             popupLike.addEventListener('click', function() {
                 this.classList.toggle('liked');
                 if (this.classList.contains('liked')) {
-                    this.innerHTML = '<i class="bi bi-heart-fill"></i><span>Liked</span>';
+                    this.innerHTML = '<i class="bi bi-heart-fill"></i><span>Menyukai</span>';
                 } else {
-                    this.innerHTML = '<i class="bi bi-heart"></i><span>Like</span>';
+                    this.innerHTML = '<i class="bi bi-heart"></i><span>Suka</span>';
                 }
             });
 
