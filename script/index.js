@@ -15,6 +15,7 @@
                 });
             }, observerOptions);
 
+      
             // Observe all cards and sections - simpler without testimonials
             const elements = document.querySelectorAll('.card, .container-4');
             elements.forEach(el => observer.observe(el));
@@ -103,3 +104,4 @@
                 });
             });
         });
+        

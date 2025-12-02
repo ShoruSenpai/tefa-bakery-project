@@ -2,42 +2,42 @@
         const galleryData = {
             1: {
                 title: "Kunjungan",
-                image: "../assets/images/dummy-image-square.webp",
+                image: "../assets/asset tefa/IMG-20251201-WA0012.jpg",
                 description: "Gambar kegiatan kunjungan siswa smk negeri jember ke Tefa Coffe and Bakery",
                 date: "March 2024",
                 location: "Tefa coffe and bakery"
             },
             2: {
                 title: "Artisan Bread Making",
-                image: "../assets/images/dummy-image-square.webp",
+                image: "../assets/asset tefa/IMG-20251201-WA0016.jpg",
                 description: "Proses pembuatan roti artisan oleh siswa TEFA Bakery",
                 date: "April 2024",
                 location: "Tefa coffe and bakery"
             },
             3: {
                 title: "Coffee Barista",
-                image: "../assets/images/dummy-image-square.webp",
+                image: "../assets/asset tefa/IMG_20250902_150333 - (1).jpg",
                 description: "Pelatihan barista untuk siswa dalam menyajikan kopi berkualitas",
                 date: "Mei 2024",
                 location: "Tefa coffe and bakery"
             },
             4: {
                 title: "Cafe Exterior",
-                image: "../assets/images/dummy-image-square.webp",
+                image: "../assets/asset tefa/IMG-20251201-WA0014.jpg",
                 description: "Tampilan luar cafe TEFA Bakery & Coffee yang menarik",
                 date: "Juni 2024",
                 location: "Tefa coffe and bakery"
             },
             5: {
                 title: "Pastry Display",
-                image: "../assets/images/dummy-image-square.webp",
+                image: "../assets/asset tefa/IMG-20251201-WA0013.jpg",
                 description: "Display pastry yang dibuat oleh siswa TEFA Bakery",
                 date: "Juli 2024",
                 location: "Tefa coffe and bakery"
             },
             6: {
                 title: "Dessert Plating",
-                image: "../assets/images/dummy-image-square.webp",
+                image: "../assets/asset tefa/foto prbd.jpg",
                 description: "Teknik plating dessert yang diajarkan kepada siswa",
                 date: "Agustus 2024",
                 location: "Tefa coffe and bakery"
