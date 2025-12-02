@@ -564,6 +564,19 @@
     color: inherit;
 }
 
+/* Ellipsis ("...") untuk pagination */
+.our-product .pagination-dots {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    color: #8b6f47;
+    font-family: "Poppins-Regular", Helvetica;
+    font-size: 14px;
+    opacity: 0.7;
+}
+
 
 /* Teks untuk tombol paginasi aktif (background coklat) */
 
@@ -595,6 +608,27 @@
     text-align: center;
     line-height: 24px;
     margin: 0;
+}
+
+/* Penyesuaian tampilan pagination di mobile */
+@media (max-width: 576px) {
+    .our-product .container-18 {
+        gap: 0.25rem;
+    }
+
+    .our-product .icon-wrapper,
+    .our-product .button-7,
+    .our-product .button-5,
+    .our-product .button-6 {
+        width: 40px;
+        height: 40px;
+    }
+
+    .our-product .button-5,
+    .our-product .button-6,
+    .our-product .pagination-dots {
+        font-size: 13px;
+    }
 }
 
 

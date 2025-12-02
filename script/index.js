@@ -103,5 +103,5 @@
                     card.style.transform = 'perspective(1000px) rotateX(0) rotateY(0) translateZ(0)';
                 });
             });
+
         });
-        

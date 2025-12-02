@@ -21,15 +21,21 @@
                 <!-- Left Side: Polije Logo -->
                 <div class="header-left">
                     <div class="polije-logo-container">
-                        <img src="../assets/images/LogoTefa.svg" alt="Logo Polije" class="polije-logo-svg" />
+                        <img
+                            src="../assets/images/LogoTefa.svg"
+                            data-desktop-src="../assets/images/LogoTefa.svg"
+                            data-mobile-src="../assets/favicon.ico"
+                            alt="Logo Polije"
+                            class="polije-logo-svg"
+                        />
                     </div>
                 </div>
 
                 <!-- Mobile Toggle -->
                 <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-nav" aria-expanded="false">
-                    <span class="visually-hidden">Menu</span>
-                    <i class="bi bi-list"></i>
-                </button>
+            <span class="visually-hidden">Menu</span>
+            <i class="bi bi-list"></i>
+          </button>
 
                 <!-- Center: Navigation Menu -->
                 <ul id="primary-nav" class="container-37" data-state="closed">
@@ -63,7 +69,13 @@
                 <!-- Right Side: Container/TEFA Logo -->
                 <div class="header-right">
                     <div class="tefa-logo-container">
-                        <img src="../assets/images/LogoPolije.svg" alt="Logo TEFA" class="tefa-logo-svg" />
+                        <img
+                            src="../assets/images/LogoPolije.svg"
+                            data-desktop-src="../assets/images/LogoPolije.svg"
+                            data-mobile-src="../assets/faviconPolije.png"
+                            alt="Logo TEFA"
+                            class="tefa-logo-svg"
+                        />
                     </div>
                 </div>
             </div>
@@ -88,7 +100,7 @@
               <img
                 class="hero-img"
                 src="../assets/asset tefa/IMG-20251202-WA0015.JPG"
-                alt="image"/>
+                alt="image" />
             </div>
           </div>
         </section>
@@ -151,102 +163,182 @@
             </p>
           </div>
 
-          <div class="carousel-wrapper">
-            <button
-              class="btn btn-outline-secondary rounded-circle"
-              aria-label="Previous slide">
-              <i class="bi bi-chevron-left"></i>
-            </button>
-
-            <div class="carousel-content">
-              <div class="carousel-track">
-                <article class="carousel-item">
-                  <div class="card">
-                    <div class="featured-products-2">
-                      <div
-                        class="image-with-fallback-3"
-                        style="
-                          background-image: url('../assets/images/dummy-image-square.webp');
-                        "></div>
-                    </div>
-                    <div class="featured-products-3">
-                      <h3 class="heading-2">Butter Croissant</h3>
-                      <p class="paragraph">
-                        Flaky, buttery layers of perfection
-                      </p>
-                      <div class="container-15">
-                        <span class="text-wrapper-12">$4.50</span>
-                        <button
-                          class="btn btn-primary btn-sm"
-                          aria-label="Preview">
-                          <i class="bi bi-eye"></i>
-                          <!-- <span>Preview</span> -->
-                        </button>
+          <div
+            id="featuredProductsCarousel"
+            class="carousel slide"
+            data-bs-ride="carousel"
+            data-bs-interval="7000">
+            <div class="carousel-inner">
+              <div class="carousel-item active">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 justify-content-center">
+                  <div class="col d-flex">
+                    <article class="home-product-card">
+                      <div class="home-product-card__media">
+                        <img src="../assets/asset tefa/Roti Manis isi Pisang Coklat.jpg" alt="Artisan Sourdough" />
                       </div>
-                    </div>
-                  </div>
-                </article>
-
-                <article class="carousel-item">
-                  <div class="card">
-                    <div class="featured-products-2">
-                      <div
-                        class="image-with-fallback-4"
-                        style="
-                          background-image: url('../assets/images/dummy-image-square.webp');
-                        "></div>
-                    </div>
-                    <div class="featured-products-3">
-                      <h3 class="heading-2">Artisan Sourdough</h3>
-                      <p class="paragraph">
-                        Handcrafted with traditional methods
-                      </p>
-                      <div class="container-15">
-                        <span class="text-wrapper-12">$7.99</span>
-                        <button
-                          class="btn btn-primary btn-sm"
-                          aria-label="Preview">
-                          <i class="bi bi-eye"></i>
-                          <!-- <span>Preview</span> -->
-                        </button>
+                      <div class="home-product-card__body">
+                        <div class="home-product-card__meta">
+                          <span class="home-product-card__category">Roti Manis</span>
+                          <span class="home-product-card__rating"><i class="bi bi-star-fill"></i>4.9</span>
+                        </div>
+                        <h3 class="home-product-card__title">Roti Pisang Coklat</h3>
+                        <p class="home-product-card__desc">
+                          Kombnasi pisang dan coklat yang nikmat
+                        </p>
+                        <div class="home-product-card__footer">
+                          <span class="home-product-card__price">Rp 5.000</span>
+                          <button class="btn btn-primary btn-sm rounded-pill" aria-label="Preview">
+                            <i class="bi bi-eye"></i>
+                            <span>Preview</span>
+                          </button>
+                        </div>
                       </div>
-                    </div>
+                    </article>
                   </div>
-                </article>
-
-                <article class="carousel-item">
-                  <div class="card">
-                    <div class="featured-products-2">
-                      <div
-                        class="image-with-fallback-5"
-                        style="
-                          background-image: url('../assets/images/dummy-image-square.webp');
-                        "></div>
-                    </div>
-                    <div class="featured-products-3">
-                      <h3 class="heading-2">Chocolate Cake</h3>
-                      <p class="paragraph">
-                        Rich and decadent chocolate delight
-                      </p>
-                      <div class="container-15">
-                        <span class="text-wrapper-12">$6.50</span>
-                        <button
-                          class="btn btn-primary btn-sm"
-                          aria-label="Preview">
-                          <i class="bi bi-eye"></i>
-                          <!-- <span>Preview</span> -->
-                        </button>
+                  <div class="col d-flex">
+                    <article class="home-product-card">
+                      <div class="home-product-card__media">
+                        <img src="../assets/asset tefa/Roti Boy.jpg" alt="Chocolate Cake" />
                       </div>
-                    </div>
+                      <div class="home-product-card__body">
+                        <div class="home-product-card__meta">
+                          <span class="home-product-card__category">Roti Manis</span>
+                          <span class="home-product-card__rating"><i class="bi bi-star-fill"></i>4.8</span>
+                        </div>
+                        <h3 class="home-product-card__title">Rori Boy</h3>
+                        <p class="home-product-card__desc">
+                          Roti manis dengan rasa yang lezat
+                        </p>
+                        <div class="home-product-card__footer">
+                          <span class="home-product-card__price">Rp 5.000</span>
+                          <button class="btn btn-primary btn-sm rounded-pill" aria-label="Preview">
+                            <i class="bi bi-eye"></i>
+                            <span>Preview</span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
                   </div>
-                </article>
+                  <div class="col d-flex">
+                    <article class="home-product-card">
+                      <div class="home-product-card__media">
+                        <img src="../assets/asset tefa/Roti Abon Gulung.jpg" alt="Caramel Latte" />
+                      </div>
+                      <div class="home-product-card__body">
+                        <div class="home-product-card__meta">
+                          <span class="home-product-card__category">Roti Manis</span>
+                          <span class="home-product-card__rating"><i class="bi bi-star-fill"></i>4.7</span>
+                        </div>
+                        <h3 class="home-product-card__title">Roti Abon Gulung</h3>
+                        <p class="home-product-card__desc">
+                          Roti gulung dengan isian abon yang nikmat
+                        </p>
+                        <div class="home-product-card__footer">
+                          <span class="home-product-card__price">Rp 5.000</span>
+                          <button class="btn btn-primary btn-sm rounded-pill" aria-label="Preview">
+                            <i class="bi bi-eye"></i>
+                            <span>Preview</span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
+              </div>
+
+              <div class="carousel-item">
+                <div class="row row-cols-1 row-cols-sm-2 row-cols-lg-3 g-4 justify-content-center">
+                  <div class="col d-flex">
+                    <article class="home-product-card">
+                      <div class="home-product-card__media">
+                        <img src="../assets/asset tefa/Roti isi daging.jpg" alt="Almond Brioche" />
+                      </div>
+                      <div class="home-product-card__body">
+                        <div class="home-product-card__meta">
+                          <span class="home-product-card__category">Roti Manis</span>
+                          <span class="home-product-card__rating"><i class="bi bi-star-fill"></i>4.8</span>
+                        </div>
+                        <h3 class="home-product-card__title">Roti Isi Daging</h3>
+                        <p class="home-product-card__desc">
+                          Roti dengan isian daging yang lezat
+                        </p>
+                        <div class="home-product-card__footer">
+                          <span class="home-product-card__price">Rp 5.000</span>
+                          <button class="btn btn-primary btn-sm rounded-pill" aria-label="Preview">
+                            <i class="bi bi-eye"></i>
+                            <span>Preview</span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col d-flex">
+                    <article class="home-product-card">
+                      <div class="home-product-card__media">
+                        <img src="../assets/asset tefa/Roti Pizza.jpg" alt="Matcha Roll Cake" />
+                      </div>
+                      <div class="home-product-card__body">
+                        <div class="home-product-card__meta">
+                          <span class="home-product-card__category">Cake</span>
+                          <span class="home-product-card__rating"><i class="bi bi-star-fill"></i>4.9</span>
+                        </div>
+                        <h3 class="home-product-card__title">Roti Pizza</h3>
+                        <p class="home-product-card__desc">
+                          Roti dengan toping ala pizza
+                        </p>
+                        <div class="home-product-card__footer">
+                          <span class="home-product-card__price">Rp 5.000</span>
+                          <button class="btn btn-primary btn-sm rounded-pill" aria-label="Preview">
+                            <i class="bi bi-eye"></i>
+                            <span>Preview</span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                  <div class="col d-flex">
+                    <article class="home-product-card">
+                      <div class="home-product-card__media">
+                        <img src="../assets/asset tefa/Roti Sobek.jpg" alt="Hazelnut Latte" />
+                      </div>
+                      <div class="home-product-card__body">
+                        <div class="home-product-card__meta">
+                          <span class="home-product-card__category">Roti Spesial</span>
+                          <span class="home-product-card__rating"><i class="bi bi-star-fill"></i>5.0</span>
+                        </div>
+                        <h3 class="home-product-card__title">Roti Sobek</h3>
+                        <p class="home-product-card__desc">
+                          Roti sobek yang lembut
+                        </p>
+                        <div class="home-product-card__footer">
+                          <span class="home-product-card__price">Rp 5.000</span>
+                          <button class="btn btn-primary btn-sm rounded-pill" aria-label="Preview">
+                            <i class="bi bi-eye"></i>
+                            <span>Preview</span>
+                          </button>
+                        </div>
+                      </div>
+                    </article>
+                  </div>
+                </div>
               </div>
             </div>
 
             <button
-              class="btn btn-outline-secondary rounded-circle"
-              aria-label="Next slide">
-              <i class="bi bi-chevron-right"></i>
+              class="carousel-control-prev"
+              type="button"
+              data-bs-target="#featuredProductsCarousel"
+              data-bs-slide="prev">
+              <i class="bi bi-chevron-left" aria-hidden="true"></i>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button
+              class="carousel-control-next"
+              type="button"
+              data-bs-target="#featuredProductsCarousel"
+              data-bs-slide="next">
+              <i class="bi bi-chevron-right" aria-hidden="true"></i>
+              <span class="visually-hidden">Next</span>
             </button>
           </div>
         </section>
@@ -408,6 +500,7 @@
                 </div>
                 </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
     <script src="../script/header.js"></script>
     <script src="../script/index.js"></script>
 </body>
