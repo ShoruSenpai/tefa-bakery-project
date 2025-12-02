@@ -15,13 +15,15 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentPage = 1;
     let currentFilter = 'all';
 
-    // Hitung jumlah produk per halaman berdasarkan ukuran layar (2 baris)
+    // Hitung jumlah produk per halaman
+    // Desktop: 2 baris penuh (menyesuaikan jumlah kolom)
+    // Mobile: tetap 4 produk (2 kolom x 2 baris)
     function getProductsPerPage() {
         const width = window.innerWidth;
-        if (width >= 1440) return 8; // 2 baris x 4 kolom
-        if (width >= 1024) return 6; // 2 baris x 3 kolom
-        if (width >= 768) return 4; // 2 baris x 2 kolom
-        return 2; // 2 baris x 1 kolom (mobile)
+        if (width >= 1440) return 8; // 4 kolom x 2 baris
+        if (width >= 1024) return 6; // 3 kolom x 2 baris
+        // Tablet & mobile: 2 kolom x 2 baris = 4 produk
+        return 4;
     }
 
     // Ambil produk yang terlihat (setelah filter)
@@ -46,25 +48,59 @@ document.addEventListener('DOMContentLoaded', function() {
         if (pageNumberContainer) {
             pageNumberContainer.innerHTML = '';
 
-            // Buat tombol nomor halaman secara dinamis
-            for (let i = 1; i <= totalPages; i++) {
+            // Helper: buat tombol halaman
+            const createPageButton = (page) => {
+                const isActive = page === currentPage;
                 const btn = document.createElement('button');
-                const isActive = i === currentPage;
                 btn.className = isActive ? 'button-5 active' : 'button-6';
 
                 const span = document.createElement('span');
-                // Gunakan nama class unik untuk menghindari konflik dengan header
                 span.className = isActive ? 'text-wrapper-29' : 'text-wrapper-pagination';
-                span.textContent = i;
+                span.textContent = page;
                 btn.appendChild(span);
 
-                // Tambahkan event klik
                 btn.addEventListener('click', function() {
-                    currentPage = i;
+                    if (currentPage === page) return;
+                    currentPage = page;
                     showCurrentPage();
                 });
 
-                pageNumberContainer.appendChild(btn);
+                return btn;
+            };
+
+            // Helper: buat elemen "..." (ellipsis)
+            const createDots = () => {
+                const dots = document.createElement('span');
+                dots.className = 'pagination-dots';
+                dots.textContent = '…';
+                return dots;
+            };
+
+            // Jika halaman sedikit, tampilkan semua
+            if (totalPages <= 5) {
+                for (let i = 1; i <= totalPages; i++) {
+                    pageNumberContainer.appendChild(createPageButton(i));
+                }
+            } else {
+                // Pola: 1 ... (current-1, current, current+1) ... total
+                pageNumberContainer.appendChild(createPageButton(1));
+
+                if (currentPage > 3) {
+                    pageNumberContainer.appendChild(createDots());
+                }
+
+                const start = Math.max(2, currentPage - 1);
+                const end = Math.min(totalPages - 1, currentPage + 1);
+
+                for (let i = start; i <= end; i++) {
+                    pageNumberContainer.appendChild(createPageButton(i));
+                }
+
+                if (currentPage < totalPages - 2) {
+                    pageNumberContainer.appendChild(createDots());
+                }
+
+                pageNumberContainer.appendChild(createPageButton(totalPages));
             }
         }
 
@@ -169,9 +205,21 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', function() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function() {
-            currentPage = 1; // Reset ke halaman pertama saat resize
+            // Jangan reset ke halaman 1 agar tidak terasa "refresh" saat address bar mobile muncul/hilang
             showCurrentPage();
         }, 250);
+    });
+
+    // Klik kartu = klik tombol Preview (khusus mobile)
+    const isMobile = () => window.innerWidth <= 576;
+    productCards.forEach(card => {
+        card.addEventListener('click', function() {
+            if (!isMobile()) return;
+            const previewBtn = card.querySelector('.button-4');
+            if (previewBtn) {
+                previewBtn.click();
+            }
+        });
     });
 
     // Muat awal

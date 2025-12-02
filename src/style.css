@@ -103,18 +103,21 @@ a.btn-outline-primary {
     transition: all 0.3s ease !important;
 }
 
-.btn-outline-primary:hover{
+.btn-outline-primary:hover {
     color: #ffffff;
 }
+
 .btn-outline-primary:focus,
-.btn.btn-outline-primary:hover{
-    background-color:#6b4423!important;
+.btn.btn-outline-primary:hover {
+    background-color: #6b4423!important;
     border-color: #6b4423 !important;
 }
+
 .btn.btn-outline-primary:focus,
 a.btn-outline-primary:hover {
-   color: #FFFFFF !important;
+    color: #FFFFFF !important;
 }
+
 a.btn-outline-primary:focus {
     background-color: #faf7f2 !important;
     border-color: #8b6f47 !important;
@@ -122,7 +125,6 @@ a.btn-outline-primary:focus {
     transform: translateY(-2px) !important;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15) !important;
 }
-
 
 .container-10 {
     display: grid;
@@ -152,16 +154,17 @@ a.btn-outline-primary:focus {
     overflow: hidden;
     display: block;
     width: 100%;
-    height: 100%; 
+    height: 100%;
 }
 
-.hero-img{
+.hero-img {
     width: 100%;
     height: 100%;
-    position :fixed;
+    position: fixed;
     display: block;
     object-fit: cover;
 }
+
 .about-img {
     width: 100%;
     height: 100%;
@@ -392,129 +395,225 @@ a.btn-outline-primary:focus {
 }
 
 
-/* Carousel Wrapper */
+/* Bootstrap Carousel Overrides */
 
-.carousel-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1.5rem;
-    padding: 2rem 0;
+.featured-products .carousel {
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
-    width: 100%;
+    padding: 1rem 0 2rem;
+    position: relative;
 }
 
-@media (min-width: 768px) {
-    .carousel-wrapper {
-        padding: 2rem 0;
-        gap: 2rem;
-    }
+.featured-products .carousel-inner {
+    padding-bottom: 0.5rem;
 }
 
-
-/* Carousel Arrow Buttons - Bootstrap Style */
-
-.carousel-wrapper .btn,
-.carousel-wrapper .btn-outline-secondary {
-    width: 44px !important;
-    height: 44px !important;
-    padding: 0 !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-size: 18px !important;
-    border: 1px solid rgba(107, 84, 62, 0.12) !important;
-    background: #fff !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) !important;
-    transition: all 0.3s ease !important;
-    border-radius: 50% !important;
-    flex-shrink: 0;
-}
-.btn-primary.btn-sm{
-    width: 44px !important;
-    height: 44px !important;
-    padding: 0 !important;
-    display: inline-flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-    font-size: 18px !important;
-    border: 1px solid rgba(107, 84, 62, 0.12) !important;
-    background: #8b6f47 !important;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.08) !important;
-    transition: all 0.3s ease !important;
-    border-radius: 50% !important;
-    flex-shrink: 0;
+.featured-products .carousel-item {
+    min-height: 100%;
 }
 
-
-.carousel-wrapper .btn:hover,
-.carousel-wrapper .btn-outline-secondary:hover {
-    /* background-color: #faf7f2 !important;
-    border-color: #8b6f47 !important; */
-    color: #FFFFFF !important;
-    background-color: #6b4423 !important;
-    transform: translateY(-2px) !important;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.12) !important;
+.featured-products .carousel-item .col {
+    display: flex;
 }
 
-
-/* Carousel Viewport */
-
-.carousel-content {
-    flex: 1 1 auto;
-    min-width: 0;
-    overflow: visible;
-    display: block;
-    width: 100%;
+.featured-products .carousel-control-prev,
+.featured-products .carousel-control-next {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    border: 1px solid #6b4423;
+    background-color: #ffffff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+    top: 50%;
+    transform: translateY(-50%);
+    opacity: 1;
+    transition: all 0.3s ease;
 }
 
-
-/* Carousel Track - Grid Layout untuk 3 cards */
-
-.carousel-track {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 1.5rem;
-    align-items: stretch;
-    padding: 0.5rem 0;
-    width: 100%;
+.featured-products .carousel-control-prev:hover,
+.featured-products .carousel-control-next:hover {
+    background-color: #6b4423;
+    /* border-color: #6b4423; */
+    color: #ffffff;
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
 }
 
-@media (min-width: 768px) {
-    .carousel-track {
-        gap: 2rem;
-    }
+.featured-products .carousel-control-prev-icon,
+.featured-products .carousel-control-next-icon {
+    display: none;
+}
+
+.featured-products .carousel-control-prev i,
+.featured-products .carousel-control-next i {
+    color: #6b4423;
+    /* default: coklat, sama seperti border */
+    font-size: 1.4rem;
+}
+
+.featured-products .carousel-control-prev:hover i,
+.featured-products .carousel-control-next:hover i {
+    color: #ffffff;
+    /* saat hover: icon jadi putih */
 }
 
 @media (max-width: 992px) {
-    .carousel-track {
-        grid-template-columns: repeat(2, 1fr);
+    .featured-products .carousel {
+        padding: 0.5rem 0 1.5rem;
     }
 }
 
-@media (max-width: 768px) {
-    .carousel-track {
-        grid-template-columns: 1fr;
-        gap: 1.5rem;
+@media (max-width: 576px) {
+    .featured-products .carousel {
+        padding-bottom: 1rem;
+    }
+    .featured-products .carousel-control-prev,
+    .featured-products .carousel-control-next {
+        width: 40px;
+        height: 40px;
     }
 }
 
-@media (min-width: 768px) {
-    .carousel-track {
-        gap: 2rem;
-    }
-}
 
+/* Home product cards (match produk page aesthetic) */
 
-/* Carousel Item Sizing */
-
-.carousel-item,
-.card-wrapper,
-.carousel-item-2 {
+.home-product-card {
+    background: #FAF7F2;
+    border-radius: 28px;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
     width: 100%;
-    max-width: 100%;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.home-product-card:hover {
+    transform: translateY(-6px);
+}
+
+.home-product-card__media {
+    height: 230px;
+    overflow: hidden;
+}
+
+.home-product-card__media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
     display: block;
+    transition: transform 0.4s ease;
+}
+
+.home-product-card:hover .home-product-card__media img {
+    transform: scale(1.05);
+}
+
+.home-product-card__body {
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.home-product-card__meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0.95rem;
+}
+
+.home-product-card__category {
+    color: #c68a44;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+}
+
+.home-product-card__rating {
+    background: rgba(255, 255, 255, 0.7);
+    padding: 0.2rem 0.65rem;
+    border-radius: 999px;
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-weight: 600;
+    color: #6b4423;
+    font-size: 0.9rem;
+}
+
+.home-product-card__rating i {
+    color: #f6c344;
+    font-size: 0.85rem;
+}
+
+.home-product-card__title {
+    font-family: "Poppins-SemiBold", Helvetica;
+    font-size: 1.1rem;
+    margin: 0;
+    color: #523217;
+}
+
+.home-product-card__desc {
+    font-size: 0.95rem;
+    color: #7b6040;
+    margin: 0;
+    line-height: 1.5;
+}
+
+.home-product-card__footer {
+    margin-top: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.home-product-card__price {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: #6b4423;
+}
+
+.home-product-card__footer .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.35rem;
+    font-size: 0.9rem;
+    padding: 0.4rem 0.95rem;
+    border-radius: 999px;
+}
+
+
+/* Match produk.html primary button colors inside home product cards */
+
+.home-product-card__footer .btn.btn-primary {
+    background-color: #8b6f47 !important;
+    border-color: #8b6f47 !important;
+    color: #ffffff !important;
+    box-shadow: 0px 2px 4px -2px rgba(0, 0, 0, 0.12), 0px 4px 6px -1px rgba(0, 0, 0, 0.18);
+}
+
+.home-product-card__footer .btn.btn-primary:hover,
+.home-product-card__footer .btn.btn-primary:focus {
+    background-color: #6b5a3a !important;
+    border-color: #6b5a3a !important;
+}
+
+
+/* Icon inside preview button - thicker and always white */
+
+.home-product-card__footer .btn.btn-primary i {
+    color: #ffffff !important;
+    font-size: 18px;
+    text-shadow: 0 0 2px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 576px) {
+    .home-product-card__media {
+        height: 200px;
+    }
+    .home-product-card__body {
+        padding: 1.25rem;
+    }
 }
 
 .card {
@@ -633,29 +732,6 @@ a.btn-outline-primary:focus {
 
 
 /* Featured Products - Responsive */
-
-@media (max-width: 992px) {
-    .carousel-wrapper .btn {
-        display: none;
-    }
-}
-
-@media (max-width: 768px) {
-    .carousel-wrapper {
-        gap: 1rem;
-        padding: 1.5rem clamp(1.5rem, 4vw, 2rem);
-    }
-    .carousel-track {
-        gap: 1.5rem;
-        padding: 0.5rem 0;
-    }
-    .carousel-wrapper .btn {
-        display: none;
-    }
-    .featured-products-2 {
-        height: 220px;
-    }
-}
 
 @media (max-width: 480px) {
     .featured-products-2 {
@@ -1285,16 +1361,21 @@ a.btn-outline-primary:focus {
     }
 }
 
+
 /* ============================================
    ENHANCED ANIMATIONS FOR STYLE.CSS
    ============================================ */
 
+
 /* Smooth scroll behavior */
+
 html {
     scroll-behavior: smooth;
 }
 
+
 /* Hero Section Enhanced Animations */
+
 #beranda .tefa-bakery-cofee {
     animation: slideInLeft 0.8s ease-out;
     transform-origin: left center;
@@ -1313,7 +1394,9 @@ html {
     transition: transform 0.3s ease-out;
 }
 
+
 /* About Section Stats Animation */
+
 .text-wrapper-2 {
     display: inline-block;
     animation: fadeInUp 0.6s ease-out;
@@ -1322,7 +1405,6 @@ html {
 
 .container-4:hover .text-wrapper-2 {
     color: #c68a44;
-
 }
 
 .about .text-wrapper {
@@ -1345,11 +1427,21 @@ html {
     animation: scaleIn 0.6s ease-out;
 }
 
-.container-4:nth-child(1) { animation-delay: 0.3s; }
-.container-4:nth-child(2) { animation-delay: 0.4s; }
-.container-4:nth-child(3) { animation-delay: 0.5s; }
+.container-4:nth-child(1) {
+    animation-delay: 0.3s;
+}
+
+.container-4:nth-child(2) {
+    animation-delay: 0.4s;
+}
+
+.container-4:nth-child(3) {
+    animation-delay: 0.5s;
+}
+
 
 /* Featured Products Section Animations */
+
 .featured-products .heading,
 .featured-products .discover-our {
     animation: fadeInDown 0.8s ease-out;
@@ -1359,11 +1451,21 @@ html {
     animation: scaleIn 0.6s ease-out;
 }
 
-.carousel-item:nth-child(1) { animation-delay: 0.1s; }
-.carousel-item:nth-child(2) { animation-delay: 0.2s; }
-.carousel-item:nth-child(3) { animation-delay: 0.3s; }
+.carousel-item:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.carousel-item:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.carousel-item:nth-child(3) {
+    animation-delay: 0.3s;
+}
+
 
 /* Product Card Enhanced Hover Effect */
+
 .card {
     overflow: hidden;
     position: relative;
@@ -1393,7 +1495,9 @@ html {
     box-shadow: 0 15px 40px rgba(0, 0, 0, 0.15);
 }
 
+
 /* Testimonial Section Animations */
+
 .testimonials-header h2 {
     animation: fadeInDown 0.8s ease-out;
 }
@@ -1409,9 +1513,17 @@ html {
     overflow: hidden;
 }
 
-.testimonial-card:nth-child(1) { animation-delay: 0.1s; }
-.testimonial-card:nth-child(2) { animation-delay: 0.2s; }
-.testimonial-card:nth-child(3) { animation-delay: 0.3s; }
+.testimonial-card:nth-child(1) {
+    animation-delay: 0.1s;
+}
+
+.testimonial-card:nth-child(2) {
+    animation-delay: 0.2s;
+}
+
+.testimonial-card:nth-child(3) {
+    animation-delay: 0.3s;
+}
 
 .testimonial-card:hover {
     transform: translateY(-8px);
@@ -1422,12 +1534,16 @@ html {
     animation: pulse 2s ease-in-out infinite;
 }
 
+
 /* Link hover animations */
+
 a {
     transition: color 0.3s ease;
 }
 
+
 /* Heading animations with underline */
+
 .featured-products .heading {
     position: relative;
 }
@@ -1455,12 +1571,16 @@ a {
     display: none;
 }
 
+
 /* Remove underline line from "Kepuasan Pelanggan" heading */
+
 .testimonials-header h2::after {
     display: none;
 }
 
+
 /* Button animations */
+
 .btn {
     position: relative;
     overflow: hidden;
@@ -1485,57 +1605,31 @@ a {
     height: 300px;
 }
 
+
 /* Navigation link animation improvement */
+
 .frame-2 {
     position: relative;
 }
 
-/* Carousel button animations */
-.carousel-wrapper .btn,
-.carousel-wrapper .btn-outline-secondary {
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
 /* Image parallax effect on scroll */
+
 .hero-img,
 .about-img {
     transition: transform 0.3s ease-out;
 }
 
+
 /* Footer animations */
+
 .footer {
     animation: fadeInUp 0.8s ease-out;
 }
 
-/* Carousel buttons with enhanced animation */
-.carousel-wrapper .btn,
-.carousel-wrapper .btn-outline-secondary {
-    position: relative;
-    overflow: hidden;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.carousel-wrapper .btn::after,
-.carousel-wrapper .btn-outline-secondary::after {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.3);
-    transform: translate(-50%, -50%);
-    transition: width 0.4s, height 0.4s;
-}
-
-.carousel-wrapper .btn:active::after,
-.carousel-wrapper .btn-outline-secondary:active::after {
-    width: 100px;
-    height: 100px;
-}
 
 /* Enhanced card shine effect */
+
 .card::after {
     content: '';
     position: absolute;
@@ -1565,16 +1659,21 @@ a {
     }
 }
 
+
 /* Product category hover effect */
+
 .heading-2 {
     position: relative;
 }
 
 .heading-2::after {
-    display: none; /* underline removed for product titles */
+    display: none;
+    /* underline removed for product titles */
 }
 
+
 /* Add to Cart button animation */
+
 .btn-sm {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
     position: relative;
@@ -1586,19 +1685,26 @@ a {
     box-shadow: 0 6px 12px rgba(139, 111, 71, 0.25) !important;
 }
 
+
 /* Testimonial quote animation */
+
 .testimonial-card .quote {
     font-style: italic;
 }
 
+
 /* Star rating - no hover animation */
+
 .stars i {
     display: inline-block;
 }
 
+
 /* Heading accent animation */
+
 @keyframes textGlow {
-    0%, 100% {
+    0%,
+    100% {
         text-shadow: 0 0 10px rgba(198, 138, 68, 0.3);
     }
     50% {
@@ -1606,18 +1712,21 @@ a {
     }
 }
 
+
 /* Paragraph animation */
+
 .paragraph {
     line-height: 1.6;
 }
 
+
 /* Responsive animation adjustments */
+
 @media (max-width: 992px) {
     .card:hover {
         transform: translateY(-8px);
         box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
     }
-    
     .testimonial-card:hover {
         transform: translateY(-6px);
     }
@@ -1628,22 +1737,18 @@ a {
         transform: translateY(-6px);
         box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
     }
-    
     .testimonial-card:hover {
         transform: translateY(-4px);
         box-shadow: 0 12px 24px rgba(107, 68, 35, 0.15);
     }
-    
     .container-4:hover {
         transform: scale(1.02);
     }
-    
     /* Disable complex animations on mobile for better performance */
     .card::before,
     .card::after {
         display: none;
     }
-    
     #beranda .container-11:hover {
         animation: none;
     }
@@ -1654,16 +1759,13 @@ a {
         transform: translateY(-4px);
         box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
     }
-    
     .testimonial-card:hover {
         transform: translateY(-2px);
         box-shadow: 0 8px 16px rgba(107, 68, 35, 0.12);
     }
-    
     .container-4:hover {
         transform: scale(1.01);
     }
-    
     /* Disable animations that consume battery on small devices */
     .container-4 {
         animation: none;

@@ -386,24 +386,18 @@ a:focus-visible {
     }
     
     .container-36 {
-        gap: 1rem;
+        gap: 0.75rem;
         flex-wrap: wrap;
-        justify-content: space-between;
-        align-items: center;
     }
     
     .nav-toggle {
         display: inline-flex;
-        order: 2;
-        min-width: 44px;
-        min-height: 44px;
     }
     
     .header-left,
     .header-right {
         flex: 0 0 auto;
     }
-    
     .container-37 {
         display: none;
         flex-direction: column;
