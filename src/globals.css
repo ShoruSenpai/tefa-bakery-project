@@ -6,15 +6,6 @@
     --max-viewport: 1440;
 }
 
-/* Fluid font helper function */
-@function fluid($min-size, $max-size) {
-    @return clamp(
-        #{$min-size}px,
-        #{$min-size}px + (#{$max-size} - #{$min-size}) * 
-        ((100vw - #{$min-viewport}px) / (#{$max-viewport} - #{$min-viewport})),
-        #{$max-size}px
-    );
-}
 
 * {
     -webkit-font-smoothing: antialiased;
@@ -638,12 +629,13 @@ a:focus-visible {
 .text-wrapper-26 {
     font-family: "Poppins-SemiBold", Helvetica;
     font-weight: 600;
-    color: #6b4423;
+    color: #8b6f47;
     font-size: clamp(15px, 2.5vw, 18px);
-    margin-bottom: 0.25rem;
+    display: flex;
+    align-items: flex-end;
 }
 
-.list {
+.container-29 .list {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
@@ -652,40 +644,45 @@ a:focus-visible {
     margin: 0;
 }
 
-.list li {
+.container-29 .list li {
     position: relative;
-    padding-left: 1rem;
+    padding-left: 1.2rem; /* Kurangi padding kiri agar lebih dekat */
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.list li::before {
+.container-29 .list li::before {
     content: '›';
     position: absolute;
     left: 0;
     color: #8b6f47;
     font-weight: bold;
-    transition: transform 0.3s ease;
+    font-size: 1.1em;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    transform-origin: center;
 }
 
-.list li:hover::before {
-    transform: translateX(3px);
+/* Hover effect untuk panah */
+.container-29 .list li:hover::before {
     color: #6b4423;
+    transform: translateX(3px) scale(1.1);
 }
 
-.text-wrapper-25 {
+.container-29 .list a.text-wrapper-25 {
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
     color: #8b6f47;
     font-size: clamp(12px, 2vw, 16px);
     text-decoration: none;
     display: block;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    padding: 2px 0;
     position: relative;
-    padding-left: 0;
-    transition: color 0.25s ease, transform 0.15s ease;
 }
 
-.text-wrapper-25:hover {
-    color: #6b4423;
-    font-weight: 500;
+.container-29 .list a.text-wrapper-25:hover {
+    color: #6b4423 !important;
+    font-weight:500 !important;
+    transform: translateX(5px);
 }
 
 .container-31 {
@@ -759,6 +756,7 @@ a:focus-visible {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
+    margin-top: 0.5rem;
 }
 
 /* Social Media Icons */
