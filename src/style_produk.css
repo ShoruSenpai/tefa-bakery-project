@@ -262,6 +262,7 @@
     background-position: center;
     background-repeat: no-repeat;
     transition: transform 0.3s ease;
+     transform: scale(1.05);
 }
 
 .our-product .card:hover .image-with-fallback,
@@ -431,7 +432,7 @@
 }
 
 .our-product .button-4:hover {
-    background-color: #6b5a3a;
+    background-color: #6b4423;
     transform: translateY(-2px);
     box-shadow: 0px 4px 6px -2px #0000001a, 0px 6px 8px -1px #0000001a;
 }
@@ -717,7 +718,7 @@
 }
 
 .our-product .button-8:hover {
-    background-color: #6b5a3a;
+    background-color: #6b4423;
     transform: translateY(-2px);
     box-shadow: 0px 6px 8px -4px #0000001a, 0px 12px 17px -3px #0000001a;
 }
@@ -935,26 +936,7 @@
 }
 
 
-/* Ensure images have smooth transform */
 
-.our-product .image-with-fallback,
-.our-product .image-with-fallback-2,
-.our-product .image-with-fallback-3,
-.our-product .image-with-fallback-4,
-.our-product .image-with-fallback-5 {
-    transition: transform 0.5s ease;
-}
-
-.our-product .card:hover .image-with-fallback,
-.our-product .card:hover .image-with-fallback-2,
-.our-product .card:hover .image-with-fallback-3,
-.our-product .card:hover .image-with-fallback-4,
-.our-product .card:hover .image-with-fallback-5,
-.our-product .card:hover .image-with-fallback-6,
-.our-product .card:hover .image-with-fallback-7,
-.our-product .card:hover .image-with-fallback-8 {
-    transform: scale(1.05);
-}
 
 
 /* Respect user preference for reduced motion */
