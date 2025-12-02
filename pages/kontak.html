@@ -40,24 +40,26 @@
       <!-- Header -->
       <header class="navbar-light">
         <div class="container-36">
-          <!-- Left Side: Polije Logo -->
+          <!-- Left Side: TEFA Logo -->
           <div class="header-left">
-            <div class="polije-logo-container">
-              <img
-                src="../assets/images/LogoTefa.svg"
-                data-desktop-src="../assets/images/LogoTefa.svg"
-                data-mobile-src="../assets/favicon.ico"
-                alt="Logo Polije"
-                class="polije-logo-svg"
-              />
+            <div class="header-logos">
+              <div class="tefa-logo-container">
+                <img
+                  src="../assets/images/LogoTefa.svg"
+                  alt="Logo TEFA"
+                  class="tefa-logo-svg"
+                />
+              </div>
+              <!-- Polije Logo (mobile only, next to TEFA) -->
+              <div class="polije-logo-container polije-logo-mobile">
+                <img
+                  src="../assets/images/LogoPolije.svg"
+                  alt="Logo Polije"
+                  class="polije-logo-svg"
+                />
+              </div>
             </div>
           </div>
-
-          <!-- Mobile Toggle -->
-          <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-nav" aria-expanded="false">
-            <span class="visually-hidden">Menu</span>
-            <i class="bi bi-list"></i>
-          </button>
 
           <!-- Center: Navigation Menu -->
           <ul id="primary-nav" class="container-37" data-state="closed">
@@ -96,24 +98,27 @@
             <li class="frame-6">
               <a
                 href="kontak.html"
-                class="frame-2 active"
+                class="frame-2"
               >
                 <span class="text-wrapper-34">Kontak</span>
               </a>
             </li>
           </ul>
 
-          <!-- Right Side: Container/TEFA Logo -->
+          <!-- Right Side: Polije Logo (desktop) + Mobile Toggle Button -->
           <div class="header-right">
-            <div class="tefa-logo-container">
+            <!-- Polije Logo (desktop only) -->
+            <div class="polije-logo-container polije-logo-desktop">
               <img
                 src="../assets/images/LogoPolije.svg"
-                data-desktop-src="../assets/images/LogoPolije.svg"
-                data-mobile-src="../assets/faviconPolije.png"
-                alt="Logo TEFA"
-                class="tefa-logo-svg"
+                alt="Logo Polije"
+                class="polije-logo-svg"
               />
             </div>
+            <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-nav" aria-expanded="false">
+              <span class="visually-hidden">Menu</span>
+              <i class="bi bi-list"></i>
+            </button>
           </div>
         </div>
       </header>
@@ -143,7 +148,7 @@
               <h3>Instagram</h3>
               <p>@tefabakery</p>
               <a
-                href="https://www.instagram.com/tefasippolije"
+                href="https://www.instagram.com/tefabakery"
                 target="_blank"
                 rel="noopener noreferrer"
                 >Lihat Profil</a
@@ -167,11 +172,11 @@
                 class="icon-wrapper"
                 aria-hidden="true"
               >
-                <i class="bi bi-facebook"></i>
+                <i class="bi bi-envelope-open"></i>
               </div>
-              <h3>Facebook</h3>
-              <p>tefa.sip</p>
-              <a href="https://web.facebook.com/tefa.sip">Lihat</a>
+              <h3>Email</h3>
+              <p>info@tefabakery.com</p>
+              <a href="mailto:info@tefabakery.com">Kirim Email</a>
             </article>
             <article class="info-card">
               <div
@@ -181,9 +186,9 @@
                 <i class="bi bi-whatsapp"></i>
               </div>
               <h3>WhatsApp</h3>
-              <p>+62 8233-3497-811</p>
+              <p>+62 812-3456-7890</p>
               <a
-                href="https://api.whatsapp.com/send?phone=6282333497811"
+                href="https://wa.me/6281234567890"
                 target="_blank"
                 rel="noopener noreferrer"
                 >Hubungi Kami</a
@@ -217,6 +222,16 @@
                     referrerpolicy="no-referrer-when-downgrade"
                   ></iframe>
                 </div>
+                <!-- <div class="map-actions">
+                                <a class="button btn btn-outline-primary" target="_blank" rel="noopener noreferrer"
+                                   href="https://www.google.com/maps/@?api=1&map_action=pano&viewpoint=-8.1683,113.7065">
+                                    Buka Street View
+                                </a>
+                                <a class="button btn btn-outline-secondary" target="_blank" rel="noopener noreferrer"
+                                   href="https://www.google.com/maps/search/?api=1&query=Politeknik+Negeri+Jember">
+                                    Lihat di Google Maps
+                                </a>
+                            </div> -->
               </div>
             </article>
           </div>
@@ -274,10 +289,12 @@
               </div>
               <button
                 type="submit"
-                class="btn btn-primary">
+                class="btn btn-primary"
+              >
                 <i
                   class="bi bi-send-fill"
-                  aria-hidden="true"></i>
+                  aria-hidden="true"
+                ></i>
                 Kirim Pesan
               </button>
             </form>

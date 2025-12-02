@@ -16,14 +16,47 @@ document.addEventListener('DOMContentLoaded', function() {
     let currentFilter = 'all';
 
     // Hitung jumlah produk per halaman
-    // Desktop: 2 baris penuh (menyesuaikan jumlah kolom)
-    // Mobile: tetap 4 produk (2 kolom x 2 baris)
+    // Mobile: 4 produk (2x2), Desktop: 2 baris dengan produk menyesuaikan
     function getProductsPerPage() {
-        const width = window.innerWidth;
-        if (width >= 1440) return 8; // 4 kolom x 2 baris
-        if (width >= 1024) return 6; // 3 kolom x 2 baris
-        // Tablet & mobile: 2 kolom x 2 baris = 4 produk
-        return 4;
+        if (window.innerWidth < 768) {
+            // Mobile: 2x2 = 4 produk
+            return 4;
+        } else {
+            // Desktop: hitung jumlah kolom berdasarkan lebar container dan card
+            const container = document.querySelector('.our-product .container-5');
+            if (container) {
+                // Cari card yang visible untuk mendapatkan ukuran aktual
+                const visibleCards = Array.from(container.children).filter(card => {
+                    return card.offsetWidth > 0 && window.getComputedStyle(card).display !== 'none';
+                });
+                
+                if (visibleCards.length > 0) {
+                    const firstCard = visibleCards[0];
+                    const containerWidth = container.offsetWidth;
+                    const cardWidth = firstCard.offsetWidth;
+                    // Hitung gap dari computed style
+                    const containerStyle = window.getComputedStyle(container);
+                    const gapValue = containerStyle.gap || containerStyle.columnGap || '32px';
+                    const gap = parseFloat(gapValue) || 32;
+                    
+                    // Hitung jumlah kolom yang bisa muat
+                    // Formula: (containerWidth + gap) / (cardWidth + gap)
+                    const columns = Math.floor((containerWidth + gap) / (cardWidth + gap));
+                    // 2 baris = kolom x 2, minimum 4 produk
+                    const productsPerPage = Math.max(columns * 2, 4);
+                    return productsPerPage;
+                }
+            }
+            // Fallback berdasarkan breakpoint
+            if (window.innerWidth >= 1440) {
+                return 8; // 4 kolom x 2 baris
+            } else if (window.innerWidth >= 1024) {
+                return 6; // 3 kolom x 2 baris
+            } else if (window.innerWidth >= 768) {
+                return 4; // 2 kolom x 2 baris
+            }
+            return 4;
+        }
     }
 
     // Ambil produk yang terlihat (setelah filter)
@@ -205,22 +238,29 @@ document.addEventListener('DOMContentLoaded', function() {
     window.addEventListener('resize', function() {
         clearTimeout(resizeTimer);
         resizeTimer = setTimeout(function() {
-            // Jangan reset ke halaman 1 agar tidak terasa "refresh" saat address bar mobile muncul/hilang
+            currentPage = 1; // Reset ke halaman pertama saat resize
+            updatePaginationButtons();
             showCurrentPage();
         }, 250);
     });
-
-    // Klik kartu = klik tombol Preview (khusus mobile)
-    const isMobile = () => window.innerWidth <= 576;
-    productCards.forEach(card => {
-        card.addEventListener('click', function() {
-            if (!isMobile()) return;
-            const previewBtn = card.querySelector('.button-4');
-            if (previewBtn) {
-                previewBtn.click();
-            }
-        });
+    
+    // Pastikan perhitungan dilakukan setelah semua elemen ter-render
+    window.addEventListener('load', function() {
+        setTimeout(function() {
+            updatePaginationButtons();
+            showCurrentPage();
+        }, 200);
     });
+    
+    // Juga trigger setelah DOMContentLoaded untuk memastikan
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', function() {
+            setTimeout(function() {
+                updatePaginationButtons();
+                showCurrentPage();
+            }, 300);
+        });
+    }
 
     // Muat awal
     showCurrentPage();

@@ -1,12 +1,4 @@
-/* Reset & Base */
 @import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
-
-:root {
-    --min-viewport: 320;
-    --max-viewport: 1440;
-}
-
-
 * {
     -webkit-font-smoothing: antialiased;
     box-sizing: border-box;
@@ -32,15 +24,17 @@ a:focus-visible {
     outline: -webkit-focus-ring-color auto 5px !important;
 }
 
+
 /* ============================================
    NAVBAR
    ============================================ */
+
 .navbar-light {
     position: sticky;
     top: 0;
     width: 100%;
     height: auto;
-    padding: max(0.5rem, 2vmin) max(1rem, 3vmin);
+    padding: 1rem clamp(1rem, 4vw, 2rem);
     background-color: #f9f6ee;
     box-shadow: 0px 2px 8px rgba(0, 0, 0, 0.1);
     z-index: 1000;
@@ -52,7 +46,7 @@ a:focus-visible {
     align-items: center;
     justify-content: space-between;
     gap: 2rem;
-    max-width: min(1440px, 95vw);
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0;
 }
@@ -70,9 +64,55 @@ a:focus-visible {
 
 .header-right {
     justify-content: flex-end;
+    gap: 1rem;
 }
 
+
+/* Header Logos Container (TEFA + Polije side by side) */
+
+.header-logos {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    flex: 0 0 auto;
+}
+
+
+/* Desktop: Only show TEFA logo in header-logos */
+
+@media (min-width: 769px) {
+    .header-logos {
+        gap: 0;
+    }
+}
+
+
+/* Logo visibility: Desktop vs Mobile */
+
+.polije-logo-desktop {
+    display: none !important;
+    /* Hidden by default, shown on desktop */
+}
+
+.polije-logo-mobile {
+    display: flex;
+    /* Shown by default, hidden on desktop */
+}
+
+@media (min-width: 769px) {
+    .polije-logo-desktop {
+        display: flex !important;
+        /* Show on desktop */
+    }
+    .polije-logo-mobile {
+        display: none !important;
+        /* Hide on desktop */
+    }
+}
+
+
 /* Logo Polije Styling (Left) */
+
 .polije-logo-container {
     display: flex;
     align-items: center;
@@ -81,7 +121,6 @@ a:focus-visible {
 }
 
 .polije-logo-svg {
-    max-width: 100%;
     max-height: 64px;
     height: auto;
     width: auto;
@@ -101,7 +140,7 @@ a:focus-visible {
     font-family: "Poppins-Bold", Helvetica;
     font-weight: 700;
     color: #6b5344;
-    font-size: fluid(16, 20);
+    font-size: clamp(14px, 3vw, 18px);
     line-height: 1;
     letter-spacing: 0.5px;
 }
@@ -110,12 +149,14 @@ a:focus-visible {
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
     color: #8b6f47;
-    font-size: fluid(10, 12);
+    font-size: clamp(10px, 1.5vw, 12px);
     line-height: 1;
     letter-spacing: 0.4px;
 }
 
+
 /* Logo TEFA Styling (Right) */
+
 .tefa-logo-container {
     display: flex;
     align-items: center;
@@ -124,7 +165,6 @@ a:focus-visible {
 }
 
 .tefa-logo-svg {
-    max-width: 100%;
     max-height: 48px;
     height: auto;
     width: auto;
@@ -144,7 +184,7 @@ a:focus-visible {
     font-family: "Poppins-Bold", Helvetica;
     font-weight: 700;
     color: #6b5344;
-    font-size: fluid(16, 20);
+    font-size: clamp(14px, 3vw, 18px);
     line-height: 1;
     letter-spacing: 0.5px;
 }
@@ -153,12 +193,14 @@ a:focus-visible {
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
     color: #8b6f47;
-    font-size: fluid(10, 12);
+    font-size: clamp(10px, 1.5vw, 12px);
     line-height: 1;
     letter-spacing: 0.4px;
 }
 
+
 /* Navigation Menu (Center) */
+
 .container-37 {
     display: flex;
     align-items: center;
@@ -228,12 +270,6 @@ a:focus-visible {
     position: relative;
 }
 
-.frame-2.active {
-    text-decoration: none;
-    color: #000;
-    font-weight: 700;
-}
-
 .frame-2::after {
     content: '';
     position: absolute;
@@ -265,46 +301,6 @@ a:focus-visible {
     display: inline-block;
 }
 
-/* ============================================
-   ACTIVE NAVIGATION STYLES
-   ============================================ */
-.frame-2.active {
-    position: relative;
-    font-weight: 700 !important;
-}
-
-.frame-2.active::after {
-    content: '';
-    position: absolute;
-    bottom: 0.125rem;
-    left: 0;
-    width: 100% !important;
-    height: 2px;
-    background-color: #6b4423 !important;
-}
-
-.frame-2.active .text-wrapper-30,
-.frame-2.active .text-wrapper-31,
-.frame-2.active .text-wrapper-32,
-.frame-2.active .text-wrapper-33,
-.frame-2.active .text-wrapper-34 {
-    color: #6b4423 !important;
-    font-weight: 700;
-}
-
-.frame-2.active:hover::after {
-    width: 100% !important;
-}
-
-.frame-3 .frame-2.active .text-wrapper-31,
-.frame-wrapper .frame-2.active .text-wrapper-30,
-.frame-5 .frame-2.active .text-wrapper-33,
-.frame-4 .frame-2.active .text-wrapper-32,
-.frame-6 .frame-2.active .text-wrapper-34 {
-    color: #6b4423 !important;
-    font-weight: 700 !important;
-}
-
 .text-wrapper-30,
 .text-wrapper-31,
 .text-wrapper-32,
@@ -330,68 +326,98 @@ a:focus-visible {
     transform: translateY(-1px);
 }
 
+
+/* Active navigation menu item */
+
+.frame-2.active .text-wrapper-30,
+.frame-2.active .text-wrapper-31,
+.frame-2.active .text-wrapper-32,
+.frame-2.active .text-wrapper-33,
+.frame-2.active .text-wrapper-34 {
+    color: #6b4423;
+    font-weight: 600;
+    position: relative;
+}
+
+.frame-2.active .text-wrapper-30::after,
+.frame-2.active .text-wrapper-31::after,
+.frame-2.active .text-wrapper-32::after,
+.frame-2.active .text-wrapper-33::after,
+.frame-2.active .text-wrapper-34::after {
+    content: '';
+    position: absolute;
+    bottom: -4px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background-color: #6b4423;
+    border-radius: 2px;
+}
+
+
 /* Responsive Header - Tablet */
+
 @media (max-width: 1024px) {
     .navbar-light {
         padding: 0.875rem clamp(1rem, 3vw, 1.5rem);
     }
-    
     .container-36 {
         gap: 1.5rem;
     }
-    
     .container-37 {
         gap: 1.25rem;
     }
-    
     .frame-2 {
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
     .frame-2::after {
         transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
     .text-wrapper-30,
     .text-wrapper-31,
     .text-wrapper-32,
     .text-wrapper-33,
     .text-wrapper-34 {
         transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s ease;
-        font-size: clamp(12px, 2vw, 14px);
     }
-    
     .polije-logo-svg {
         max-height: 56px;
     }
-    
     .tefa-logo-svg {
         max-height: 44px;
     }
+    .text-wrapper-30,
+    .text-wrapper-31,
+    .text-wrapper-32,
+    .text-wrapper-33,
+    .text-wrapper-34 {
+        font-size: clamp(12px, 2vw, 14px);
+    }
 }
 
+
 /* Responsive Header - Mobile */
+
 @media (max-width: 768px) {
     .navbar-light {
         padding: 0.75rem clamp(1rem, 3vw, 1.5rem);
     }
-    
     .container-36 {
-        gap: 0.75rem;
+        gap: 1rem;
         flex-wrap: wrap;
     }
-    
     .nav-toggle {
         display: inline-flex;
     }
-    
     .header-left,
     .header-right {
         flex: 0 0 auto;
     }
+    .header-logos {
+        gap: 0.75rem;
+    }
     .container-37 {
         display: none;
-        flex-direction: column;
         gap: 1rem;
         order: 3;
         flex: 0 0 100%;
@@ -399,31 +425,17 @@ a:focus-visible {
         margin-top: 0.75rem;
         padding-top: 0.75rem;
         border-top: 1px solid rgba(107, 84, 62, 0.1);
-        width: 100%;
-        max-height: 0;
-        overflow: hidden;
-        transition: max-height 0.3s ease;
+        flex-direction: column;
     }
-    
     .container-37.is-open {
         display: flex;
-        max-height: 300px;
     }
-    
     .frame-2 {
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
-        padding: 0.75rem 0;
-        min-height: 44px;
-        display: flex;
-        align-items: center;
-        width: 100%;
-        justify-content: center;
     }
-    
     .frame-2::after {
         transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
     .text-wrapper-30,
     .text-wrapper-31,
     .text-wrapper-32,
@@ -432,57 +444,56 @@ a:focus-visible {
         transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s ease;
         font-size: 13px;
     }
-    
-    .frame-2.active::after {
-        bottom: 0.063rem;
-        height: 1.5px;
-    }
 }
 
 @media (max-width: 480px) {
     .navbar-light {
         padding: 0.625rem 1rem;
     }
-    
     .container-36 {
         gap: 0.75rem;
     }
-    
+    .header-logos {
+        gap: 0.5rem;
+    }
     .frame-2 {
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
     .frame-2::after {
         transition: width 0.5s cubic-bezier(0.4, 0, 0.2, 1);
     }
-    
     .text-wrapper-30,
     .text-wrapper-31,
     .text-wrapper-32,
     .text-wrapper-33,
     .text-wrapper-34 {
         transition: color 0.5s cubic-bezier(0.4, 0, 0.2, 1), transform 0.5s ease;
-        font-size: 12px;
     }
-    
     .polije-logo-svg {
         max-height: 40px;
     }
-    
     .tefa-logo-svg {
         max-height: 36px;
     }
-    
     .container-37 {
         gap: 0.75rem;
         margin-top: 0.5rem;
         padding-top: 0.5rem;
     }
+    .text-wrapper-30,
+    .text-wrapper-31,
+    .text-wrapper-32,
+    .text-wrapper-33,
+    .text-wrapper-34 {
+        font-size: 12px;
+    }
 }
+
 
 /* ============================================
    FOOTER
    ============================================ */
+
 .footer {
     background-color: #f5e6d3;
     padding: 2rem clamp(1.5rem, 4vw, 2rem);
@@ -504,9 +515,15 @@ a:focus-visible {
     display: flex;
     flex-direction: column;
     gap: 1.5rem;
-    max-width: min(1440px, 95vw);
+    max-width: 1440px;
     margin: 0 auto;
     padding: 0;
+}
+
+@media (min-width: 768px) {
+    .container-24 {
+        padding: 0;
+    }
 }
 
 .container-25 {
@@ -577,174 +594,134 @@ a:focus-visible {
     margin-top: 0.25rem;
 }
 
-/* .container-28 {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-    gap: 0.75rem !important;
-} */
 .container-28 {
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem; /* Jarak lebih kecil */
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(160px, 1fr));
+    gap: 1.5rem;
 }
-@media (max-width: 768px) {
+
+@media (min-width: 768px) {
     .container-28 {
-        flex-direction: column;
-        gap: 1.5rem;
+        gap: 2rem;
     }
-    
-    .container-30 {
-        padding-left: 0;
-        margin-left: 0;
+}
+
+@media (min-width: 1024px) {
+    .container-28 {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
     }
 }
 
 .container-29,
 .container-30,
 .container-32 {
-    flex: 1;
-    min-width: 200px;
-}
-
-.container-29 .list,
-.container-30 .list,
-.container-32 .list {
-    margin-bottom: 1rem;
-}
-.container-29 {
-    margin-right: 0.5rem; /* Kurangi jarak kanan */
-}
-
-.container-30 {
-    padding-left: 0.5rem;
-    margin-left:-2rem; /* Tambah jarak kiri */
-}
-
-.container-32 {
-    margin-left: 1rem; /* Kurangi jarak kiri */
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
 }
 
 .text-wrapper-24,
 .text-wrapper-26 {
     font-family: "Poppins-SemiBold", Helvetica;
     font-weight: 600;
-    color: #8b6f47;
+    color: #6b4423;
     font-size: clamp(15px, 2.5vw, 18px);
-    display: flex;
-    align-items: flex-end;
+    margin-bottom: 0.25rem;
 }
 
-.container-29 .list {
+.list {
     display: flex;
     flex-direction: column;
-    gap: 0.75rem;
+    gap: 0.5rem;
     list-style: none;
     padding: 0;
     margin: 0;
 }
 
-.container-29 .list li {
-    position: relative;
-    padding-left: 1.2rem; /* Kurangi padding kiri agar lebih dekat */
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-}
-
-.container-29 .list li::before {
-    content: '›';
-    position: absolute;
-    left: 0;
-    color: #8b6f47;
-    font-weight: bold;
-    font-size: 1.1em;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    transform-origin: center;
-}
-
-/* Hover effect untuk panah */
-.container-29 .list li:hover::before {
-    color: #6b4423;
-    transform: translateX(3px) scale(1.1);
-}
-
-.container-29 .list a.text-wrapper-25 {
+.text-wrapper-25 {
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
     color: #8b6f47;
     font-size: clamp(12px, 2vw, 16px);
     text-decoration: none;
-    display: block;
-    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-    padding: 2px 0;
-    position: relative;
 }
+
+
+/* Footer quick links hover effect */
+
+
+/* .container-29 .list a.text-wrapper-25 {
+    position: relative;
+    display: inline-block;
+    transition: color 0.25s ease, transform 0.15s ease;
+} */
+
+
+/* .container-29 .list a.text-wrapper-25::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -3px;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(90deg, #8b6f47 0%, #c68a44 50%, #8b6f47 100%);
+    transition: width 0.25s ease;
+    border-radius: 2px;
+} */
 
 .container-29 .list a.text-wrapper-25:hover {
-    color: #6b4423 !important;
-    font-weight:500 !important;
-    transform: translateX(5px);
+    color: #6b4423;
+    transform: translateY(-2px);
 }
 
-.container-31 {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 0.75rem;
+
+/* .container-29 .list a.text-wrapper-25:hover::after {
     width: 100%;
+} */
+
+
+/* nyoba aja */
+
+.container-29 .list a.text-wrapper-25 {
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 20px;
+    transition: color 0.25s ease, transform 0.15s ease;
+}
+
+.container-29 .list a.text-wrapper-25::before {
+    content: '▶';
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+
+.container-29 .list a.text-wrapper-25:hover::before {
+    opacity: 1;
+}
+
+
+/* end */
+
+.container-31 {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
 }
 
 .div-2 {
-    display: grid;
-    grid-template-columns: 1fr auto;
-    align-items: center;
-    gap: 1rem;
-    padding: 0.5rem 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
 }
 
 .text-wrapper-27,
-.sabtu-minggu {
-    line-height: 1.4;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #8b6f47;
-    font-size: clamp(12px, 2vw, 16px);
-}
-
-.text-wrapper-28 {
-    text-align: center;
-    font-family: "Poppins-Regular", Helvetica;
-    font-weight: 400;
-    color: #8b6f47;
-    font-size: clamp(12px, 2vw, 16px);
-}
-
-@media (max-width: 768px) {
-    .div-2 {
-        grid-template-columns: 1fr auto;
-        gap: 1rem;
-    }
-    
-    .text-wrapper-28 {
-        min-width: 100px;
-        padding: 0.3rem 0.8rem;
-        font-size: clamp(12px, 1.8vw, 14px);
-    }
-}
-
-@media (max-width: 480px) {
-    .div-2 {
-        grid-template-columns: 1fr;
-        gap: 0.25rem;
-    }
-    
-    .text-wrapper-28 {
-        width: 100%;
-        min-width: unset;
-        text-align: left;
-        margin-top: 0.125rem;
-        padding: 0.25rem 0.75rem;
-    }
-}
-
+.text-wrapper-28,
+.sabtu-minggu,
 .p {
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
@@ -752,14 +729,27 @@ a:focus-visible {
     font-size: clamp(12px, 2vw, 16px);
 }
 
+
+/* Mobile: Increase footer text size */
+
+@media (max-width: 768px) {
+    .text-wrapper-27,
+    .text-wrapper-28,
+    .sabtu-minggu,
+    .p {
+        font-size: clamp(14px, 3vw, 18px);
+    }
+}
+
 .container-33 {
     display: flex;
     flex-direction: column;
     gap: 0.75rem;
-    margin-top: 0.5rem;
 }
 
+
 /* Social Media Icons */
+
 .social-media-icons {
     display: flex;
     align-items: center;
@@ -780,12 +770,15 @@ a:focus-visible {
     text-decoration: none;
     transition: all 0.3s ease;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    min-width: 44px;
-    min-height: 44px;
+}
+
+.social-icon:hover {
+    transform: translateY(-2px);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15);
 }
 
 .social-icon[aria-label="Instagram"]:hover {
-    background-color: #6b4423;
+    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
 }
 
 .social-icon[aria-label="Instagram"]:hover i {
@@ -793,7 +786,7 @@ a:focus-visible {
 }
 
 .social-icon[aria-label="WhatsApp"]:hover {
-    background-color: #6b4423;
+    background-color: #25d366;
 }
 
 .social-icon[aria-label="WhatsApp"]:hover i {
@@ -801,7 +794,7 @@ a:focus-visible {
 }
 
 .social-icon[aria-label="Facebook"]:hover {
-    background-color: #6b4423;
+    background-color: #1877f2;
 }
 
 .social-icon[aria-label="Facebook"]:hover i {
@@ -813,10 +806,6 @@ a:focus-visible {
         width: 36px;
         height: 36px;
         font-size: 18px;
-    }
-    
-    .social-media-icons {
-        justify-content: center;
     }
 }
 
@@ -835,20 +824,11 @@ a:focus-visible {
     margin: 0;
 }
 
-/* Responsive spacing for mobile */
-@media (max-width: 480px) {
-    .footer {
-        padding: 1.5rem 1rem;
-    }
-    
-    .container-25 {
-        gap: 1.5rem;
-    }
-}
 
 /* ============================================
    ANIMATIONS & TRANSITIONS
    ============================================ */
+
 @keyframes fadeInUp {
     from {
         opacity: 0;
@@ -905,7 +885,8 @@ a:focus-visible {
 }
 
 @keyframes float {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0px);
     }
     50% {
@@ -914,7 +895,8 @@ a:focus-visible {
 }
 
 @keyframes pulse {
-    0%, 100% {
+    0%,
+    100% {
         opacity: 1;
     }
     50% {
@@ -923,7 +905,8 @@ a:focus-visible {
 }
 
 @keyframes bounce {
-    0%, 100% {
+    0%,
+    100% {
         transform: translateY(0);
     }
     50% {
@@ -942,17 +925,32 @@ a:focus-visible {
     }
 }
 
+
+/* Apply animations to header */
+
+.navbar-light {
+    /* Animation removed - no fade in for navbar */
+}
+
+.container-37 li {
+    /* Animation removed - no fade in for nav items */
+}
+
+
 /* Social icon animation */
+
 .social-icon {
     transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-icon:hover {
-    transform: scale(1.1);
+    transform: translateY(-4px) scale(1.1);
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
 }
 
+
 /* Ripple effect CSS */
+
 .btn .ripple {
     position: absolute;
     border-radius: 50%;
@@ -969,7 +967,9 @@ a:focus-visible {
     }
 }
 
+
 /* Loading animation */
+
 @keyframes spin {
     from {
         transform: rotate(0deg);
@@ -979,7 +979,9 @@ a:focus-visible {
     }
 }
 
+
 /* Gradient shift animation */
+
 @keyframes gradient-shift {
     0% {
         background-position: 0% 50%;
@@ -992,9 +994,12 @@ a:focus-visible {
     }
 }
 
+
 /* Glow animation */
+
 @keyframes glow {
-    0%, 100% {
+    0%,
+    100% {
         box-shadow: 0 0 5px rgba(139, 111, 71, 0.3);
     }
     50% {
@@ -1002,7 +1007,9 @@ a:focus-visible {
     }
 }
 
+
 /* Hover scale animation */
+
 @keyframes scaleUp {
     from {
         transform: scale(1);
@@ -1012,7 +1019,9 @@ a:focus-visible {
     }
 }
 
+
 /* Text shimmer animation */
+
 @keyframes shimmer {
     0% {
         background-position: -1200px 0;
@@ -1021,12 +1030,3 @@ a:focus-visible {
         background-position: 1200px 0;
     }
 }
-
-/* Testing/debugging (optional) */
-/*
-@media (max-width: 768px) {
-    * {
-        outline: 1px solid rgba(255,0,0,0.1);
-    }
-}
-*/
