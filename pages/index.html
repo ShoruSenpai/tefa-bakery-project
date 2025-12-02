@@ -138,7 +138,7 @@
             <div class="container-11">
               <img
                 class="hero-img"
-                src="../assets/asset tefa/IMG_20250902_151820.JPG"
+                src="../assets/asset-tefa/IMG_20250902_151820.JPG"
                 alt="Gunung"
               />
             </div>
@@ -154,7 +154,7 @@
               <div class="image-with-fallback-wrapper">
                 <img
                   class="about-img"
-                  src="../assets/asset tefa/IMG_20250902_150845.JPG"
+                  src="../assets/asset-tefa/IMG_20250902_150845.JPG"
                   alt="Gunung Rinjani"
                 />
               </div>
@@ -201,109 +201,222 @@
           </div>
         </section>
 
-        <section
-          class="featured-products"
-          id="produk"
-        >
-          <div class="container-14">
-            <h2 class="heading">Produk Unggulan</h2>
-            <p class="discover-our">
+        <!-- corousel featured products -->
+
+        <section class="ftp-wrapper">
+          <div class="ftp-header">
+            <h1>Produk Unggulan</h1>
+            <p>
               Jelajahi Kategori produk kami yang dibuat fresh setiap hari dengan
-              bahan‑bahan berkualitas terbaik.
+              bahan-bahan berkualitas terbaik.
+            </p>
+          </div>
+          <div class="slider-container">
+            <button
+              class="btn prev"
+              id="prevBtn"
+            >
+              ←
+            </button>
+
+            <div class="slider-wrapper">
+              <div
+                class="slider"
+                id="slider"
+              >
+                <!-- products card -->
+                <div class="card">
+                  <img
+                    src="../assets/asset-tefa/IMG-20251126-WA0004.jpg"
+                    alt=""
+                  />
+                  <div class="paragraph-products">
+                    <div class="product-wrapper">
+                      <h3>Lorem Ipsum Dolor</h3>
+                      <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="price-wrapper">
+                      <h6>Rp.xxx.xxx,xx</h6>
+                      <!-- btn preview -->
+                      <div class="btn-prev-ftp">Preview</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="../assets/asset-tefa/IMG-20251126-WA0005.jpg"
+                    alt=""
+                  />
+                  <div class="paragraph-products">
+                    <div class="product-wrapper">
+                      <h3>Lorem Ipsum Dolor</h3>
+                      <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="price-wrapper">
+                      <h6>Rp.xxx.xxx,xx</h6>
+                      <!-- btn preview -->
+                      <div class="btn-prev-ftp">Preview</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="../assets/asset-tefa/IMG-20251126-WA0007.jpg"
+                    alt=""
+                  />
+                  <div class="paragraph-products">
+                    <div class="product-wrapper">
+                      <h3>Lorem Ipsum Dolor</h3>
+                      <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="price-wrapper">
+                      <h6>Rp.xxx.xxx,xx</h6>
+                      <!-- btn preview -->
+                      <div class="btn-prev-ftp">Preview</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="../assets/asset-tefa/IMG-20251126-WA0008.jpg"
+                    alt=""
+                  />
+                  <div class="paragraph-products">
+                    <div class="product-wrapper">
+                      <h3>Lorem Ipsum Dolor</h3>
+                      <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="price-wrapper">
+                      <h6>Rp.xxx.xxx,xx</h6>
+                      <!-- btn preview -->
+                      <div class="btn-prev-ftp">Preview</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="../assets/asset-tefa/IMG-20251126-WA0009.jpg"
+                    alt=""
+                  />
+                  <div class="paragraph-products">
+                    <div class="product-wrapper">
+                      <h3>Lorem Ipsum Dolor</h3>
+                      <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="price-wrapper">
+                      <h6>Rp.xxx.xxx,xx</h6>
+                      <!-- btn preview -->
+                      <div class="btn-prev-ftp">Preview</div>
+                    </div>
+                  </div>
+                </div>
+                <div class="card">
+                  <img
+                    src="../assets/asset-tefa/IMG-20251126-WA0011.jpg"
+                    alt=""
+                  />
+                  <div class="paragraph-products">
+                    <div class="product-wrapper">
+                      <h3>Lorem Ipsum Dolor</h3>
+                      <p>Lorem ipsum dolor sit amet</p>
+                    </div>
+                    <div class="price-wrapper">
+                      <h6>Rp.xxx.xxx,xx</h6>
+                      <!-- btn preview -->
+                      <div class="btn-prev-ftp">Preview</div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <button
+              class="btn next"
+              id="nextBtn"
+            >
+              →
+            </button>
+          </div>
+        </section>
+        <!-- <section
+          id="produk"
+          class="featured-products"
+        >
+          <div class="container">
+            <h2 class="heading">Produk Unggulan</h2>
+            <p class="subtext">
+              Jelajahi kategori produk kami yang dibuat fresh setiap hari.
             </p>
           </div>
 
-          <div class="carousel-wrapper">
+          <div class="carousel">
             <button
-              class="btn btn-outline-secondary rounded-circle"
-              aria-label="Previous slide"
+              class="nav prev"
+              aria-label="Previous"
             >
               <i class="bi bi-chevron-left"></i>
             </button>
 
-            <div class="carousel-content">
+            <div class="carousel-window">
               <div class="carousel-track">
-                <article class="carousel-item">
+                 
+                <article class="item">
                   <div class="card">
-                    <div class="featured-products-2">
-                      <div
-                        class="image-with-fallback-3"
-                        style="
-                          background-image: url('../assets/images/dummy-image-square.webp');
-                        "
-                      ></div>
-                    </div>
-                    <div class="featured-products-3">
-                      <h3 class="heading-2">Butter Croissant</h3>
-                      <p class="paragraph">
-                        Flaky, buttery layers of perfection
-                      </p>
-                      <div class="container-15">
-                        <span class="text-wrapper-12">$4.50</span>
-                        <button
-                          class="btn btn-primary btn-sm"
-                          aria-label="Preview"
-                        >
+                    <div
+                      class="img"
+                      style="
+                        background-image: url('../assets/images/dummy-image-square.webp');
+                      "
+                    ></div>
+                    <div class="info">
+                      <h3>Butter Croissant</h3>
+                      <p>Flaky, buttery layers of perfection</p>
+                      <div class="price-row">
+                        <span>$4.50</span>
+                        <button class="btn-preview">
                           <i class="bi bi-eye"></i>
-                          <!-- <span>Preview</span> -->
                         </button>
                       </div>
                     </div>
                   </div>
                 </article>
 
-                <article class="carousel-item">
+                <article class="item">
                   <div class="card">
-                    <div class="featured-products-2">
-                      <div
-                        class="image-with-fallback-4"
-                        style="
-                          background-image: url('../assets/images/dummy-image-square.webp');
-                        "
-                      ></div>
-                    </div>
-                    <div class="featured-products-3">
-                      <h3 class="heading-2">Artisan Sourdough</h3>
-                      <p class="paragraph">
-                        Handcrafted with traditional methods
-                      </p>
-                      <div class="container-15">
-                        <span class="text-wrapper-12">$7.99</span>
-                        <button
-                          class="btn btn-primary btn-sm"
-                          aria-label="Preview"
-                        >
+                    <div
+                      class="img"
+                      style="
+                        background-image: url('../assets/images/dummy-image-square.webp');
+                      "
+                    ></div>
+                    <div class="info">
+                      <h3>Artisan Sourdough</h3>
+                      <p>Handcrafted with traditional methods</p>
+                      <div class="price-row">
+                        <span>$7.99</span>
+                        <button class="btn-preview">
                           <i class="bi bi-eye"></i>
-                          <!-- <span>Preview</span> -->
                         </button>
                       </div>
                     </div>
                   </div>
                 </article>
 
-                <article class="carousel-item">
+                <article class="item">
                   <div class="card">
-                    <div class="featured-products-2">
-                      <div
-                        class="image-with-fallback-5"
-                        style="
-                          background-image: url('../assets/images/dummy-image-square.webp');
-                        "
-                      ></div>
-                    </div>
-                    <div class="featured-products-3">
-                      <h3 class="heading-2">Chocolate Cake</h3>
-                      <p class="paragraph">
-                        Rich and decadent chocolate delight
-                      </p>
-                      <div class="container-15">
-                        <span class="text-wrapper-12">$6.50</span>
-                        <button
-                          class="btn btn-primary btn-sm"
-                          aria-label="Preview"
-                        >
+                    <div
+                      class="img"
+                      style="
+                        background-image: url('../assets/images/dummy-image-square.webp');
+                      "
+                    ></div>
+                    <div class="info">
+                      <h3>Chocolate Cake</h3>
+                      <p>Rich and decadent chocolate delight</p>
+                      <div class="price-row">
+                        <span>$6.50</span>
+                        <button class="btn-preview">
                           <i class="bi bi-eye"></i>
-                          <!-- <span>Preview</span> -->
                         </button>
                       </div>
                     </div>
@@ -313,13 +426,13 @@
             </div>
 
             <button
-              class="btn btn-outline-secondary rounded-circle"
-              aria-label="Next slide"
+              class="nav next"
+              aria-label="Next"
             >
               <i class="bi bi-chevron-right"></i>
             </button>
           </div>
-        </section>
+        </section> -->
 
         <section
           class="testimonials"
@@ -518,5 +631,6 @@
       </footer>
     </div>
     <script src="../script/index.js"></script>
+    <script></script>
   </body>
 </html>
