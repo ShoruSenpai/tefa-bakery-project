@@ -29,7 +29,6 @@ a:focus-visible {
 /* ============================================
    NAVBAR
    ============================================ */
-
 .navbar-light {
   position: sticky;
   top: 0;
@@ -68,7 +67,6 @@ a:focus-visible {
 }
 
 /* Logo Polije Styling (Left) */
-
 .polije-logo-container {
   display: flex;
   align-items: center;
@@ -111,7 +109,6 @@ a:focus-visible {
 }
 
 /* Logo TEFA Styling (Right) */
-
 .tefa-logo-container {
   display: flex;
   align-items: center;
@@ -154,7 +151,6 @@ a:focus-visible {
 }
 
 /* Navigation Menu (Center) */
-
 .container-37 {
   display: flex;
   align-items: center;
@@ -165,6 +161,44 @@ a:focus-visible {
   flex-wrap: nowrap;
   margin: 0;
   padding: 0;
+}
+
+.nav-toggle {
+  display: none;
+  align-items: center;
+  justify-content: center;
+  width: 42px;
+  height: 42px;
+  border-radius: 999px;
+  border: 1px solid rgba(107, 84, 62, 0.15);
+  background: #ffffff;
+  color: #6b5344;
+  cursor: pointer;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-toggle:focus-visible {
+  outline: 2px solid #8b6f47;
+  outline-offset: 2px;
+}
+
+.nav-toggle:hover {
+  background: #f5ede1;
+}
+
+.nav-toggle.is-open i {
+  transform: rotate(90deg);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
 }
 
 .frame-wrapper,
@@ -184,6 +218,12 @@ a:focus-visible {
   transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
   display: inline-block;
   position: relative;
+}
+
+.frame-2.active {
+  text-decoration: none;
+  color: #000;
+  font-weight: 700;
 }
 
 .frame-2::after {
@@ -215,6 +255,47 @@ a:focus-visible {
   line-height: 1.5;
   display: inline-block;
 }
+
+/* ============================================
+   ACTIVE NAVIGATION STYLES
+   ============================================ */
+.frame-2.active {
+  position: relative;
+  font-weight: 700 !important;
+}
+
+.frame-2.active::after {
+  content: '';
+  position: absolute;
+  bottom: 0.125rem;
+  left: 0;
+  width: 100% !important;
+  height: 2px;
+  background-color: #6b4423 !important;
+}
+
+.frame-2.active .text-wrapper-30,
+.frame-2.active .text-wrapper-31,
+.frame-2.active .text-wrapper-32,
+.frame-2.active .text-wrapper-33,
+.frame-2.active .text-wrapper-34 {
+  color: #6b4423 !important;
+  font-weight: 700;
+}
+
+.frame-2.active:hover::after {
+  width: 100% !important;
+}
+
+.frame-3 .frame-2.active .text-wrapper-31,
+.frame-wrapper .frame-2.active .text-wrapper-30,
+.frame-5 .frame-2.active .text-wrapper-33,
+.frame-4 .frame-2.active .text-wrapper-32,
+.frame-6 .frame-2.active .text-wrapper-34 {
+  color: #6b4423 !important;
+  font-weight: 700 !important;
+}
+
 .text-wrapper-30,
 .text-wrapper-31,
 .text-wrapper-32,
@@ -230,6 +311,7 @@ a:focus-visible {
   line-height: 1.5;
   display: inline-block;
 }
+
 .frame-2:hover .text-wrapper-33,
 .frame-2:hover .text-wrapper-30,
 .frame-2:hover .text-wrapper-31,
@@ -240,7 +322,6 @@ a:focus-visible {
 }
 
 /* Responsive Header - Tablet */
-
 @media (max-width: 1024px) {
   .navbar-light {
     padding: 0.875rem clamp(1rem, 3vw, 1.5rem);
@@ -280,7 +361,6 @@ a:focus-visible {
 }
 
 /* Responsive Header - Mobile */
-
 @media (max-width: 768px) {
   .navbar-light {
     padding: 0.75rem clamp(1rem, 3vw, 1.5rem);
@@ -361,7 +441,6 @@ a:focus-visible {
 /* ============================================
    FOOTER
    ============================================ */
-
 .footer {
   background-color: #f5e6d3;
   padding: 2rem clamp(1.5rem, 4vw, 2rem);
@@ -507,6 +586,25 @@ a:focus-visible {
   margin: 0;
 }
 
+.list li {
+  position: relative;
+  padding-left: 1rem;
+}
+
+.list li::before {
+  content: '›';
+  position: absolute;
+  left: 0;
+  color: #8b6f47;
+  font-weight: bold;
+  transition: transform 0.3s ease;
+}
+
+.list li:hover::before {
+  transform: translateX(3px);
+  color: #6b4423;
+}
+
 .text-wrapper-25 {
   font-family: 'Poppins-Regular', Helvetica;
   font-weight: 400;
@@ -553,8 +651,50 @@ a:focus-visible {
 }
 
 .text-wrapper-27,
-.text-wrapper-28,
-.sabtu-minggu,
+.sabtu-minggu {
+  line-height: 1.4;
+  font-family: 'Poppins-Regular', Helvetica;
+  font-weight: 400;
+  color: #8b6f47;
+  font-size: clamp(12px, 2vw, 16px);
+}
+
+.text-wrapper-28 {
+  text-align: center;
+  font-family: 'Poppins-Regular', Helvetica;
+  font-weight: 400;
+  color: #8b6f47;
+  font-size: clamp(12px, 2vw, 16px);
+}
+
+@media (max-width: 768px) {
+  .div-2 {
+    grid-template-columns: 1fr auto;
+    gap: 1rem;
+  }
+
+  .text-wrapper-28 {
+    min-width: 100px;
+    padding: 0.3rem 0.8rem;
+    font-size: clamp(12px, 1.8vw, 14px);
+  }
+}
+
+@media (max-width: 480px) {
+  .div-2 {
+    grid-template-columns: 1fr;
+    gap: 0.25rem;
+  }
+
+  .text-wrapper-28 {
+    width: 100%;
+    min-width: unset;
+    text-align: left;
+    margin-top: 0.125rem;
+    padding: 0.25rem 0.75rem;
+  }
+}
+
 .p {
   font-family: 'Poppins-Regular', Helvetica;
   font-weight: 400;
@@ -569,7 +709,6 @@ a:focus-visible {
 }
 
 /* Social Media Icons */
-
 .social-media-icons {
   display: flex;
   align-items: center;
@@ -651,10 +790,20 @@ a:focus-visible {
   margin: 0;
 }
 
+/* Responsive spacing for mobile */
+@media (max-width: 480px) {
+  .footer {
+    padding: 1.5rem 1rem;
+  }
+
+  .container-25 {
+    gap: 1.5rem;
+  }
+}
+
 /* ============================================
    ANIMATIONS & TRANSITIONS
    ============================================ */
-
 @keyframes fadeInUp {
   from {
     opacity: 0;

@@ -45,14 +45,22 @@
             <div class="polije-logo-container">
               <img
                 src="../assets/images/LogoTefa.svg"
+                data-desktop-src="../assets/images/LogoTefa.svg"
+                data-mobile-src="../assets/favicon.ico"
                 alt="Logo Polije"
                 class="polije-logo-svg"
               />
             </div>
           </div>
 
+          <!-- Mobile Toggle -->
+          <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-nav" aria-expanded="false">
+            <span class="visually-hidden">Menu</span>
+            <i class="bi bi-list"></i>
+          </button>
+
           <!-- Center: Navigation Menu -->
-          <ul class="container-37">
+          <ul id="primary-nav" class="container-37" data-state="closed">
             <li class="frame-wrapper">
               <a
                 href="index.html"
@@ -88,7 +96,7 @@
             <li class="frame-6">
               <a
                 href="kontak.html"
-                class="frame-2"
+                class="frame-2 active"
               >
                 <span class="text-wrapper-34">Kontak</span>
               </a>
@@ -100,6 +108,8 @@
             <div class="tefa-logo-container">
               <img
                 src="../assets/images/LogoPolije.svg"
+                data-desktop-src="../assets/images/LogoPolije.svg"
+                data-mobile-src="../assets/faviconPolije.png"
                 alt="Logo TEFA"
                 class="tefa-logo-svg"
               />
@@ -410,6 +420,7 @@
         </div>
       </footer>
     </div>
+    <script src="../script/header.js"></script>
     <script src="../script/kontak.js"></script>
   </body>
 </html>

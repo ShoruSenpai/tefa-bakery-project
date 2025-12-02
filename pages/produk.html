@@ -1,1624 +1,1470 @@
 <!DOCTYPE html>
 <html lang="id">
-  <head>
-    <meta
-      name="viewport"
-      content="width=device-width, initial-scale=1"
-    />
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="utf-8" />
-    <meta
-      name="description"
-      content="Tefa Bakery & Coffee - Produk berkualitas dengan bahan-bahan terbaik"
-    />
+    <meta name="description" content="Tefa Bakery & Coffee - Produk berkualitas dengan bahan-bahan terbaik" />
     <title>Produk - Tefa Bakery & Coffee</title>
-    <link
-      rel="icon"
-      href="../assets/images/tefa_logo.webp"
-    />
-    <link
-      rel="stylesheet"
-      href="../src/globals.css"
-    />
-    <link
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
-      rel="stylesheet"
-      integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN"
-      crossorigin="anonymous"
-    />
-    <link
-      rel="stylesheet"
-      href="../src/style_produk.css"
-    />
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css"
-    />
-  </head>
+    <link rel="icon" href="../assets/images/tefa_logo.webp" />
+    <link rel="stylesheet" href="../src/globals.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+    <link rel="stylesheet" href="../src/style_produk.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css" />
+</head>
 
-  <body>
+<body>
     <div class="our-product">
-      <!-- Header -->
-      <header class="navbar-light">
-        <div class="container-36">
-          <!-- Left Side: Polije Logo -->
-          <div class="header-left">
-            <div class="polije-logo-container">
-              <img
-                src="../assets/images/LogoTefa.svg"
-                alt="Logo Polije"
-                class="polije-logo-svg"
-              />
+        <!-- Header -->
+        <header class="navbar-light">
+            <div class="container-36">
+                <!-- Left Side: Polije Logo -->
+                <div class="header-left">
+                    <div class="polije-logo-container">
+                        <img src="../assets/images/LogoTefa.svg" data-desktop-src="../assets/images/LogoTefa.svg" data-mobile-src="../assets/favicon.ico" alt="Logo Polije" class="polije-logo-svg" />
+                    </div>
+                </div>
+
+                <!-- Mobile Toggle -->
+                <button class="nav-toggle" type="button" aria-label="Toggle navigation" aria-controls="primary-nav" aria-expanded="false">
+                    <span class="visually-hidden">Menu</span>
+                    <i class="bi bi-list"></i>
+                </button>
+
+                <!-- Center: Navigation Menu -->
+                <ul id="primary-nav" class="container-37" data-state="closed">
+                    <li class="frame-wrapper">
+                        <a href="index.html" class="frame-2">
+                            <span class="text-wrapper-30">Beranda</span>
+                        </a>
+                    </li>
+                    <li class="frame-3">
+                        <a href="tentang.html" class="frame-2">
+                            <span class="text-wrapper-31">Tentang</span>
+                        </a>
+                    </li>
+                    <li class="frame-5">
+                        <a href="produk.html" class="frame-2 active">
+                            <span class="text-wrapper-33">Produk</span>
+                        </a>
+                    </li>
+                    <li class="frame-4">
+                        <a href="galeri.html" class="frame-2">
+                            <span class="text-wrapper-32">Galeri</span>
+                        </a>
+                    </li>
+                    <li class="frame-6">
+                        <a href="kontak.html" class="frame-2">
+                            <span class="text-wrapper-34">Kontak</span>
+                        </a>
+                    </li>
+                </ul>
+
+                <!-- Right Side: Container/TEFA Logo -->
+                <div class="header-right">
+                    <div class="tefa-logo-container">
+                        <img src="../assets/images/LogoPolije.svg" data-desktop-src="../assets/images/LogoPolije.svg" data-mobile-src="../assets/faviconPolije.png" alt="Logo TEFA" class="tefa-logo-svg" />
+                    </div>
+                </div>
             </div>
-          </div>
+        </header>
 
-          <!-- Center: Navigation Menu -->
-          <ul class="container-37">
-            <li class="frame-wrapper">
-              <a
-                href="index.html"
-                class="frame-2"
-              >
-                <span class="text-wrapper-30">Beranda</span>
-              </a>
-            </li>
-            <li class="frame-3">
-              <a
-                href="tentang.html"
-                class="frame-2"
-              >
-                <span class="text-wrapper-31">Tentang</span>
-              </a>
-            </li>
-            <li class="frame-5">
-              <a
-                href="produk.html"
-                class="frame-2"
-              >
-                <span class="text-wrapper-33">Produk</span>
-              </a>
-            </li>
-            <li class="frame-4">
-              <a
-                href="galeri.html"
-                class="frame-2"
-              >
-                <span class="text-wrapper-32">Galeri</span>
-              </a>
-            </li>
-            <li class="frame-6">
-              <a
-                href="kontak.html"
-                class="frame-2"
-              >
-                <span class="text-wrapper-34">Kontak</span>
-              </a>
-            </li>
-          </ul>
+        <main>
+            <section class="div">
+                <div class="div-wrapper">
+                    <h1 class="text-wrapper-2">Produk</h1>
+                </div>
+                <div class="from-humble-wrapper">
+                    <p class="from-humble">
+                        Jelajahi lengkap produk kami yang dibuat fresh setiap hari dengan bahan-bahan berkualitas terbaik.
+                    </p>
+                </div>
+            </section>
 
-          <!-- Right Side: Container/TEFA Logo -->
-          <div class="header-right">
-            <div class="tefa-logo-container">
-              <img
-                src="../assets/images/LogoPolije.svg"
-                alt="Logo TEFA"
-                class="tefa-logo-svg"
-              />
-            </div>
-          </div>
-        </div>
-      </header>
-
-      <main>
-        <section class="div">
-          <div class="div-wrapper">
-            <h1 class="text-wrapper-2">Produk</h1>
-          </div>
-          <div class="from-humble-wrapper">
-            <p class="from-humble">
-              Jelajahi lengkap produk kami yang dibuat fresh setiap hari dengan
-              bahan-bahan berkualitas terbaik.
-            </p>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="container-4">
-            <button
-              class="button btn-filter active"
-              data-filter="all"
-            >
+            <section class="section">
+                <div class="container-4">
+                    <button class="button btn-filter active" data-filter="all">
               <span class="text-wrapper-9">Semua Produk</span>
             </button>
-            <button
-              class="button-2 btn-filter"
-              data-filter="roti"
-            >
+                    <button class="button-2 btn-filter" data-filter="roti">
               <span class="text-wrapper-10">Roti</span>
             </button>
-            <button
-              class="button-3 btn-filter"
-              data-filter="minuman-panas"
-            >
+                    <button class="button-3 btn-filter" data-filter="minuman-panas">
               <span class="text-wrapper-11">Minumman Panas</span>
             </button>
-            <button
-              class="cakes-desserts-wrapper btn-filter"
-              data-filter="minuman-dingin"
-            >
+                    <button class="cakes-desserts-wrapper btn-filter" data-filter="minuman-dingin">
               <span class="cakes-desserts">Minuman Dingin</span>
             </button>
-          </div>
+                </div>
 
-          <div class="container-5">
-            <div
-              class="card"
-              data-category="roti"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-6">
-                  <div class="text">
-                    <span class="text-wrapper-12">Roti</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                <div class="container-5">
+                    <!-- Aneka Roti Manis Rp.5000 -->
+                    <div class="card" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback" style="background-image: url('../assets/asset tefa/Roti Boy.jpg');"></div>
+                        </div>
+                        <div class="product-page-2">
+                            <div class="container-6">
+                                <div class="text"><span class="text-wrapper-12">Roti Manis</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-13">4.8</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Boy</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="p">Roti manis dengan rasa yang lezat</p>
+                            </div>
+                            <div class="container-8">
+                                <div class="text-3"><span class="text-wrapper-15">Rp 5.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.8</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Roti Sosis</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="p">Flaky, buttery layers of perfection</p>
-                </div>
-                <div class="container-8">
-                  <div class="text-3">
-                    <span class="text-wrapper-15">Rp.5000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-eye"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-2"
-              data-category="roti"
-            >
-              <div class="product-page-3">
-                <div
-                  class="image-with-fallback-2"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-4">
-                <div class="container-9">
-                  <div class="text-4">
-                    <span class="text-wrapper-17">Roti</span>
-                  </div>
-                  <div class="container-10">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-2" data-category="roti">
+                        <div class="product-page-3">
+                            <div class="image-with-fallback-2" style="background-image: url('../assets/asset tefa/Roti Manis isi Pisang Coklat.jpg');"></div>
+                        </div>
+                        <div class="product-page-4">
+                            <div class="container-9">
+                                <div class="text-4"><span class="text-wrapper-17">Roti Manis</span></div>
+                                <div class="container-10">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-5"><span class="text-wrapper-18">4.9</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Pisang Coklat</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-19">Kombinasi pisang dan coklat yang nikmat</p>
+                            </div>
+                            <div class="container-11">
+                                <div class="text-3"><span class="text-wrapper-20">Rp 5.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-5">
-                      <span class="text-wrapper-18">5</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Roti Isi Daging</h3>
-                </div>
-                <div class="paragraph-3">
-                  <p class="text-wrapper-19">
-                    Handcrafted with traditional methods
-                  </p>
-                </div>
-                <div class="container-11">
-                  <div class="text-3">
-                    <span class="text-wrapper-20">Rp.5000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-eye"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-3"
-              data-category="roti"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-3"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-12">
-                  <div class="text-6">
-                    <span class="cakes-desserts-2">Roti</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-3" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-3" style="background-image: url('../assets/asset tefa/Roti Abon Gulung.jpg');"></div>
+                        </div>
+                        <div class="product-page-2">
+                            <div class="container-12">
+                                <div class="text-6"><span class="cakes-desserts-2">Roti Manis</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-13">4.7</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Abon</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-21">Roti dengan isian abon yang gurih</p>
+                            </div>
+                            <div class="container-13">
+                                <div class="text-3"><span class="text-wrapper-15">Rp 5.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.9</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Roti Abon Gulung</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="text-wrapper-21">
-                    Rich and decadent chocolate delight
-                  </p>
-                </div>
-                <div class="container-13">
-                  <div class="text-3">
-                    <span class="text-wrapper-15">Rp.5000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-eye"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-4"
-              data-category="roti"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-4"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-14">
-                  <div class="text-7">
-                    <span class="coffee-drinks-2">Roti</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-4" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-4" style="background-image: url('../assets/asset tefa/Roti Abon Gulung.jpg');"></div>
+                        </div>
+                        <div class="product-page-2">
+                            <div class="container-14">
+                                <div class="text-7"><span class="coffee-drinks-2">Roti Manis</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-22">4.8</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Abon Gulung</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-21">Roti gulung dengan isian abon</p>
+                            </div>
+                            <div class="container-15">
+                                <div class="text-3"><span class="text-wrapper-20">Rp 5.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-22">4.7</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Roti Boy</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="text-wrapper-21">
-                    Smooth espresso with caramel note
-                  </p>
-                </div>
-                <div class="container-15">
-                  <div class="text-3">
-                    <span class="text-wrapper-20">Rp.5000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-eye"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-5"
-              data-category="roti"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-5"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-4">
-                <div class="container-6">
-                  <div class="text">
-                    <span class="text-wrapper-12">Roti</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-5" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-5" style="background-image: url('../assets/asset tefa/Roti Isi Daging.jpg');"></div>
+                        </div>
+                        <div class="product-page-4">
+                            <div class="container-6">
+                                <div class="text"><span class="text-wrapper-12">Roti Manis</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-13">4.9</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Isi Daging</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-23">Roti dengan isian daging yang lezat</p>
+                            </div>
+                            <div class="container-16">
+                                <div class="text-3"><span class="text-wrapper-20">Rp 5.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.9</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Bolen Pisang Keju</h3>
-                </div>
-                <div class="paragraph-3">
-                  <p class="text-wrapper-23">
-                    Buttery croissant filled with almond cream
-                  </p>
-                </div>
-                <div class="container-16">
-                  <div class="text-3">
-                    <span class="text-wrapper-20">Rp.5000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-eye"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-6"
-              data-category="roti"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-6"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-4">
-                <div class="container-17">
-                  <div class="text-6">
-                    <span class="cakes-desserts-2">Roti Manis</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-6" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-6" style="background-image: url('../assets/asset tefa/Roti Manis Kacang.jpg');"></div>
+                        </div>
+                        <div class="product-page-4">
+                            <div class="container-17">
+                                <div class="text-6"><span class="cakes-desserts-2">Roti Manis</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-13">4.8</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-24">Roti Kacang Tanah</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-25">Roti dengan topping kacang tanah</p>
+                            </div>
+                            <div class="container-11">
+                                <div class="text-3"><span class="text-wrapper-26">Rp 5.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.8</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-24">Roti Manis Isi Keju</h3>
-                </div>
-                <div class="paragraph-3">
-                  <p class="text-wrapper-25">
-                    Classic cookies with premium chocolate
-                  </p>
-                </div>
-                <div class="container-11">
-                  <div class="text-3">
-                    <span class="text-wrapper-26">Rp.5000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-eye"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-7"
-              data-category="roti"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-7"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-12">
-                  <div class="text-8">
-                    <span class="text-wrapper-27">Roti Manis</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-7" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-7" style="background-image: url('../assets/asset tefa/Roti Manis Isi Keju.jpg');"></div>
+                        </div>
+                        <div class="product-page-2">
+                            <div class="container-12">
+                                <div class="text-8"><span class="text-wrapper-27">Roti Manis</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-13">4.7</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Keju</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="p">Roti dengan isian keju yang melimpah</p>
+                            </div>
+                            <div class="container-13">
+                                <div class="text-3"><span class="text-wrapper-15">Rp 5.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.6</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Roti Manis Isi Kacang Hijau</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="p">Fresh ingredients on artisan bread</p>
-                </div>
-                <div class="container-13">
-                  <div class="text-3">
-                    <span class="text-wrapper-15">Rp.5000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-eye"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-8"
-              data-category="roti"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-8"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-14">
-                  <div class="text-7">
-                    <span class="coffee-drinks-2">Roti Manis</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-8" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-8" style="background-image: url('../assets/asset tefa/Roti Boy Isi Coklat.jpg');"></div>
+                        </div>
+                        <div class="product-page-2">
+                            <div class="container-14">
+                                <div class="text-7"><span class="coffee-drinks-2">Roti Manis</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-22">4.8</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Coklat Topping Kacang</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-21">Roti coklat dengan topping kacang</p>
+                            </div>
+                            <div class="container-15">
+                                <div class="text-3"><span class="text-wrapper-20">Rp 5.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-22">4.7</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Roti Manis Isi Milk</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="text-wrapper-28">Refreshing cold brew coffee</p>
-                </div>
-                <div class="container-15">
-                  <div class="text-3">
-                    <span class="text-wrapper-20">Rp.5000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-eye"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <!-- Minuman Panas -->
-            <div
-              class="card"
-              data-category="minuman-panas"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-6">
-                  <div class="text">
-                    <span class="text-wrapper-12">Minuman Panas</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback" style="background-image: url('../assets/asset tefa/Roti Boy Isi Coklat.jpg');"></div>
+                        </div>
+                        <div class="product-page-2">
+                            <div class="container-6">
+                                <div class="text"><span class="text-wrapper-12">Roti Manis</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-13">4.9</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Coklat Topping Yupi</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="p">Roti coklat dengan topping yupi</p>
+                            </div>
+                            <div class="container-8">
+                                <div class="text-3"><span class="text-wrapper-15">Rp 5.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.8</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Kopi Tubruk</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="p">Kopi tradisional yang nikmat</p>
-                </div>
-                <div class="container-8">
-                  <div class="text-3">
-                    <span class="text-wrapper-15">Rp.8000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-eye"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-2"
-              data-category="minuman-panas"
-            >
-              <div class="product-page-3">
-                <div
-                  class="image-with-fallback-2"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-4">
-                <div class="container-9">
-                  <div class="text-4">
-                    <span class="text-wrapper-17">Minuman Panas</span>
-                  </div>
-                  <div class="container-10">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-2" data-category="roti">
+                        <div class="product-page-3">
+                            <div class="image-with-fallback-2" style="background-image: url('../assets/asset tefa/Roti Manis Isi Milk.jpg');"></div>
+                        </div>
+                        <div class="product-page-4">
+                            <div class="container-9">
+                                <div class="text-4"><span class="text-wrapper-17">Roti Manis</span></div>
+                                <div class="container-10">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-5"><span class="text-wrapper-18">4.8</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Milk</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-19">Roti dengan rasa susu yang creamy</p>
+                            </div>
+                            <div class="container-11">
+                                <div class="text-3"><span class="text-wrapper-20">Rp 5.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-5">
-                      <span class="text-wrapper-18">4.7</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Kopi Filter</h3>
-                </div>
-                <div class="paragraph-3">
-                  <p class="text-wrapper-19">
-                    Kopi dengan metode filter yang halus
-                  </p>
-                </div>
-                <div class="container-11">
-                  <div class="text-3">
-                    <span class="text-wrapper-20">Rp.8000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-eye"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-3"
-              data-category="minuman-panas"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-3"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-12">
-                  <div class="text-6">
-                    <span class="cakes-desserts-2">Minuman Panas</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-3" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-3" style="background-image: url('../assets/images/dummy-image-square.webp');"></div>
+                        </div>
+                        <div class="product-page-2">
+                            <div class="container-12">
+                                <div class="text-6"><span class="cakes-desserts-2">Roti Manis</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-13">4.7</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Selai Srikaya</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-21">Roti dengan selai srikaya yang manis</p>
+                            </div>
+                            <div class="container-13">
+                                <div class="text-3"><span class="text-wrapper-15">Rp 5.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.9</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Kopi Susu Panas</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="text-wrapper-21">
-                    Kopi dengan susu hangat yang creamy
-                  </p>
-                </div>
-                <div class="container-13">
-                  <div class="text-3">
-                    <span class="text-wrapper-15">Rp.10000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-4"
-              data-category="minuman-panas"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-4"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-14">
-                  <div class="text-7">
-                    <span class="coffee-drinks-2">Minuman Panas</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-4" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-4" style="background-image: url('../assets/asset tefa/Roti Manis Isi Kacang Hijau.jpg');"></div>
+                        </div>
+                        <div class="product-page-2">
+                            <div class="container-14">
+                                <div class="text-7"><span class="coffee-drinks-2">Roti Manis</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-22">4.8</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Kacang Ijo</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-21">Roti dengan isian kacang hijau</p>
+                            </div>
+                            <div class="container-15">
+                                <div class="text-3"><span class="text-wrapper-20">Rp 5.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-22">4.8</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Hot Cappucino</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="text-wrapper-21">
-                    Espresso dengan susu steamed dan foam
-                  </p>
-                </div>
-                <div class="container-15">
-                  <div class="text-3">
-                    <span class="text-wrapper-20">Rp.12000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-5"
-              data-category="minuman-panas"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-5"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-4">
-                <div class="container-6">
-                  <div class="text">
-                    <span class="text-wrapper-12">Minuman Panas</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-5" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-5" style="background-image: url('../assets/asset tefa/Roti Sosis.jpg');"></div>
+                        </div>
+                        <div class="product-page-4">
+                            <div class="container-6">
+                                <div class="text"><span class="text-wrapper-12">Roti Manis</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-13">4.9</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Sosis</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-23">Roti dengan isian sosis yang gurih</p>
+                            </div>
+                            <div class="container-16">
+                                <div class="text-3"><span class="text-wrapper-20">Rp 5.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.7</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Espresso Double</h3>
-                </div>
-                <div class="paragraph-3">
-                  <p class="text-wrapper-23">Double shot espresso yang kuat</p>
-                </div>
-                <div class="container-16">
-                  <div class="text-3">
-                    <span class="text-wrapper-20">Rp.10000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-6"
-              data-category="minuman-panas"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-6"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-4">
-                <div class="container-17">
-                  <div class="text-6">
-                    <span class="cakes-desserts-2">Minuman Panas</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-6" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-6" style="background-image: url('../assets/asset tefa/Roti Manis Isi Keju.jpg');"></div>
+                        </div>
+                        <div class="product-page-4">
+                            <div class="container-17">
+                                <div class="text-6"><span class="cakes-desserts-2">Roti Manis</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-13">4.8</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-24">Roti Cream Meses Keju</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-25">Roti dengan cream, meses dan keju</p>
+                            </div>
+                            <div class="container-11">
+                                <div class="text-3"><span class="text-wrapper-26">Rp 5.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.6</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-24">Espresso Single</h3>
-                </div>
-                <div class="paragraph-3">
-                  <p class="text-wrapper-25">Single shot espresso klasik</p>
-                </div>
-                <div class="container-11">
-                  <div class="text-3">
-                    <span class="text-wrapper-26">Rp.8000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-7"
-              data-category="minuman-panas"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-7"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-12">
-                  <div class="text-8">
-                    <span class="text-wrapper-27">Minuman Panas</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-7" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-7" style="background-image: url('../assets/asset tefa/Roti Pizza.jpg');"></div>
+                        </div>
+                        <div class="product-page-2">
+                            <div class="container-12">
+                                <div class="text-8"><span class="text-wrapper-27">Roti Manis</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-13">4.7</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Pizza</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="p">Roti dengan topping ala pizza</p>
+                            </div>
+                            <div class="container-13">
+                                <div class="text-3"><span class="text-wrapper-15">Rp 5.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.8</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Americano</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="p">Espresso dengan air panas</p>
-                </div>
-                <div class="container-13">
-                  <div class="text-3">
-                    <span class="text-wrapper-15">Rp.10000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-8"
-              data-category="minuman-panas"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-8"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-14">
-                  <div class="text-7">
-                    <span class="coffee-drinks-2">Minuman Panas</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <!-- Roti Spesial -->
+                    <div class="card-8" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-8" style="background-image: url('../assets/images/dummy-image-square.webp');"></div>
+                        </div>
+                        <div class="product-page-2">
+                            <div class="container-14">
+                                <div class="text-7"><span class="coffee-drinks-2">Roti Spesial</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-22">4.9</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Tawar</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-21">Roti tawar premium berkualitas</p>
+                            </div>
+                            <div class="container-15">
+                                <div class="text-3"><span class="text-wrapper-20">Rp 12.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-22">4.7</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Milk Tea</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="text-wrapper-28">Teh dengan susu hangat</p>
-                </div>
-                <div class="container-15">
-                  <div class="text-3">
-                    <span class="text-wrapper-20">Rp.10000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card"
-              data-category="minuman-panas"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-6">
-                  <div class="text">
-                    <span class="text-wrapper-12">Minuman Panas</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback" style="background-image: url('../assets/asset tefa/Roti Kasur Isi Coklat dan Keju.jpg');"></div>
+                        </div>
+                        <div class="product-page-2">
+                            <div class="container-6">
+                                <div class="text"><span class="text-wrapper-12">Roti Spesial</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-13">4.8</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Kasur</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="p">Roti kasur yang empuk dan lezat</p>
+                            </div>
+                            <div class="container-8">
+                                <div class="text-3"><span class="text-wrapper-15">Rp 14.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.9</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Thai Tea</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="p">Teh Thailand yang khas</p>
-                </div>
-                <div class="container-8">
-                  <div class="text-3">
-                    <span class="text-wrapper-15">Rp.10000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-2"
-              data-category="minuman-panas"
-            >
-              <div class="product-page-3">
-                <div
-                  class="image-with-fallback-2"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-4">
-                <div class="container-9">
-                  <div class="text-4">
-                    <span class="text-wrapper-17">Minuman Panas</span>
-                  </div>
-                  <div class="container-10">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-2" data-category="roti">
+                        <div class="product-page-3">
+                            <div class="image-with-fallback-2" style="background-image: url('../assets/asset tefa/Roti Sobek.jpg');"></div>
+                        </div>
+                        <div class="product-page-4">
+                            <div class="container-9">
+                                <div class="text-4"><span class="text-wrapper-17">Roti Spesial</span></div>
+                                <div class="container-10">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-5"><span class="text-wrapper-18">4.9</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Sobek</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-19">Roti sobek yang lembut</p>
+                            </div>
+                            <div class="container-11">
+                                <div class="text-3"><span class="text-wrapper-20">Rp 14.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-5">
-                      <span class="text-wrapper-18">4.8</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Hot Chocolate</h3>
-                </div>
-                <div class="paragraph-3">
-                  <p class="text-wrapper-19">
-                    Cokelat panas yang creamy dan nikmat
-                  </p>
-                </div>
-                <div class="container-11">
-                  <div class="text-3">
-                    <span class="text-wrapper-20">Rp.10000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-3"
-              data-category="minuman-panas"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-3"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-12">
-                  <div class="text-6">
-                    <span class="cakes-desserts-2">Minuman Panas</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-3" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-3" style="background-image: url('../assets/images/dummy-image-square.webp');"></div>
+                        </div>
+                        <div class="product-page-2">
+                            <div class="container-12">
+                                <div class="text-6"><span class="cakes-desserts-2">Roti Spesial</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-13">4.7</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Kenong</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-21">Roti kenong dengan tekstur unik</p>
+                            </div>
+                            <div class="container-13">
+                                <div class="text-3"><span class="text-wrapper-15">Rp 12.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.5</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Teh Hangat</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="text-wrapper-21">Teh hangat yang menenangkan</p>
-                </div>
-                <div class="container-13">
-                  <div class="text-3">
-                    <span class="text-wrapper-15">Rp.5000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-4"
-              data-category="minuman-panas"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-4"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-14">
-                  <div class="text-7">
-                    <span class="coffee-drinks-2">Minuman Panas</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-4" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-4" style="background-image: url('../assets/images/dummy-image-square.webp');"></div>
+                        </div>
+                        <div class="product-page-2">
+                            <div class="container-14">
+                                <div class="text-7"><span class="coffee-drinks-2">Roti Spesial</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-22">4.8</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Sisir</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-21">Roti sisir yang renyah</p>
+                            </div>
+                            <div class="container-15">
+                                <div class="text-3"><span class="text-wrapper-20">Rp 10.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-22">4.7</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Susu Hangat</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="text-wrapper-21">Susu hangat yang menenangkan</p>
-                </div>
-                <div class="container-15">
-                  <div class="text-3">
-                    <span class="text-wrapper-20">Rp.10000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <!-- Minuman Dingin -->
-            <div
-              class="card-5"
-              data-category="minuman-dingin"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-5"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-4">
-                <div class="container-6">
-                  <div class="text">
-                    <span class="text-wrapper-12">Minuman Dingin</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-5" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-5" style="background-image: url('../assets/images/dummy-image-square.webp');"></div>
+                        </div>
+                        <div class="product-page-4">
+                            <div class="container-6">
+                                <div class="text"><span class="text-wrapper-12">Roti Spesial</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-13">4.9</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Gembul</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-23">Roti gembul yang empuk</p>
+                            </div>
+                            <div class="container-16">
+                                <div class="text-3"><span class="text-wrapper-20">Rp 10.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.8</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Es Kopi Susu</h3>
-                </div>
-                <div class="paragraph-3">
-                  <p class="text-wrapper-23">
-                    Kopi susu dingin yang menyegarkan
-                  </p>
-                </div>
-                <div class="container-16">
-                  <div class="text-3">
-                    <span class="text-wrapper-20">Rp.15000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-6"
-              data-category="minuman-dingin"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-6"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-4">
-                <div class="container-17">
-                  <div class="text-6">
-                    <span class="cakes-desserts-2">Minuman Dingin</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <!-- Roti Kering SIP -->
+                    <div class="card-6" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-6" style="background-image: url('../assets/images/dummy-image-square.webp');"></div>
+                        </div>
+                        <div class="product-page-4">
+                            <div class="container-17">
+                                <div class="text-6"><span class="cakes-desserts-2">Roti Kering SIP</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-13">4.8</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-24">Roti Kering A</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-25">Roti kering dengan varian A</p>
+                            </div>
+                            <div class="container-11">
+                                <div class="text-3"><span class="text-wrapper-26">Rp 15.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.7</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-24">Es Kopi Soda</h3>
-                </div>
-                <div class="paragraph-3">
-                  <p class="text-wrapper-25">Kopi dengan soda yang unik</p>
-                </div>
-                <div class="container-11">
-                  <div class="text-3">
-                    <span class="text-wrapper-26">Rp.10000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-7"
-              data-category="minuman-dingin"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-7"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-12">
-                  <div class="text-8">
-                    <span class="text-wrapper-27">Minuman Dingin</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-7" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-7" style="background-image: url('../assets/images/dummy-image-square.webp');"></div>
+                        </div>
+                        <div class="product-page-2">
+                            <div class="container-12">
+                                <div class="text-8"><span class="text-wrapper-27">Roti Kering SIP</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-13">4.7</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Kering B</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="p">Roti kering dengan varian B</p>
+                            </div>
+                            <div class="container-13">
+                                <div class="text-3"><span class="text-wrapper-15">Rp 8.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.9</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Es Cappucino</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="p">Cappucino dingin yang creamy</p>
-                </div>
-                <div class="container-13">
-                  <div class="text-3">
-                    <span class="text-wrapper-15">Rp.15000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-8"
-              data-category="minuman-dingin"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-8"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-14">
-                  <div class="text-7">
-                    <span class="coffee-drinks-2">Minuman Dingin</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-8" data-category="roti">
+                        <div class="image-with-fallback-wrapper">
+                            <div class="image-with-fallback-8" style="background-image: url('../assets/images/dummy-image-square.webp');"></div>
+                        </div>
+                        <div class="product-page-2">
+                            <div class="container-14">
+                                <div class="text-7"><span class="coffee-drinks-2">Roti Kering SIP</span></div>
+                                <div class="container-7">
+                                    <div class="icon"><i class="bi bi-star-fill"></i></div>
+                                    <div class="text-2"><span class="text-wrapper-22">4.8</span></div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Roti Bagelen</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-21">Roti bagelen yang renyah</p>
+                            </div>
+                            <div class="container-15">
+                                <div class="text-3"><span class="text-wrapper-20">Rp 10.000</span></div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-22">4.8</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Es Matchacino</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="text-wrapper-28">Matcha latte dingin yang segar</p>
-                </div>
-                <div class="container-15">
-                  <div class="text-3">
-                    <span class="text-wrapper-20">Rp.15000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card"
-              data-category="minuman-dingin"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-6">
-                  <div class="text">
-                    <span class="text-wrapper-12">Minuman Dingin</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <!-- Minuman Panas -->
+                    <div class="card" data-category="minuman-panas">
+                        <div class="product-page-2">
+                            <div class="container-6">
+                                <div class="text">
+                                    <span class="text-wrapper-12">Minuman Panas</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-13">4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Kopi Tubruk</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="p">Kopi tradisional yang nikmat</p>
+                            </div>
+                            <div class="container-8">
+                                <div class="text-3">
+                                    <span class="text-wrapper-15">Rp 8.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.7</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Es Milk Tea</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="p">Teh susu dingin yang menyegarkan</p>
-                </div>
-                <div class="container-8">
-                  <div class="text-3">
-                    <span class="text-wrapper-15">Rp.15000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-2"
-              data-category="minuman-dingin"
-            >
-              <div class="product-page-3">
-                <div
-                  class="image-with-fallback-2"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-4">
-                <div class="container-9">
-                  <div class="text-4">
-                    <span class="text-wrapper-17">Minuman Dingin</span>
-                  </div>
-                  <div class="container-10">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-2" data-category="minuman-panas">
+                        <div class="product-page-4">
+                            <div class="container-9">
+                                <div class="text-4">
+                                    <span class="text-wrapper-17">Minuman Panas</span>
+                                </div>
+                                <div class="container-10">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-5">
+                                        <span class="text-wrapper-18">4.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Kopi Filter</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-19">
+                                    Kopi dengan metode filter yang halus
+                                </p>
+                            </div>
+                            <div class="container-11">
+                                <div class="text-3">
+                                    <span class="text-wrapper-20">Rp 8.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-5">
-                      <span class="text-wrapper-18">4.8</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Es Lemon Tea</h3>
-                </div>
-                <div class="paragraph-3">
-                  <p class="text-wrapper-19">Teh lemon dingin yang segar</p>
-                </div>
-                <div class="container-11">
-                  <div class="text-3">
-                    <span class="text-wrapper-20">Rp.15000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-3"
-              data-category="minuman-dingin"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-3"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-12">
-                  <div class="text-6">
-                    <span class="cakes-desserts-2">Minuman Dingin</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-3" data-category="minuman-panas">
+                        <div class="product-page-2">
+                            <div class="container-12">
+                                <div class="text-6">
+                                    <span class="cakes-desserts-2">Minuman Panas</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-13">4.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Kopi Susu Panas</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-21">
+                                    Kopi dengan susu hangat yang creamy
+                                </p>
+                            </div>
+                            <div class="container-13">
+                                <div class="text-3">
+                                    <span class="text-wrapper-15">Rp 10.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.9</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Es Chocolate</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="text-wrapper-21">Cokelat dingin yang menyegarkan</p>
-                </div>
-                <div class="container-13">
-                  <div class="text-3">
-                    <span class="text-wrapper-15">Rp.15000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-4"
-              data-category="minuman-dingin"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-4"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-14">
-                  <div class="text-7">
-                    <span class="coffee-drinks-2">Minuman Dingin</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-4" data-category="minuman-panas">
+                        <div class="product-page-2">
+                            <div class="container-14">
+                                <div class="text-7">
+                                    <span class="coffee-drinks-2">Minuman Panas</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-22">4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Hot Cappucino</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-21">
+                                    Espresso dengan susu steamed dan foam
+                                </p>
+                            </div>
+                            <div class="container-15">
+                                <div class="text-3">
+                                    <span class="text-wrapper-20">Rp 12.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-22">4.6</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Es Teh</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="text-wrapper-21">Teh dingin yang menyegarkan</p>
-                </div>
-                <div class="container-15">
-                  <div class="text-3">
-                    <span class="text-wrapper-20">Rp.10000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-5"
-              data-category="minuman-dingin"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-5"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-4">
-                <div class="container-6">
-                  <div class="text">
-                    <span class="text-wrapper-12">Minuman Dingin</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-5" data-category="minuman-panas">
+                        <div class="product-page-4">
+                            <div class="container-6">
+                                <div class="text">
+                                    <span class="text-wrapper-12">Minuman Panas</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-13">4.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Espresso Double</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-23">Double shot espresso yang kuat</p>
+                            </div>
+                            <div class="container-16">
+                                <div class="text-3">
+                                    <span class="text-wrapper-20">Rp 10.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.8</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Es Thai Tea</h3>
-                </div>
-                <div class="paragraph-3">
-                  <p class="text-wrapper-23">Thai tea dingin yang khas</p>
-                </div>
-                <div class="container-16">
-                  <div class="text-3">
-                    <span class="text-wrapper-20">Rp.15000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-6"
-              data-category="minuman-dingin"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-6"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-4">
-                <div class="container-17">
-                  <div class="text-6">
-                    <span class="cakes-desserts-2">Minuman Dingin</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-6" data-category="minuman-panas">
+                        <div class="product-page-4">
+                            <div class="container-17">
+                                <div class="text-6">
+                                    <span class="cakes-desserts-2">Minuman Panas</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-13">4.6</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-24">Espresso Single</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-25">Single shot espresso klasik</p>
+                            </div>
+                            <div class="container-11">
+                                <div class="text-3">
+                                    <span class="text-wrapper-26">Rp 8.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">4.7</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-24">Es Susu</h3>
-                </div>
-                <div class="paragraph-3">
-                  <p class="text-wrapper-25">Susu dingin yang menyegarkan</p>
-                </div>
-                <div class="container-11">
-                  <div class="text-3">
-                    <span class="text-wrapper-26">Rp.10000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
 
-            <div
-              class="card-7"
-              data-category="minuman-dingin"
-            >
-              <div class="image-with-fallback-wrapper">
-                <div
-                  class="image-with-fallback-7"
-                  style="
-                    background-image: url('../assets/images/dummy-image-square.webp');
-                  "
-                ></div>
-              </div>
-              <div class="product-page-2">
-                <div class="container-12">
-                  <div class="text-8">
-                    <span class="text-wrapper-27">Minuman Dingin</span>
-                  </div>
-                  <div class="container-7">
-                    <div class="icon">
-                      <i class="bi bi-star-fill"></i>
+                    <div class="card-7" data-category="minuman-panas">
+                        <div class="product-page-2">
+                            <div class="container-12">
+                                <div class="text-8">
+                                    <span class="text-wrapper-27">Minuman Panas</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-13">4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Americano</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="p">Espresso dengan air panas</p>
+                            </div>
+                            <div class="container-13">
+                                <div class="text-3">
+                                    <span class="text-wrapper-15">Rp 10.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
                     </div>
-                    <div class="text-2">
-                      <span class="text-wrapper-13">5</span>
-                    </div>
-                  </div>
-                </div>
-                <div class="heading-2">
-                  <h3 class="text-wrapper-14">Es Japanese Coffee</h3>
-                </div>
-                <div class="paragraph-2">
-                  <p class="p">Kopi Jepang dingin yang istimewa</p>
-                </div>
-                <div class="container-13">
-                  <div class="text-3">
-                    <span class="text-wrapper-15">Rp.20000</span>
-                  </div>
-                  <button class="button-4 btn btn-primary btn-sm">
-                    <i class="bi bi-cart-plus"></i>
-                    <span class="text-wrapper-16">Preview</span>
-                  </button>
-                </div>
-              </div>
-            </div>
-          </div>
 
-          <div class="container-18">
-            <button
-              class="icon-wrapper"
-              aria-label="Previous page"
-            >
+                    <div class="card-8" data-category="minuman-panas">
+                        <div class="product-page-2">
+                            <div class="container-14">
+                                <div class="text-7">
+                                    <span class="coffee-drinks-2">Minuman Panas</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-22">4.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Milk Tea</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-28">Teh dengan susu hangat</p>
+                            </div>
+                            <div class="container-15">
+                                <div class="text-3">
+                                    <span class="text-wrapper-20">Rp 10.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" data-category="minuman-panas">
+                        <div class="product-page-2">
+                            <div class="container-6">
+                                <div class="text">
+                                    <span class="text-wrapper-12">Minuman Panas</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-13">4.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Thai Tea</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="p">Teh Thailand yang khas</p>
+                            </div>
+                            <div class="container-8">
+                                <div class="text-3">
+                                    <span class="text-wrapper-15">Rp 10.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-2" data-category="minuman-panas">
+                        <div class="product-page-4">
+                            <div class="container-9">
+                                <div class="text-4">
+                                    <span class="text-wrapper-17">Minuman Panas</span>
+                                </div>
+                                <div class="container-10">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-5">
+                                        <span class="text-wrapper-18">4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Hot Chocolate</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-19">
+                                    Cokelat panas yang creamy dan nikmat
+                                </p>
+                            </div>
+                            <div class="container-11">
+                                <div class="text-3">
+                                    <span class="text-wrapper-20">Rp 10.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-3" data-category="minuman-panas">
+                        <div class="product-page-2">
+                            <div class="container-12">
+                                <div class="text-6">
+                                    <span class="cakes-desserts-2">Minuman Panas</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-13">4.5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Teh Hangat</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-21">Teh hangat yang menenangkan</p>
+                            </div>
+                            <div class="container-13">
+                                <div class="text-3">
+                                    <span class="text-wrapper-15">Rp 5.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-4" data-category="minuman-panas">
+                        <div class="product-page-2">
+                            <div class="container-14">
+                                <div class="text-7">
+                                    <span class="coffee-drinks-2">Minuman Panas</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-22">4.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Susu Hangat</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-21">Susu hangat yang menenangkan</p>
+                            </div>
+                            <div class="container-15">
+                                <div class="text-3">
+                                    <span class="text-wrapper-20">Rp 10.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Minuman Dingin -->
+                    <div class="card-5" data-category="minuman-dingin">
+                        <div class="product-page-4">
+                            <div class="container-6">
+                                <div class="text">
+                                    <span class="text-wrapper-12">Minuman Dingin</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-13">4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Es Kopi Susu</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-23">
+                                    Kopi susu dingin yang menyegarkan
+                                </p>
+                            </div>
+                            <div class="container-16">
+                                <div class="text-3">
+                                    <span class="text-wrapper-20">Rp 15.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-6" data-category="minuman-dingin">
+                        <div class="product-page-4">
+                            <div class="container-17">
+                                <div class="text-6">
+                                    <span class="cakes-desserts-2">Minuman Dingin</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-13">4.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-24">Es Kopi Soda</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-25">Kopi dengan soda yang unik</p>
+                            </div>
+                            <div class="container-11">
+                                <div class="text-3">
+                                    <span class="text-wrapper-26">Rp 10.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-7" data-category="minuman-dingin">
+                        <div class="product-page-2">
+                            <div class="container-12">
+                                <div class="text-8">
+                                    <span class="text-wrapper-27">Minuman Dingin</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-13">4.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Es Cappucino</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="p">Cappucino dingin yang creamy</p>
+                            </div>
+                            <div class="container-13">
+                                <div class="text-3">
+                                    <span class="text-wrapper-15">Rp 15.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-8" data-category="minuman-dingin">
+                        <div class="product-page-2">
+                            <div class="container-14">
+                                <div class="text-7">
+                                    <span class="coffee-drinks-2">Minuman Dingin</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-22">4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Es Matchacino</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-28">Matcha latte dingin yang segar</p>
+                            </div>
+                            <div class="container-15">
+                                <div class="text-3">
+                                    <span class="text-wrapper-20">Rp 15.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card" data-category="minuman-dingin">
+                        <div class="product-page-2">
+                            <div class="container-6">
+                                <div class="text">
+                                    <span class="text-wrapper-12">Minuman Dingin</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-13">4.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Es Milk Tea</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="p">Teh susu dingin yang menyegarkan</p>
+                            </div>
+                            <div class="container-8">
+                                <div class="text-3">
+                                    <span class="text-wrapper-15">Rp 15.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-2" data-category="minuman-dingin">
+                        <div class="product-page-4">
+                            <div class="container-9">
+                                <div class="text-4">
+                                    <span class="text-wrapper-17">Minuman Dingin</span>
+                                </div>
+                                <div class="container-10">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-5">
+                                        <span class="text-wrapper-18">4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Es Lemon Tea</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-19">Teh lemon dingin yang segar</p>
+                            </div>
+                            <div class="container-11">
+                                <div class="text-3">
+                                    <span class="text-wrapper-20">Rp 15.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-3" data-category="minuman-dingin">
+                        <div class="product-page-2">
+                            <div class="container-12">
+                                <div class="text-6">
+                                    <span class="cakes-desserts-2">Minuman Dingin</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-13">4.9</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Es Chocolate</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-21">Cokelat dingin yang menyegarkan</p>
+                            </div>
+                            <div class="container-13">
+                                <div class="text-3">
+                                    <span class="text-wrapper-15">Rp 15.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-4" data-category="minuman-dingin">
+                        <div class="product-page-2">
+                            <div class="container-14">
+                                <div class="text-7">
+                                    <span class="coffee-drinks-2">Minuman Dingin</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-22">4.6</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Es Teh</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="text-wrapper-21">Teh dingin yang menyegarkan</p>
+                            </div>
+                            <div class="container-15">
+                                <div class="text-3">
+                                    <span class="text-wrapper-20">Rp 10.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-5" data-category="minuman-dingin">
+                        <div class="product-page-4">
+                            <div class="container-6">
+                                <div class="text">
+                                    <span class="text-wrapper-12">Minuman Dingin</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-13">4.8</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Es Thai Tea</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-23">Thai tea dingin yang khas</p>
+                            </div>
+                            <div class="container-16">
+                                <div class="text-3">
+                                    <span class="text-wrapper-20">Rp 15.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-6" data-category="minuman-dingin">
+                        <div class="product-page-4">
+                            <div class="container-17">
+                                <div class="text-6">
+                                    <span class="cakes-desserts-2">Minuman Dingin</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-13">4.7</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-24">Es Susu</h3>
+                            </div>
+                            <div class="paragraph-3">
+                                <p class="text-wrapper-25">Susu dingin yang menyegarkan</p>
+                            </div>
+                            <div class="container-11">
+                                <div class="text-3">
+                                    <span class="text-wrapper-26">Rp 10.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="card-7" data-category="minuman-dingin">
+                        <div class="product-page-2">
+                            <div class="container-12">
+                                <div class="text-8">
+                                    <span class="text-wrapper-27">Minuman Dingin</span>
+                                </div>
+                                <div class="container-7">
+                                    <div class="icon">
+                                        <i class="bi bi-star-fill"></i>
+                                    </div>
+                                    <div class="text-2">
+                                        <span class="text-wrapper-13">5</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="heading-2">
+                                <h3 class="text-wrapper-14">Es Japanese Coffee</h3>
+                            </div>
+                            <div class="paragraph-2">
+                                <p class="p">Kopi Jepang dingin yang istimewa</p>
+                            </div>
+                            <div class="container-13">
+                                <div class="text-3">
+                                    <span class="text-wrapper-15">Rp 20.000</span>
+                                </div>
+                                <button class="button-4 btn btn-primary btn-sm"><i class="bi bi-eye"></i><span class="text-wrapper-16">Preview</span></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="container-18">
+                    <button class="icon-wrapper" aria-label="Previous page">
               <i class="bi bi-chevron-left"></i>
             </button>
-            <div class="container-19">
-              <button class="button-5 active">
+                    <div class="container-19">
+                        <button class="button-5 active">
                 <span class="text-wrapper-29">1</span>
               </button>
-              <button class="button-6">
+                        <button class="button-6">
                 <span class="text-wrapper-30">2</span>
               </button>
-            </div>
-            <button
-              class="button-7"
-              aria-label="Next page"
-            >
+                    </div>
+                    <button class="button-7" aria-label="Next page">
               <i class="bi bi-chevron-right"></i>
             </button>
-          </div>
+                </div>
 
-          <div class="paragraph-4">
-            <p
-              class="text-wrapper-31"
-              id="pagination-text"
-            >
-              Showing 1-8 of 12 products
-            </p>
-          </div>
-        </section>
+                <div class="paragraph-4">
+                    <p class="text-wrapper-31" id="pagination-text">
+                        Menampilkan 1-4 dari beberapa produk
+                    </p>
+                </div>
+            </section>
 
-        <section class="container-wrapper">
-          <div class="container-20">
-            <div class="heading-3">
-              <h2 class="text-wrapper-cta">Temukan Yang Anda Cari?</h2>
-            </div>
-            <div class="we-also-take-custom-wrapper">
-              <p class="we-also-take-custom">
-                Hubungi kami untuk mendiskusikan kebutuhan unik Anda dan kami
-                akan membuatkan sesuatu yang istimewa hanya untuk Anda.
-              </p>
-            </div>
-            <button class="button-8 btn btn-primary">
+            <section class="container-wrapper">
+                <div class="container-20">
+                    <div class="heading-3">
+                        <h2 class="text-wrapper-cta">Temukan Yang Anda Cari?</h2>
+                    </div>
+                    <div class="we-also-take-custom-wrapper">
+                        <p class="we-also-take-custom">
+                            Hubungi kami untuk mendiskusikan kebutuhan unik Anda dan kami akan membuatkan sesuatu yang istimewa hanya untuk Anda.
+                        </p>
+                    </div>
+                    <button class="button-8 btn btn-primary" onclick="window.location.href='../pages/kontak.html'">
               <span class="text-wrapper-331">Hubungi Kami</span>
             </button>
-          </div>
-        </section>
-      </main>
+                </div>
+            </section>
+        </main>
 
-      <footer
-        class="footer"
-        id="kontak"
-      >
-        <div class="container-24">
-          <div class="container-25">
-            <div class="container-26">
-              <div class="container-27">
-                <div
-                  class="tefa-logo"
-                  role="img"
-                  aria-label="TEFA Bakery & Coffee Logo"
-                ></div>
-                <span class="tefa-bakery-coffee">Tefa Bakery &amp; Coffee</span>
-              </div>
-              <div class="crafting-artisan-wrapper">
-                <p class="crafting-artisan">
-                  Membangun inovasi bakery bersama generasi muda dengan kualitas
-                  terbaik
-                </p>
-              </div>
-            </div>
-            <div class="container-28">
-              <nav class="container-29">
-                <h3 class="text-wrapper-24">Tautan Cepat</h3>
-                <ul class="list">
-                  <li>
-                    <a
-                      href="index.html#beranda"
-                      class="text-wrapper-25"
-                      >Beranda</a
+        <footer class="footer" id="kontak">
+            <div class="container-24">
+                <div class="container-25">
+                    <div class="container-26">
+                        <div class="container-27">
+                            <div class="tefa-logo" role="img" aria-label="TEFA Bakery & Coffee Logo"></div>
+                            <span class="tefa-bakery-coffee">Tefa Bakery &amp; Coffee</span>
+                        </div>
+                        <div class="crafting-artisan-wrapper">
+                            <p class="crafting-artisan">
+                                Membangun inovasi bakery bersama generasi muda dengan kualitas terbaik
+                            </p>
+                        </div>
+                    </div>
+                    <div class="container-28">
+                        <nav class="container-29">
+                            <h3 class="text-wrapper-24">Tautan Cepat</h3>
+                            <ul class="list">
+                                <li>
+                                    <a href="index.html#beranda" class="text-wrapper-25">Beranda</a
                     >
                   </li>
                   <li>
@@ -1680,43 +1526,29 @@
                     >
                       <i class="bi bi-instagram"></i>
                     </a>
-                    <a
-                      href="https://wa.me/6281234567890"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="social-icon"
-                      aria-label="WhatsApp"
-                    >
-                      <i class="bi bi-whatsapp"></i>
-                    </a>
-                    <a
-                      href="https://www.facebook.com/tefabakery"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      class="social-icon"
-                      aria-label="Facebook"
-                    >
-                      <i class="bi bi-facebook"></i>
-                    </a>
-                  </div>
+                                    <a href="https://wa.me/6281234567890" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="WhatsApp">
+                                        <i class="bi bi-whatsapp"></i>
+                                    </a>
+                                    <a href="https://www.facebook.com/tefabakery" target="_blank" rel="noopener noreferrer" class="social-icon" aria-label="Facebook">
+                                        <i class="bi bi-facebook"></i>
+                                    </a>
+                    </div>
                 </div>
-              </address>
+                </address>
             </div>
-          </div>
-          <div class="container-35">
-            <p class="text-wrapper-29">
-              © 2025 Sip Bakkery. All Rights Reserved.
-            </p>
-          </div>
-        </div>
-      </footer>
     </div>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
-      crossorigin="anonymous"
-    ></script>
+    <div class="container-35">
+        <p class="text-wrapper-29">
+            © 2025 Sip Bakkery. All Rights Reserved.
+        </p>
+    </div>
+    </div>
+    </footer>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+    <script src="../script/header.js"></script>
     <script src="../script/produk.js"></script>
     <script src="../script/script.js"></script>
-  </body>
+</body>
+
 </html>
