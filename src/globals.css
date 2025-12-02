@@ -521,12 +521,12 @@ a:focus-visible {
 }
 
 /* Footer quick links hover effect */
-.container-29 .list a.text-wrapper-25 {
+/* .container-29 .list a.text-wrapper-25 {
     position: relative;
     display: inline-block;
     transition: color 0.25s ease, transform 0.15s ease;
-}
-.container-29 .list a.text-wrapper-25::after {
+} */
+/* .container-29 .list a.text-wrapper-25::after {
     content: '';
     position: absolute;
     left: 0;
@@ -536,21 +536,43 @@ a:focus-visible {
     background: linear-gradient(90deg, #8b6f47 0%, #c68a44 50%, #8b6f47 100%);
     transition: width 0.25s ease;
     border-radius: 2px;
-}
+} */
 .container-29 .list a.text-wrapper-25:hover {
     color: #6b4423;
     transform: translateY(-2px);
 }
-.container-29 .list a.text-wrapper-25:hover::after {
+/* .container-29 .list a.text-wrapper-25:hover::after {
     width: 100%;
+} */
+
+
+/* nyoba aja */
+.container-29 .list a.text-wrapper-25 {
+    text-decoration: none;
+    display: block;
+    font-size: 0.95rem;
+    position: relative;
+    padding-left: 20px;
+    transition: color 0.25s ease, transform 0.15s ease;
 }
+.container-29 .list a.text-wrapper-25::before {
+   content: '→';
+    position: absolute;
+    left: 0;
+    opacity: 0;
+    transition: all 0.25s ease;
+}
+.container-29 .list a.text-wrapper-25:hover::before {
+    opacity: 1;
+}
+/* end */
+
 
 .container-31 {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
 }
-
 .div-2 {
     display: flex;
     flex-direction: column;

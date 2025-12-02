@@ -483,11 +483,6 @@
     transition: transform 0.3s ease, color 0.3s ease;
 }
 
-.about-us .our-bakery-was:hover {
-    color: #6b4423;
-    transform: translateX(5px);
-}
-
 /* Paragraph 2 animation */
 .about-us .paragraph-2 {
     animation: fadeInUp 0.8s ease-out 1.4s both;

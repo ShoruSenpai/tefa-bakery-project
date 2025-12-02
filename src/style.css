@@ -86,7 +86,6 @@ a.btn-primary:focus {
     background-color: #6b4423 !important;
     border-color: #6b4423 !important;
     color: #ffffff !important;
-    transform: translateY(-2px) !important;
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.15) !important;
 }
 
@@ -110,6 +109,7 @@ a.btn-outline-primary {
 .btn-outline-primary:focus,
 .btn.btn-outline-primary:hover{
     background-color:#6b4423!important;
+    border-color: #6b4423 !important;
 }
 .btn.btn-outline-primary:focus,
 a.btn-outline-primary:hover {
@@ -1283,7 +1283,7 @@ html {
     animation: fadeInUp 0.8s ease-out 0.4s both;
 }
 
-#beranda .hero-img {
+#beranda .container-11 {
     animation: slideInRight 0.8s ease-out 0.2s both;
     transition: transform 0.3s ease-out;
 }
