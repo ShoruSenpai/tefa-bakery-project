@@ -110,7 +110,9 @@
     white-space: nowrap;
 }
 
+
 /* Semua tombol filter memiliki styling default yang sama (tidak aktif) */
+
 .our-product .button,
 .our-product .button-2,
 .our-product .button-3,
@@ -121,14 +123,19 @@
     border: 1.78px solid #e8d4b8;
 }
 
+
 /* Efek hover dihapus dari sini karena sudah ditangani di bagian btn-filter */
 
+
 /* Status Aktif dan Hover untuk Tombol Filter */
+
 .our-product .btn-filter {
     transition: all 0.3s ease;
 }
 
+
 /* Status aktif - tombol yang sedang dipilih */
+
 .our-product .btn-filter.active {
     background-color: #8b6f47 !important;
     color: #ffffff !important;
@@ -136,7 +143,9 @@
     box-shadow: 0px 4px 6px -4px #0000001a, 0px 10px 15px -3px #0000001a;
 }
 
+
 /* Efek hover untuk tombol filter yang tidak aktif */
+
 .our-product .btn-filter:not(.active):hover {
     background-color: #f5e6d3 !important;
     border-color: #8b6f47 !important;
@@ -145,7 +154,9 @@
     box-shadow: 0px 6px 8px -4px #0000001a, 0px 12px 17px -3px #0000001a;
 }
 
+
 /* Efek hover untuk tombol filter yang aktif */
+
 .our-product .btn-filter.active:hover {
     background-color: #6b5a3a !important;
     border-color: #6b5a3a !important;
@@ -300,8 +311,7 @@
 .our-product .text-wrapper-12,
 .our-product .text-wrapper-17,
 .our-product .cakes-desserts-2,
-.our-product .coffee-drinks-2,
-.our-product .text-wrapper-27 {
+.our-product .coffee-drinks-2 {
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 500;
     color: #8b6f47;
@@ -393,10 +403,10 @@
     display: flex;
     align-items: center;
 }
+
 .our-product .text-wrapper-26,
 .our-product .text-wrapper-15,
-.our-product .text-wrapper-20
- {
+.our-product .text-wrapper-20 {
     font-family: "Poppins-Regular", Helvetica;
     font-weight: 400;
     color: #6b4423;
@@ -539,7 +549,9 @@
     transform: translateY(-2px);
 }
 
+
 /* Styling teks tombol paginasi - hanya untuk pagination, tidak mempengaruhi header */
+
 .our-product .container-19 .text-wrapper-29,
 .our-product .container-19 .text-wrapper-30,
 .our-product .container-19 .text-wrapper-pagination {
@@ -552,13 +564,17 @@
     color: inherit;
 }
 
+
 /* Teks untuk tombol paginasi aktif (background coklat) */
+
 .our-product .container-19 .button-5 .text-wrapper-29,
 .our-product .container-19 .button-5.active .text-wrapper-29 {
     color: #ffffff !important;
 }
 
+
 /* Teks untuk tombol paginasi tidak aktif (background putih) */
+
 .our-product .container-19 .button-6 .text-wrapper-30,
 .our-product .container-19 .button-6 .text-wrapper-pagination {
     color: #8b6f47 !important;
@@ -677,53 +693,113 @@
    FOOTER (menggunakan globals.css)
    ============================================ */
 
+
 /* ============================================
    ANIMATIONS FOR PRODUK PAGE
    ============================================ */
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(20px); }
-    to   { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 @keyframes slideInLeft {
-    from { opacity: 0; transform: translateX(-30px); }
-    to   { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes scaleIn {
-    from { opacity: 0; transform: scale(0.95); }
-    to   { opacity: 1; transform: scale(1); }
+    from {
+        opacity: 0;
+        transform: scale(0.95);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
 }
 
 @keyframes float {
-    0%,100% { transform: translateY(0); }
-    50%     { transform: translateY(-6px); }
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-6px);
+    }
 }
 
 @keyframes fadeInRight {
-    from { opacity: 0; transform: translateX(20px); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes fadeInLeft {
-    from { opacity: 0; transform: translateX(-20px); }
-    to { opacity: 1; transform: translateX(0); }
+    from {
+        opacity: 0;
+        transform: translateX(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
 }
 
 @keyframes pulse {
-    0% { transform: scale(1); }
-    50% { transform: scale(1.02); }
-    100% { transform: scale(1); }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.02);
+    }
+    100% {
+        transform: scale(1);
+    }
 }
 
+
 /* Utility classes to trigger animations via JS */
-.animate-on-scroll { opacity: 0; transform: translateY(12px); transition: opacity 0.4s ease, transform 0.4s ease; }
-.animate-on-scroll.prod-in-view { opacity: 1; transform: translateY(0); }
+
+.animate-on-scroll {
+    opacity: 0;
+    transform: translateY(12px);
+    transition: opacity 0.4s ease, transform 0.4s ease;
+}
+
+.animate-on-scroll.prod-in-view {
+    opacity: 1;
+    transform: translateY(0);
+}
+
 
 /* Specific element animations */
-.our-product .text-wrapper-2.animate-on-scroll.prod-in-view { animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1); }
-.our-product .btn-filter.animate-on-scroll.prod-in-view { animation: scaleIn 0.45s ease both; }
+
+.our-product .text-wrapper-2.animate-on-scroll.prod-in-view {
+    animation: fadeInUp 0.8s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.our-product .btn-filter.animate-on-scroll.prod-in-view {
+    animation: scaleIn 0.45s ease both;
+}
+
 .our-product .card.animate-on-scroll.prod-in-view,
 .our-product .card-2.animate-on-scroll.prod-in-view,
 .our-product .card-3.animate-on-scroll.prod-in-view,
@@ -731,21 +807,56 @@
 .our-product .card-5.animate-on-scroll.prod-in-view,
 .our-product .card-6.animate-on-scroll.prod-in-view,
 .our-product .card-7.animate-on-scroll.prod-in-view,
-.our-product .card-8.animate-on-scroll.prod-in-view { animation: fadeInUp 0.8s ease both; }
-.our-product .image-with-fallback.animate-on-scroll.prod-in-view { animation: scaleIn 0.6s ease both; }
-.our-product .container-20.animate-on-scroll.prod-in-view { animation: slideInLeft 0.7s ease both; }
+.our-product .card-8.animate-on-scroll.prod-in-view {
+    animation: fadeInUp 0.8s ease both;
+}
+
+.our-product .image-with-fallback.animate-on-scroll.prod-in-view {
+    animation: scaleIn 0.6s ease both;
+}
+
+.our-product .container-20.animate-on-scroll.prod-in-view {
+    animation: slideInLeft 0.7s ease both;
+}
+
 
 /* Add extra animations for filter container and CTA */
-.our-product .container-4.animate-on-scroll.prod-in-view { animation: fadeInRight 0.55s ease both; }
-.our-product .container-20.animate-on-scroll.prod-in-view { animation: fadeInLeft 0.65s ease both; }
-.our-product .button-8.animate-on-scroll.prod-in-view { animation: pulse 1.6s ease 0.3s both; }
+
+.our-product .container-4.animate-on-scroll.prod-in-view {
+    animation: fadeInRight 0.55s ease both;
+}
+
+.our-product .container-20.animate-on-scroll.prod-in-view {
+    animation: fadeInLeft 0.65s ease both;
+}
+
+.our-product .button-8.animate-on-scroll.prod-in-view {
+    animation: pulse 1.6s ease 0.3s both;
+}
+
 
 /* Staggered appearance for grid items (fallback CSS only) */
-.our-product .container-5 .card { opacity: 0; transform: translateY(12px); }
-.our-product .container-5 .card.prod-in-view { opacity: 1; transform: translateY(0); transition: opacity 0.45s ease, transform 0.45s ease; }
+
+.our-product .container-5 .card {
+    opacity: 0;
+    transform: translateY(12px);
+}
+
+.our-product .container-5 .card.prod-in-view {
+    opacity: 1;
+    transform: translateY(0);
+    transition: opacity 0.45s ease, transform 0.45s ease;
+}
+
 
 /* Subtle hover 3D for product cards */
-.our-product .card { transform-origin: center; will-change: transform; transition: transform 0.3s ease, box-shadow 0.3s ease; }
+
+.our-product .card {
+    transform-origin: center;
+    will-change: transform;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 @media (hover: hover) and (pointer: fine) {
     .our-product .card:hover,
     .our-product .card-2:hover,
@@ -756,37 +867,99 @@
     .our-product .card-7:hover,
     .our-product .card-8:hover {
         transform: translateY(-6px) scale(1.01);
-        box-shadow: 0 10px 20px rgba(0,0,0,0.12);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
     }
-    .our-product .card:hover .image-with-fallback, .our-product .card:hover .image-with-fallback-2,
-    .our-product .card:hover .image-with-fallback-3, .our-product .card:hover .image-with-fallback-4,
-    .our-product .card:hover .image-with-fallback-5, .our-product .card:hover .image-with-fallback-6,
-    .our-product .card:hover .image-with-fallback-7, .our-product .card:hover .image-with-fallback-8 { transform: scale(1.05); }
+    .our-product .card:hover .image-with-fallback,
+    .our-product .card:hover .image-with-fallback-2,
+    .our-product .card:hover .image-with-fallback-3,
+    .our-product .card:hover .image-with-fallback-4,
+    .our-product .card:hover .image-with-fallback-5,
+    .our-product .card:hover .image-with-fallback-6,
+    .our-product .card:hover .image-with-fallback-7,
+    .our-product .card:hover .image-with-fallback-8 {
+        transform: scale(1.05);
+    }
 }
+
+
 /* Fallback for non-hover devices: keep simple pressed state */
-.our-product .card:active { transform: translateY(-2px); box-shadow: 0 6px 12px rgba(0,0,0,0.08); }
+
+.our-product .card:active {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.08);
+}
+
 
 /* Button hover micro interactions */
-.our-product .btn-filter { transition: transform 0.18s ease, box-shadow 0.18s ease; }
-.our-product .btn-filter:active { transform: translateY(1px) scale(0.995); }
+
+.our-product .btn-filter {
+    transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.our-product .btn-filter:active {
+    transform: translateY(1px) scale(0.995);
+}
+
 
 /* Ensure images have smooth transform */
-.our-product .image-with-fallback, .our-product .image-with-fallback-2, .our-product .image-with-fallback-3,
-.our-product .image-with-fallback-4, .our-product .image-with-fallback-5 { transition: transform 0.5s ease; }
-.our-product .card:hover .image-with-fallback, .our-product .card:hover .image-with-fallback-2,
-.our-product .card:hover .image-with-fallback-3, .our-product .card:hover .image-with-fallback-4,
-.our-product .card:hover .image-with-fallback-5, .our-product .card:hover .image-with-fallback-6,
-.our-product .card:hover .image-with-fallback-7, .our-product .card:hover .image-with-fallback-8 { transform: scale(1.05); }
+
+.our-product .image-with-fallback,
+.our-product .image-with-fallback-2,
+.our-product .image-with-fallback-3,
+.our-product .image-with-fallback-4,
+.our-product .image-with-fallback-5 {
+    transition: transform 0.5s ease;
+}
+
+.our-product .card:hover .image-with-fallback,
+.our-product .card:hover .image-with-fallback-2,
+.our-product .card:hover .image-with-fallback-3,
+.our-product .card:hover .image-with-fallback-4,
+.our-product .card:hover .image-with-fallback-5,
+.our-product .card:hover .image-with-fallback-6,
+.our-product .card:hover .image-with-fallback-7,
+.our-product .card:hover .image-with-fallback-8 {
+    transform: scale(1.05);
+}
+
 
 /* Respect user preference for reduced motion */
+
 @media (prefers-reduced-motion: reduce) {
-    .animate-on-scroll, .animate-on-scroll.prod-in-view, .prod-in-view {
+    .animate-on-scroll,
+    .animate-on-scroll.prod-in-view,
+    .prod-in-view {
         transition: none !important;
         animation: none !important;
         transform: none !important;
     }
 }
 
+
 /* Pagination and CTA subtle effects */
-.our-product .button-5.animate-on-scroll.prod-in-view { animation: scaleIn 0.45s ease both; }
-.our-product .button-8.animate-on-scroll.prod-in-view { animation: fadeInUp 0.6s ease both; }
+
+.our-product .button-5.animate-on-scroll.prod-in-view {
+    animation: scaleIn 0.45s ease both;
+}
+
+.our-product .button-8.animate-on-scroll.prod-in-view {
+    animation: fadeInUp 0.6s ease both;
+}
+
+
+/* ============================================
+   FOOTER STYLING OVERRIDE - Jam Operasional
+   ============================================ */
+
+
+/* Pastikan ukuran font jam operasional di footer tidak terlalu kecil */
+
+.our-product .footer .text-wrapper-27,
+.our-product .footer .text-wrapper-28,
+.our-product .footer .sabtu-minggu {
+    font-family: "Poppins-Regular", Helvetica;
+    font-weight: 400;
+    color: #8b6f47;
+    font-size: clamp(14px, 2vw, 16px) !important;
+    line-height: 1.5;
+}
