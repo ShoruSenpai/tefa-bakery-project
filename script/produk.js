@@ -75,4 +75,20 @@ document.addEventListener('DOMContentLoaded', function() {
             // If reduced motion changed or layout changed, we could re-check behavior
         }, 150);
     });
+    
+    // Click handler for product cards (mobile - no button)
+    cards.forEach(card => {
+        card.addEventListener('click', function(e) {
+            // Don't trigger if clicking on button (desktop)
+            if (e.target.closest('.button-4')) {
+                return;
+            }
+            // Handle preview action
+            const previewBtn = this.querySelector('.button-4');
+            if (previewBtn && window.innerWidth <= 768) {
+                // On mobile, trigger preview action
+                previewBtn.click();
+            }
+        });
+    });
 });
