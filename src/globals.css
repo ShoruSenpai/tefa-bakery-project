@@ -169,6 +169,44 @@ a:focus-visible {
     padding: 0;
 }
 
+.nav-toggle {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    border: 1px solid rgba(107, 84, 62, 0.15);
+    background: #ffffff;
+    color: #6b5344;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.nav-toggle:focus-visible {
+    outline: 2px solid #8b6f47;
+    outline-offset: 2px;
+}
+
+.nav-toggle:hover {
+    background: #f5ede1;
+}
+
+.nav-toggle.is-open i {
+    transform: rotate(90deg);
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
 .frame-wrapper,
 .frame-3,
 .frame-4,
@@ -293,11 +331,15 @@ a:focus-visible {
         gap: 1rem;
         flex-wrap: wrap;
     }
+    .nav-toggle {
+        display: inline-flex;
+    }
     .header-left,
     .header-right {
         flex: 0 0 auto;
     }
     .container-37 {
+        display: none;
         gap: 1rem;
         order: 3;
         flex: 0 0 100%;
@@ -305,6 +347,10 @@ a:focus-visible {
         margin-top: 0.75rem;
         padding-top: 0.75rem;
         border-top: 1px solid rgba(107, 84, 62, 0.1);
+        flex-direction: column;
+    }
+    .container-37.is-open {
+        display: flex;
     }
     .frame-2 {
         transition: all 0.5s cubic-bezier(0.4, 0, 0.2, 1);
