@@ -1455,6 +1455,11 @@ a {
     display: none;
 }
 
+/* Remove underline line from "Kepuasan Pelanggan" heading */
+.testimonials-header h2::after {
+    display: none;
+}
+
 /* Button animations */
 .btn {
     position: relative;
