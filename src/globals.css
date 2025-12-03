@@ -714,9 +714,9 @@ a:focus-visible {
 }
 
 .div-2 {
-    display: flex;
-    flex-direction: column;
-    gap: 0.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
 }
 
 .text-wrapper-27,
@@ -778,7 +778,7 @@ a:focus-visible {
 }
 
 .social-icon[aria-label="Instagram"]:hover {
-    background: linear-gradient(45deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%);
+    background: #6b4423;
 }
 
 .social-icon[aria-label="Instagram"]:hover i {
@@ -786,15 +786,14 @@ a:focus-visible {
 }
 
 .social-icon[aria-label="WhatsApp"]:hover {
-    background-color: #25d366;
-}
+    background-color: #6b4423;}
 
 .social-icon[aria-label="WhatsApp"]:hover i {
     color: #ffffff;
 }
 
 .social-icon[aria-label="Facebook"]:hover {
-    background-color: #1877f2;
+    background-color: #6b4423
 }
 
 .social-icon[aria-label="Facebook"]:hover i {
