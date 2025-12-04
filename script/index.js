@@ -154,24 +154,123 @@
           }
       }
       // Add animation to elements on scroll
+      const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
       const observerOptions = {
-          threshold: 0.1,
-          rootMargin: '0px 0px 100px 0px'
+          threshold: 0.15,
+          rootMargin: '0px 0px -80px 0px'
       };
 
+      // Main observer for scroll animations
       const observer = new IntersectionObserver(function(entries) {
           entries.forEach(entry => {
-              if (entry.isIntersecting) {
-                  entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+              if (entry.isIntersecting && !prefersReducedMotion) {
+                  const element = entry.target;
+                  const animationType = element.dataset.animation || 'fadeInUp';
+                  const delay = element.dataset.delay || '0';
+
+                  // Remove any existing inline styles that might conflict
+                  element.style.opacity = '0';
+                  element.style.animation = 'none';
+
+                  // Force reflow
+                  void element.offsetWidth;
+
+                  // Apply animation
+                  element.style.animation = `${animationType} 0.8s ease-out ${delay}s forwards`;
+                  observer.unobserve(element);
+              } else if (entry.isIntersecting && prefersReducedMotion) {
+                  entry.target.style.opacity = '1';
                   observer.unobserve(entry.target);
               }
           });
       }, observerOptions);
 
+      // Hero Section Animations (only if not already visible)
+      const heroContent = document.querySelector('.container-7');
+      const heroImage = document.querySelector('.container-11');
+      if (heroContent && !heroContent.classList.contains('animated')) {
+          heroContent.style.opacity = '0';
+          heroContent.dataset.animation = 'fadeInUp';
+          heroContent.dataset.delay = '0';
+          observer.observe(heroContent);
+      }
+      if (heroImage && !heroImage.classList.contains('animated')) {
+          heroImage.style.opacity = '0';
+          heroImage.dataset.animation = 'slideInRight';
+          heroImage.dataset.delay = '0.2';
+          observer.observe(heroImage);
+      }
+
+      // About Section Animations
+      const aboutText = document.querySelector('.about .text-wrapper');
+      const aboutDesc = document.querySelector('.about .since-we-ve');
+      const aboutImage = document.querySelector('.about .image-with-fallback-wrapper');
+
+      if (aboutText) {
+          aboutText.style.opacity = '0';
+          aboutText.dataset.animation = 'fadeInUp';
+          aboutText.dataset.delay = '0';
+          observer.observe(aboutText);
+      }
+      if (aboutDesc) {
+          aboutDesc.style.opacity = '0';
+          aboutDesc.dataset.animation = 'fadeInUp';
+          aboutDesc.dataset.delay = '0.2';
+          observer.observe(aboutDesc);
+      }
+      if (aboutImage) {
+          aboutImage.style.opacity = '0';
+          aboutImage.dataset.animation = 'slideInRight';
+          aboutImage.dataset.delay = '0.4';
+          observer.observe(aboutImage);
+      }
+
+      // Featured Products Section Animations
+      const productsHeading = document.querySelector('.featured-products .heading');
+      const productsDesc = document.querySelector('.featured-products .discover-our');
+
+      if (productsHeading) {
+          productsHeading.style.opacity = '0';
+          productsHeading.dataset.animation = 'fadeInDown';
+          productsHeading.dataset.delay = '0';
+          observer.observe(productsHeading);
+      }
+      if (productsDesc) {
+          productsDesc.style.opacity = '0';
+          productsDesc.dataset.animation = 'fadeInUp';
+          productsDesc.dataset.delay = '0.2';
+          observer.observe(productsDesc);
+      }
+
+      // Testimonials Section Animations
+      const testimonialsHeader = document.querySelector('.testimonials-header');
+      const testimonialCards = document.querySelectorAll('.testimonial-card');
+
+      if (testimonialsHeader) {
+          testimonialsHeader.style.opacity = '0';
+          testimonialsHeader.dataset.animation = 'fadeInDown';
+          testimonialsHeader.dataset.delay = '0';
+          observer.observe(testimonialsHeader);
+      }
+
+      testimonialCards.forEach((card, index) => {
+          card.style.opacity = '0';
+          card.dataset.animation = 'fadeInUp';
+          card.dataset.delay = (0.2 + index * 0.1).toString();
+          observer.observe(card);
+      });
 
       // Observe all cards and sections - exclude product cards in slider (they have their own animations)
       const elements = document.querySelectorAll('.card:not(.slider .product-card), .container-4');
-      elements.forEach(el => observer.observe(el));
+      elements.forEach((el, index) => {
+          if (!el.dataset.animation) {
+              el.style.opacity = '0';
+              el.dataset.animation = 'fadeInUp';
+              el.dataset.delay = (index * 0.1).toString();
+          }
+          observer.observe(el);
+      });
 
       // Counter animation for stats
       const counters = document.querySelectorAll('.text-wrapper-2');
