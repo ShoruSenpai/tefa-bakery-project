@@ -1,15 +1,62 @@
 // Contact page animations and interactions
         document.addEventListener('DOMContentLoaded', function() {
-            // Intersection Observer untuk animasi scroll
+            const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            // Track scroll direction
+            let lastScrollY = window.scrollY || window.pageYOffset;
+            let scrollDirection = 'down';
+
+            // Update scroll direction
+            function updateScrollDirection() {
+                const currentScrollY = window.scrollY || window.pageYOffset;
+                scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+                lastScrollY = currentScrollY;
+            }
+
+            // Throttled scroll handler
+            let scrollTimeout;
+            window.addEventListener('scroll', () => {
+                if (scrollTimeout) {
+                    window.cancelAnimationFrame(scrollTimeout);
+                }
+                scrollTimeout = window.requestAnimationFrame(updateScrollDirection);
+            }, { passive: true });
+
+            // Intersection Observer untuk animasi scroll dengan direction detection
             const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px 50px 0px'
+                threshold: 0.15,
+                rootMargin: '0px 0px -80px 0px'
             };
 
             const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                    if (entry.isIntersecting && !prefersReducedMotion) {
+                        const element = entry.target;
+                        let animationType = element.dataset.animation || 'fadeInUp';
+                        const delay = element.dataset.delay || '0';
+
+                        // Adjust animation based on scroll direction
+                        if (scrollDirection === 'up') {
+                            if (animationType === 'fadeInUp') {
+                                animationType = 'fadeInDown';
+                            } else if (animationType === 'fadeInDown') {
+                                animationType = 'fadeInUp';
+                            } else if (animationType === 'slideInLeft') {
+                                animationType = 'slideInRight';
+                            } else if (animationType === 'slideInRight') {
+                                animationType = 'slideInLeft';
+                            }
+                        }
+
+                        element.style.opacity = '0';
+                        element.style.animation = 'none';
+                        void element.offsetWidth;
+                        
+                        const duration = window.innerWidth < 768 ? '0.6s' : '0.8s';
+                        element.style.animation = `${animationType} ${duration} ease-out ${delay}s forwards`;
+                        observer.unobserve(element);
+                    } else if (entry.isIntersecting && prefersReducedMotion) {
+                        entry.target.style.opacity = '1';
                         observer.unobserve(entry.target);
                     }
                 });
@@ -17,7 +64,21 @@
 
             // Observe contact cards dan form
             const infoCards = document.querySelectorAll('.info-card');
-            infoCards.forEach(card => observer.observe(card));
+            const contactForm = document.querySelector('.contact-form-card');
+            
+            infoCards.forEach((card, index) => {
+                card.style.opacity = '0';
+                card.dataset.animation = 'fadeInUp';
+                card.dataset.delay = (index * 0.1).toString();
+                observer.observe(card);
+            });
+
+            if (contactForm) {
+                contactForm.style.opacity = '0';
+                contactForm.dataset.animation = 'slideInRight';
+                contactForm.dataset.delay = '0.3';
+                observer.observe(contactForm);
+            }
 
             // Note: icon hover scaling removed per design (no icon hover on contact cards)
 

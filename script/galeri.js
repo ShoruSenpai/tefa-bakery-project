@@ -175,4 +175,84 @@
                     }
                 });
             });
+
+            // Scroll animations with direction detection
+            const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            // Track scroll direction
+            let lastScrollY = window.scrollY || window.pageYOffset;
+            let scrollDirection = 'down';
+
+            // Update scroll direction
+            function updateScrollDirection() {
+                const currentScrollY = window.scrollY || window.pageYOffset;
+                scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+                lastScrollY = currentScrollY;
+            }
+
+            // Throttled scroll handler
+            let scrollTimeout;
+            window.addEventListener('scroll', () => {
+                if (scrollTimeout) {
+                    window.cancelAnimationFrame(scrollTimeout);
+                }
+                scrollTimeout = window.requestAnimationFrame(updateScrollDirection);
+            }, { passive: true });
+
+            // Intersection Observer untuk animasi scroll dengan direction detection
+            const observerOptions = {
+                threshold: 0.15,
+                rootMargin: '0px 0px -80px 0px'
+            };
+
+            const galleryObserver = new IntersectionObserver(function(entries) {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting && !prefersReducedMotion) {
+                        const element = entry.target;
+                        let animationType = element.dataset.animation || 'fadeInUp';
+                        const delay = element.dataset.delay || '0';
+
+                        // Adjust animation based on scroll direction
+                        if (scrollDirection === 'up') {
+                            if (animationType === 'fadeInUp') {
+                                animationType = 'fadeInDown';
+                            } else if (animationType === 'fadeInDown') {
+                                animationType = 'fadeInUp';
+                            } else if (animationType === 'slideInLeft') {
+                                animationType = 'slideInRight';
+                            } else if (animationType === 'slideInRight') {
+                                animationType = 'slideInLeft';
+                            }
+                        }
+
+                        element.style.opacity = '0';
+                        element.style.animation = 'none';
+                        void element.offsetWidth;
+                        
+                        const duration = window.innerWidth < 768 ? '0.6s' : '0.8s';
+                        element.style.animation = `${animationType} ${duration} ease-out ${delay}s forwards`;
+                        galleryObserver.unobserve(element);
+                    } else if (entry.isIntersecting && prefersReducedMotion) {
+                        entry.target.style.opacity = '1';
+                        galleryObserver.unobserve(entry.target);
+                    }
+                });
+            }, observerOptions);
+
+            // Observe gallery items
+            galleryItems.forEach((item, index) => {
+                item.style.opacity = '0';
+                item.dataset.animation = 'scaleIn';
+                item.dataset.delay = (index * 0.1).toString();
+                galleryObserver.observe(item);
+            });
+
+            // Observe header section
+            const galleryHeader = document.querySelector('.div-wrapper, .from-humble-wrapper');
+            if (galleryHeader) {
+                galleryHeader.style.opacity = '0';
+                galleryHeader.dataset.animation = 'fadeInDown';
+                galleryHeader.dataset.delay = '0';
+                galleryObserver.observe(galleryHeader);
+            }
 });

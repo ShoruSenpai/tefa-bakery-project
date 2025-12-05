@@ -2,6 +2,84 @@
 document.addEventListener('DOMContentLoaded', function() {
     const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
+    // Track scroll direction
+    let lastScrollY = window.scrollY || window.pageYOffset;
+    let scrollDirection = 'down';
+
+    // Update scroll direction
+    function updateScrollDirection() {
+        const currentScrollY = window.scrollY || window.pageYOffset;
+        scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+        lastScrollY = currentScrollY;
+    }
+
+    // Throttled scroll handler
+    let scrollTimeout;
+    window.addEventListener('scroll', () => {
+        if (scrollTimeout) {
+            window.cancelAnimationFrame(scrollTimeout);
+        }
+        scrollTimeout = window.requestAnimationFrame(updateScrollDirection);
+    }, { passive: true });
+
+    // Scroll animations with direction detection
+    const observerOptions = {
+        threshold: 0.15,
+        rootMargin: '0px 0px -80px 0px'
+    };
+
+    const scrollObserver = new IntersectionObserver(function(entries) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && !prefersReducedMotion) {
+                const element = entry.target;
+                let animationType = element.dataset.animation || 'fadeInUp';
+                const delay = element.dataset.delay || '0';
+
+                // Adjust animation based on scroll direction
+                if (scrollDirection === 'up') {
+                    if (animationType === 'fadeInUp') {
+                        animationType = 'fadeInDown';
+                    } else if (animationType === 'fadeInDown') {
+                        animationType = 'fadeInUp';
+                    } else if (animationType === 'slideInLeft') {
+                        animationType = 'slideInRight';
+                    } else if (animationType === 'slideInRight') {
+                        animationType = 'slideInLeft';
+                    }
+                }
+
+                element.style.opacity = '0';
+                element.style.animation = 'none';
+                void element.offsetWidth;
+                
+                const duration = window.innerWidth < 768 ? '0.6s' : '0.8s';
+                element.style.animation = `${animationType} ${duration} ease-out ${delay}s forwards`;
+                scrollObserver.unobserve(element);
+            } else if (entry.isIntersecting && prefersReducedMotion) {
+                entry.target.style.opacity = '1';
+                scrollObserver.unobserve(entry.target);
+            }
+        });
+    }, observerOptions);
+
+    // Observe product section header
+    const productHeader = document.querySelector('.our-product .text-wrapper-2, .our-product .from-humble');
+    if (productHeader) {
+        productHeader.style.opacity = '0';
+        productHeader.dataset.animation = 'fadeInDown';
+        productHeader.dataset.delay = '0';
+        scrollObserver.observe(productHeader);
+    }
+
+    // Observe filter buttons
+    const filterButtons = document.querySelectorAll('.our-product .btn-filter');
+    filterButtons.forEach((btn, index) => {
+        btn.style.opacity = '0';
+        btn.dataset.animation = 'scaleIn';
+        btn.dataset.delay = (index * 0.1).toString();
+        scrollObserver.observe(btn);
+    });
+
     // Add simple 3D tilt on hover for larger screens, guard to avoid duplicate handlers
     const cards = document.querySelectorAll('.our-product .card, .our-product .card-2, .our-product .card-3, .our-product .card-4, .our-product .card-5, .our-product .card-6, .our-product .card-7, .our-product .card-8');
     cards.forEach(card => {
@@ -37,6 +115,16 @@ document.addEventListener('DOMContentLoaded', function() {
         }, 150);
     });
     
+    // Observe product cards for scroll animation
+    cards.forEach((card, index) => {
+        if (!card.dataset.animation) {
+            card.style.opacity = '0';
+            card.dataset.animation = 'fadeInUp';
+            card.dataset.delay = (index * 0.05).toString();
+            scrollObserver.observe(card);
+        }
+    });
+
     // Click handler for product cards (mobile - no button)
     cards.forEach(card => {
         card.addEventListener('click', function(e) {

@@ -153,21 +153,57 @@
               });
           }
       }
-      // Add animation to elements on scroll
+      // Add animation to elements on scroll with up/down direction detection
       const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+      // Track scroll direction
+      let lastScrollY = window.scrollY || window.pageYOffset;
+      let scrollDirection = 'down';
+
+      // Update scroll direction
+      function updateScrollDirection() {
+          const currentScrollY = window.scrollY || window.pageYOffset;
+          scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+          lastScrollY = currentScrollY;
+      }
+
+      // Throttled scroll handler
+      let scrollTimeout;
+      window.addEventListener('scroll', () => {
+          if (scrollTimeout) {
+              window.cancelAnimationFrame(scrollTimeout);
+          }
+          scrollTimeout = window.requestAnimationFrame(updateScrollDirection);
+      }, { passive: true });
 
       const observerOptions = {
           threshold: 0.15,
           rootMargin: '0px 0px -80px 0px'
       };
 
-      // Main observer for scroll animations
+      // Main observer for scroll animations with direction detection
       const observer = new IntersectionObserver(function(entries) {
           entries.forEach(entry => {
               if (entry.isIntersecting && !prefersReducedMotion) {
                   const element = entry.target;
-                  const animationType = element.dataset.animation || 'fadeInUp';
+                  let animationType = element.dataset.animation || 'fadeInUp';
                   const delay = element.dataset.delay || '0';
+
+                  // Adjust animation based on scroll direction
+                  // If scrolling down, use normal animations
+                  // If scrolling up, reverse some animations for better UX
+                  if (scrollDirection === 'up') {
+                      // For upward scroll, use different animations
+                      if (animationType === 'fadeInUp') {
+                          animationType = 'fadeInDown';
+                      } else if (animationType === 'fadeInDown') {
+                          animationType = 'fadeInUp';
+                      } else if (animationType === 'slideInLeft') {
+                          animationType = 'slideInRight';
+                      } else if (animationType === 'slideInRight') {
+                          animationType = 'slideInLeft';
+                      }
+                  }
 
                   // Remove any existing inline styles that might conflict
                   element.style.opacity = '0';
@@ -176,8 +212,9 @@
                   // Force reflow
                   void element.offsetWidth;
 
-                  // Apply animation
-                  element.style.animation = `${animationType} 0.8s ease-out ${delay}s forwards`;
+                  // Apply animation with reduced duration on mobile for better performance
+                  const duration = window.innerWidth < 768 ? '0.6s' : '0.8s';
+                  element.style.animation = `${animationType} ${duration} ease-out ${delay}s forwards`;
                   observer.unobserve(element);
               } else if (entry.isIntersecting && prefersReducedMotion) {
                   entry.target.style.opacity = '1';

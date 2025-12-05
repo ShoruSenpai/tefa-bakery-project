@@ -1,23 +1,86 @@
        // Smooth scroll and animation effects
         document.addEventListener('DOMContentLoaded', function() {
-            // Intersection Observer untuk animasi scroll
+            const prefersReducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+            // Track scroll direction
+            let lastScrollY = window.scrollY || window.pageYOffset;
+            let scrollDirection = 'down';
+
+            // Update scroll direction
+            function updateScrollDirection() {
+                const currentScrollY = window.scrollY || window.pageYOffset;
+                scrollDirection = currentScrollY > lastScrollY ? 'down' : 'up';
+                lastScrollY = currentScrollY;
+            }
+
+            // Throttled scroll handler
+            let scrollTimeout;
+            window.addEventListener('scroll', () => {
+                if (scrollTimeout) {
+                    window.cancelAnimationFrame(scrollTimeout);
+                }
+                scrollTimeout = window.requestAnimationFrame(updateScrollDirection);
+            }, { passive: true });
+
+            // Intersection Observer untuk animasi scroll dengan direction detection
             const observerOptions = {
-                threshold: 0.1,
-                rootMargin: '0px 0px 50px 0px'
+                threshold: 0.15,
+                rootMargin: '0px 0px -80px 0px'
             };
 
             const observer = new IntersectionObserver(function(entries) {
                 entries.forEach(entry => {
-                    if (entry.isIntersecting) {
-                        entry.target.style.animation = 'fadeInUp 0.8s ease-out forwards';
+                    if (entry.isIntersecting && !prefersReducedMotion) {
+                        const element = entry.target;
+                        let animationType = element.dataset.animation || 'fadeInUp';
+                        const delay = element.dataset.delay || '0';
+
+                        // Adjust animation based on scroll direction
+                        if (scrollDirection === 'up') {
+                            if (animationType === 'fadeInUp') {
+                                animationType = 'fadeInDown';
+                            } else if (animationType === 'fadeInDown') {
+                                animationType = 'fadeInUp';
+                            } else if (animationType === 'slideInLeft') {
+                                animationType = 'slideInRight';
+                            } else if (animationType === 'slideInRight') {
+                                animationType = 'slideInLeft';
+                            }
+                        }
+
+                        element.style.opacity = '0';
+                        element.style.animation = 'none';
+                        void element.offsetWidth;
+                        
+                        const duration = window.innerWidth < 768 ? '0.6s' : '0.8s';
+                        element.style.animation = `${animationType} ${duration} ease-out ${delay}s forwards`;
+                        observer.unobserve(element);
+                    } else if (entry.isIntersecting && prefersReducedMotion) {
+                        entry.target.style.opacity = '1';
                         observer.unobserve(entry.target);
                     }
                 });
             }, observerOptions);
 
             // Observe elemen untuk scroll animation
-            const elements = document.querySelectorAll('.sejarah-wrapper, .visi-misi, .section, .container-3');
-            elements.forEach(el => observer.observe(el));
+            const elements = document.querySelectorAll('.sejarah-wrapper, .visi-misi, .section, .container-3, .card, .card-2, .visi-container, .misi-container, .visi-card, .misi-card, .section-title, .text-wrapper-5');
+            elements.forEach((el, index) => {
+                el.style.opacity = '0';
+                if (!el.dataset.animation) {
+                    el.dataset.animation = 'fadeInUp';
+                    el.dataset.delay = (index * 0.1).toString();
+                }
+                observer.observe(el);
+            });
+
+            // Observe header section
+            const headerSection = document.querySelector('.div-wrapper, .from-humble-wrapper');
+            if (headerSection) {
+                headerSection.style.opacity = '0';
+                headerSection.dataset.animation = 'fadeInDown';
+                headerSection.dataset.delay = '0';
+                observer.observe(headerSection);
+            }
 
             // Parallax effect untuk image
             const imageSection = document.querySelector('.image-with-fallback-wrapper');
