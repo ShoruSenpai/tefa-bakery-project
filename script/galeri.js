@@ -17,7 +17,7 @@
             3: {
                 title: "Observasi Mahasiswa Jurusan TI",
                 image: "../assets/asset tefa/IMG_20250902_150333 - (1).jpg",
-                description: "Mahasiswa Jurusan TI Prodi Teknik Informatika melakukan Observasi mengenai Sistem dan Informasi Tefa Bakery & Coffee",
+                description: "Mahasiswa Jurusan TI Prodi Teknik Informatika melakukan Observasi ke Tefa Bakery & Coffee",
                 date: "03 September 2025",
                 location: "Tefa Bakery & Coffee"
             },
